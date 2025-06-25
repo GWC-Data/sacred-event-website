@@ -801,7 +801,7 @@ textarea::placeholder {
 .btn2 {
   font-size: 15px;
   border-radius: 10px;
-  padding: 15px 25px;
+  padding: 8px 16px;
   transition: all 0.5s ease-in-out;
   background-color: #e91e63;
   color: #fff;
@@ -837,10 +837,10 @@ textarea::placeholder {
   color: #e91e63;
   transition: all 0.5s ease-in-out;
 }
-.btn-small {
+/* .btn-small {
   font-size: 12px;
   padding: 8px 16px;
-}
+} */
 
 /* Width */
 .w-20 {

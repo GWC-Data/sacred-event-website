@@ -57,7 +57,7 @@ const Header = () => {
       </div>
 
       {/* Navigation Bar */}
-      <div className="header_menu" id="header_menu">
+      {/* <div className="header_menu" id="header_menu">
         <div className="container">
           <nav className="navbar navbar-expand-lg py-2 w-100">
             <div className="row w-100 align-items-center">
@@ -82,16 +82,16 @@ const Header = () => {
                 >
                   <Link
                     to="/"
-                    className="btn btn-small"
-                    style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }}
+                    className="btn "
+                    // style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }}
                   >
                     Book your Pass{" "}
                     <i className="fa fa-long-arrow-right ms-4"></i>
                   </Link>
                   <Link
                     to="/"
-                    className="btn btn-small"
-                    style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }}
+                    className="btn "
+                    // style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }}
                   >
                     Secure your Stall{" "}
                     <i className="fa fa-long-arrow-right ms-4"></i>
@@ -102,23 +102,46 @@ const Header = () => {
           </nav>
           <div id="slicknav-mobile"></div>
         </div>
+      </div> */}
+      <div className="header_menu" id="header_menu">
+        <div className="container">
+          <nav className="navbar navbar-expand-lg py-2 w-100">
+            <div className="row w-100 align-items-center">
+              <div className="col-lg-2 col-md-6">
+                <div className="navbar-brand m-0">
+                  <img
+                    src="https://shctpt.edu/assets/img/logo/logo.png"
+                    alt="Logo"
+                    className="w-100"
+                  />
+                </div>
+              </div>
+
+              <div className="col-lg-7 col-md-6">
+                <Navbar />
+              </div>
+
+              <div className="col-lg-3">
+                <span className="d-flex justify-content-end gap-2">
+                  <div className="menu-search" style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }}>
+                    <Link to="/Booknow" className="btn btn3">
+                      Book Your Pass <i className=""></i>
+                    </Link>
+                  </div>
+                  <div className="menu-search" style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }} >
+                    <Link to="/Booknow" className="btn btn3">
+                      Secure Your Still <i className=" "></i>
+                    </Link>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </nav>
+          <div id="slicknav-mobile"></div>
+        </div>
       </div>
 
       {/* Search Overlay */}
-      <div id="search1">
-        <button type="button" className="close">
-          &times;
-        </button>
-        <form>
-          <input
-            className="form-control form-control-lg rounded text-white"
-            placeholder="Search..."
-          />
-        </form>
-        <button type="button" className="btn">
-          <i className="fa fa-search text-white" aria-hidden="true"></i>
-        </button>
-      </div>
     </header>
   );
 };

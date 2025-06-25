@@ -43,7 +43,7 @@ function Home() {
                 <div className="banner-right ms-2 text-center text-lg-start pb-8">
                   <div className="banner-title pb-3">
                     <h4 className="text-white pb-3">
-                      PLATINUM JUBILEE <span className="pink">CELEBRATION</span>
+                    <span className="pink"> PLATINUM JUBILEE </span>  <span className="">CELEBRATION</span>
                     </h4>
                     <h2 className="text-white">
                       SCIENCE & TECHNOLOGY{" "}
