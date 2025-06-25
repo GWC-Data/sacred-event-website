@@ -75,14 +75,18 @@ const Header = () => {
                 <Navbar />
               </div>
 
-              {/* <div className="col-lg-3">
-                <div className="menu-search text-end">
-                  <Search />
-                  <Link to="/Booknow" className="btn btn3">
-                    Buy Ticket <i className="fa fa-long-arrow-right ms-4"></i>
+              <div className="col-lg-3">
+                <div className="menu-search text-end d-flex justify-content-end gap-2">
+                  <Link to="/" className="btn btn3">
+                    Book your Pass{" "}
+                    <i className="fa fa-long-arrow-right ms-4"></i>
+                  </Link>
+                  <Link to="/" className="btn btn3">
+                    Secure your Stall{" "}
+                    <i className="fa fa-long-arrow-right ms-4"></i>
                   </Link>
                 </div>
-              </div> */}
+              </div>
             </div>
           </nav>
           <div id="slicknav-mobile"></div>
