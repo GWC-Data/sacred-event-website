@@ -42,7 +42,7 @@ const Header = () => {
                     </li>
                     <li className="px-2 border-end border-lightgrey border-opacity-50 d-inline">
                       <i className="fa fa-envelope-o pe-1"></i>
-                      <small>info@website.com</small>
+                      <small>Sacredheart@website.com</small>
                     </li>
                     <li className="px-2 d-inline">
                       <i className="fa fa-clock-o pe-1"></i>
@@ -76,12 +76,23 @@ const Header = () => {
               </div>
 
               <div className="col-lg-3">
-                <div className="menu-search text-end d-flex justify-content-end gap-2">
-                  <Link to="/" className="btn btn3">
+                <div
+                  className="menu-search text-end d-flex justify-content-end gap-2"
+                  style={{ marginTop: "-5px" }}
+                >
+                  <Link
+                    to="/"
+                    className="btn btn-small"
+                    style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }}
+                  >
                     Book your Pass{" "}
                     <i className="fa fa-long-arrow-right ms-4"></i>
                   </Link>
-                  <Link to="/" className="btn btn3">
+                  <Link
+                    to="/"
+                    className="btn btn-small"
+                    style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }}
+                  >
                     Secure your Stall{" "}
                     <i className="fa fa-long-arrow-right ms-4"></i>
                   </Link>
