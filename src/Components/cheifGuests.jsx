@@ -1,54 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 const ChiefGuestSection = () => {
-     const chiefGuests = [
-        {
-          name: "Dr. A. P. J. Abdul Kalam",
-          role: "Former President of India & Aerospace Scientist",
-          image: "https://ui-avatars.com/api/?name=A+P+J+Kalam&background=random&size=300",
-          socials: {
-            facebook: "#",
-            twitter: "#",
-            google: "#",
-            instagram: "#"
-          }
-        },
-        {
-          name: "Dr. Tessy Thomas",
-          role: "Missile Woman of India, DRDO",
-          image: "https://ui-avatars.com/api/?name=Tessy+Thomas&background=random&size=300",
-          socials: {
-            facebook: "#",
-            twitter: "#",
-            google: "#",
-            instagram: "#"
-          }
-        },
-        {
-          name: "Narayana Murthy",
-          role: "Founder, Infosys",
-          image: "https://ui-avatars.com/api/?name=Narayana+Murthy&background=random&size=300",
-          socials: {
-            facebook: "#",
-            twitter: "#",
-            google: "#",
-            instagram: "#"
-          }
-        },
-        {
-          name: "Dr. Kiran Bedi",
-          role: "Social Reformer & Former IPS Officer",
-          image: "https://ui-avatars.com/api/?name=Kiran+Bedi&background=random&size=300",
-          socials: {
-            facebook: "#",
-            twitter: "#",
-            google: "#",
-            instagram: "#"
-          }
-        }
-      ];
-      
+  const chiefGuests = [
+    {
+      name: "M.Balasubramaniyam",
+      role: "CEO,Stratinfinity inc",
+      image: "/assets/images/cheifGuests/1.jpg",
+      socials: {
+        facebook: "#",
+        twitter: "#",
+        google: "#",
+        instagram: "#",
+      },
+    },
+    {
+      name: "Naveen Kumar",
+      role: "CEO & Founder, GWC Data.Ai",
+      image:
+        "https://media.licdn.com/dms/image/v2/C4D03AQEOZbLYAaWybA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653068198985?e=1756339200&v=beta&t=jp4QAQn2Og4FmiH8-URZug-TdQcDPFUtI9rrTipAlk4",
+      socials: {
+        facebook: "#",
+        twitter: "#",
+        google: "#",
+        instagram: "#",
+      },
+    },
+  ];
+
   return (
     <section className="speakers">
       <div className="container">
@@ -70,13 +48,13 @@ const ChiefGuestSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-6">
+              {/* <div className="col-lg-6">
                 <div className="speaker-button text-lg-end">
                   <Link to="/Speakerlist" className="btn my-2">
                     VIEW MORE Cheif Guest
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

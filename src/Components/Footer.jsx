@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div>
       {/*--Subscribe Section start--*/}
-      <section className="subscribe py-4">
+      {/* <section className="subscribe py-4">
         <div className="container">
           <div className="subscribe-content">
             <div className="row">
@@ -31,7 +31,7 @@ function Footer() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*--Subscribe Section end--*/}
 
       {/*--Footer Section start--*/}
@@ -49,10 +49,7 @@ function Footer() {
               </a>
             </div>
             <div className="footer-disciption border-bottom border-white border-opacity-25 m-auto mb-6">
-              <p className=" mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
-              </p>
+              <p className=" mb-6">Sacred heart college (Autonomous)</p>
               <div className="footer-socials pb-6">
                 <ul className="m-0 p-0 d-flex gap-2 justify-content-center">
                   {[
@@ -74,7 +71,7 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="footer-menu pb-9">
+            {/* <div className="footer-menu pb-9">
               <ul className="p-0 m-0">
                 <li className="d-inline mx-2">
                   <Link to="/About">
@@ -102,14 +99,14 @@ function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
-          <div className="copyright pb-6 pt-1">
+          {/* <div className="copyright pb-6 pt-1">
             <small>
               Copyright {new Date().getFullYear()} Eventen. All Rights Reserved
               Copyright
             </small>
-          </div>
+          </div> */}
         </div>
       </footer>
       {/*--Footer Section end--*/}
