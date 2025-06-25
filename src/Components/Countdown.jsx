@@ -1,7 +1,7 @@
 // src/Components/Countdown.js
 import React, { useState, useEffect } from 'react';
 
-const Countdown = ({ targetDate = '2025-12-31T23:59:59' }) => {
+const Countdown = ({ targetDate = '2025-09-13T09:00:00' }) => {
   const [timeLeft, setTimeLeft] = useState({});
   const [expired, setExpired] = useState(false);
 
@@ -37,29 +37,34 @@ const Countdown = ({ targetDate = '2025-12-31T23:59:59' }) => {
   }, [targetDate]);
 
   return (
-    <div
-      id="countdown"
-      className="countdown-inner d-flex w-100"
-    >
-      <div className="time m-auto py-4">
-        <span id="days" className="lh-1 h1 fw-bold">{timeLeft.days}</span><br />
-        <p className="text-secondary text-uppercase fw-semibold mb-0">Days</p>
-      </div>
+    <div id="countdown" className="countdown-inner d-flex w-100">
+      {expired ? (
+        <div className="m-auto py-4 text-center">
+          <h2 className="text-danger fw-bold">The Event Has Started!</h2>
+        </div>
+      ) : (
+        <>
+          <div className="time m-auto py-4">
+            <span id="days" className="lh-1 h1 fw-bold">{timeLeft.days}</span><br />
+            <p className="text-secondary text-uppercase fw-semibold mb-0">Days</p>
+          </div>
 
-      <div className="time m-auto py-4">
-        <span id="hours" className="lh-1 h1 fw-bold">{timeLeft.hours}</span><br />
-        <p className="text-secondary text-uppercase fw-semibold mb-0">Hours</p>
-      </div>
+          <div className="time m-auto py-4">
+            <span id="hours" className="lh-1 h1 fw-bold">{timeLeft.hours}</span><br />
+            <p className="text-secondary text-uppercase fw-semibold mb-0">Hours</p>
+          </div>
 
-      <div className="time m-auto py-4">
-        <span id="minutes" className="lh-1 h1 fw-bold">{timeLeft.minutes}</span><br />
-        <p className="text-secondary text-uppercase fw-semibold mb-0">Minutes</p>
-      </div>
+          <div className="time m-auto py-4">
+            <span id="minutes" className="lh-1 h1 fw-bold">{timeLeft.minutes}</span><br />
+            <p className="text-secondary text-uppercase fw-semibold mb-0">Minutes</p>
+          </div>
 
-      <div className="time m-auto py-4">
-        <span id="seconds" className="lh-1 h1 fw-bold">{timeLeft.seconds}</span><br />
-        <p className="text-secondary text-uppercase fw-semibold mb-0">Seconds</p>
-      </div>
+          <div className="time m-auto py-4">
+            <span id="seconds" className="lh-1 h1 fw-bold">{timeLeft.seconds}</span><br />
+            <p className="text-secondary text-uppercase fw-semibold mb-0">Seconds</p>
+          </div>
+        </>
+      )}
     </div>
   );
 };

@@ -5,6 +5,7 @@ import Gallery from "../Components/Gallery";
 import { Link } from "react-router-dom";
 import Countdown from "../Components/Countdown";
 import CheifGuestSection from "../Components/cheifGuests";
+import EventSchedules from "../Components/EventsSchedules";
 
 function Home() {
   return (
@@ -406,13 +407,13 @@ function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-6">
+                {/* <div className="col-lg-6">
                   <div className="speaker-button text-lg-end">
                     <Link to="/Speakerlist" className="btn my-2">
                       VIEW MORE SPEAKERS
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="sepaker-list text-center text-white">
@@ -564,7 +565,7 @@ function Home() {
                 <em>Solution Matters</em>.
               </p>
               <div className="ticket-button">
-                <Link to="/Booknow" className="btn">
+                <Link to="/" className="btn">
                   REGISTER NOW
                 </Link>
               </div>
@@ -594,7 +595,8 @@ function Home() {
       {/*--Ticketbook Section end--*/}
 
       {/*--Schedules Section start--*/}
-      <section className="schedules">
+      <EventSchedules />
+      {/* <section className="schedules">
         <div className="container">
           <div className="schedule-inner">
             <div className="schedule-title text-center mb-6 w-lg-60 mx-auto">
@@ -862,7 +864,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*--Schedules Section end--*/}
 
       {/*--Pricing Section start--*/}
@@ -1071,7 +1073,7 @@ function Home() {
       {/*--Pricing Section end--*/}
 
       {/*--Gallery Section end--*/}
-      <section className="gallery">
+      {/* <section className="gallery">
         <div className="container">
           <div className="galler-inner">
             <div className="section-title text-center">
@@ -1100,29 +1102,32 @@ function Home() {
             <Gallery />
           </div>
         </div>
-      </section>
+      </section> */}
       {/*--Gallery Section end--*/}
 
       {/*--Testimonials Section start--*/}
-      <section className="testimonial bg-lightgrey">
+      {/* <section className="testimonial bg-lightgrey">
         <div className="container">
           <div className="section-title w-lg-60 m-auto text-center pb-5">
-            <p className="mb-1  pink">OUR TESTIMONIALS</p>
+            <p className="mb-1 pink">GUEST EXPERIENCES</p>
             <h2 className="mb-1">
-              WHAT PEOPLES'S SAYS ABOUT <span className="pink">EVENTEN</span>
+              WHAT PEOPLE SAY ABOUT{" "}
+              <span className="pink">SHC INNOVATION FEST</span>
             </h2>
             <p className="m-0">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+              Hear from distinguished guests, participants, and innovators who
+              experienced the energy, collaboration, and inspiration at Sacred
+              Heart College’s 75th Jubilee and Tech Innovation Summit.
             </p>
           </div>
           <TestimonialSlider />
         </div>
-      </section>
+      </section> */}
+
       {/*--Testimonials Section end--*/}
 
       {/*--FAQ Section start--*/}
-      <section className="faq pb-0 overflow-visible d-block position-relative z-1">
+      <section className="faq pb-0 overflow-visible d-block position-relative z-1 pb-10">
         <div className="overlay bg-blue opacity-25 z-n1"></div>
         <div className="container">
           <div>
@@ -1130,13 +1135,14 @@ function Home() {
               <div className="col-lg-6 px-4 mb-2">
                 <div className="faq-general">
                   <div className="section-title pb-3 text-center text-lg-start">
-                    <p className="mb-1 pink">GENERAL QUESTIONS</p>
+                    <p className="mb-1 pink">EVENT HIGHLIGHTS</p>
                     <h2 className="mb-2 text-white">
-                      FREQUENT ASKED <span className="pink">QUESTIONS!!</span>
+                      PLATINUM JUBILEE <span className="pink">CELEBRATION</span>
                     </h2>
                     <p className="text-white">
-                      Excepteur sint occaecat cupidatat non proident, sunt in
-                      culpa qui officia deserunt mollit anim id est laborum.
+                      Join us in celebrating 75 years of Sacred Heart College,
+                      Tirupattur — a landmark event featuring innovation,
+                      collaboration, and inspiration.
                     </p>
                   </div>
                   <div className="faq-accordion p-4 mb-5 bg-white rounded">
@@ -1144,7 +1150,7 @@ function Home() {
                       className="accordion accordion-faq"
                       id="accordionFlushExample"
                     >
-                      <div className="accordion-item ">
+                      <div className="accordion-item">
                         <p className="accordion-header p-4">
                           <button
                             className="accordion-button collapsed fw-semibold p-0"
@@ -1154,7 +1160,7 @@ function Home() {
                             aria-expanded="false"
                             aria-controls="flush-collapseOne"
                           >
-                            GLOBAL SEARCH ENGINE OPTIMIZATION
+                            WHAT IS THE MAIN EVENT?
                           </button>
                         </p>
                         <div
@@ -1163,25 +1169,23 @@ function Home() {
                           data-bs-parent="#accordionFlushExample"
                         >
                           <div className="accordion-body bg-lightgrey p-6">
-                            Phasellus quis diam sed ligula sagittis tempus
-                            malesuada sed eros. Quisque elementum, diam et
-                            pellentesque volutpat, ligula diam suscipit ligula,
-                            sit amet hendrerit arcu ipsum eu nulla. Morbi sed
-                            molestie nulla, ac viverra turpis.
+                            The Science & Technology Innovation Fest 2025 is the
+                            core event, celebrating innovation under the theme
+                            "Empowering Minds & Transforming Lives".
                           </div>
                         </div>
                       </div>
                       <div className="accordion-item">
                         <p className="accordion-header p-4">
                           <button
-                            className="accordion-button collapsed  fw-semibold p-0"
+                            className="accordion-button collapsed fw-semibold p-0"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseTwo"
                             aria-expanded="false"
                             aria-controls="flush-collapseTwo"
                           >
-                            WE OWN AND SHAPE OUR FUTURE
+                            WHEN AND WHERE IS IT HELD?
                           </button>
                         </p>
                         <div
@@ -1190,11 +1194,11 @@ function Home() {
                           data-bs-parent="#accordionFlushExample"
                         >
                           <div className="accordion-body bg-lightgrey p-6">
-                            Placeholder content for this accordion, which is
-                            intended to demonstrate the{" "}
-                            <code>.accordion-flush</code> class. This is the
-                            second item's accordion body. Let's imagine this
-                            being filled with some actual content.
+                            Saturday, 13th September 2025
+                            <br />
+                            09:00 AM to 04:00 PM
+                            <br />
+                            Venue: Sacred Heart College, Tirupattur
                           </div>
                         </div>
                       </div>
@@ -1208,7 +1212,7 @@ function Home() {
                             aria-expanded="false"
                             aria-controls="flush-collapseThree"
                           >
-                            HOW LONG DO I GET SUPPORT & UPDATES?
+                            WHO CAN ATTEND?
                           </button>
                         </p>
                         <div
@@ -1217,10 +1221,9 @@ function Home() {
                           data-bs-parent="#accordionFlushExample"
                         >
                           <div className="accordion-body bg-lightgrey p-6">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Curabitur interdum, arcu a accumsan vulputate,
-                            leo diam sodales mi, et bibendum mi nunc at lorem.
-                            Etiam ut nisi hendrerit,
+                            Open to students, faculty, researchers, alumni, tech
+                            professionals, and innovation enthusiasts from all
+                            walks of life.
                           </div>
                         </div>
                       </div>
@@ -1228,16 +1231,17 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6  align-self-center px-4">
+              <div className="col-lg-6 align-self-center px-4">
                 <div className="faq-form bg-white rounded shadow-lg p-6 mb-mi">
                   <div className="form-title mb-4">
-                    <p className="mb-1 pink">TICKET BOOK</p>
+                    <p className="mb-1 pink">REGISTRATION</p>
                     <h2 className="mb-2">
-                      LET'S RESERVE A <span className="pink">SEAT</span>
+                      BE OUR <span className="pink">GUEST</span>
                     </h2>
                     <p className="m-0">
-                      Excepteur sint occaecat cupidatat non proident, sunt in
-                      culpa qui officia deserunt mollit anim id est laborum.
+                      Secure your seat for the SHC Summit – a platform to
+                      discover, connect, and be inspired by technology leaders
+                      and innovators.
                     </p>
                   </div>
                   <div className="form-content justify-content-between">
@@ -1247,7 +1251,7 @@ function Home() {
                         placeholder="Full Name"
                         className="mb-5"
                       />
-                      <div className=" row justify-content-around">
+                      <div className="row justify-content-around">
                         <div className="col-lg-6 col-md-6">
                           <div className="phone-no">
                             <input
@@ -1269,17 +1273,17 @@ function Home() {
                         </div>
                       </div>
                       <textarea
-                        placeholder="How may we help you?"
+                        placeholder="Questions or special requests?"
                         rows="4"
                         className="mb-5"
                       ></textarea>
                       <button className="btn mb-5" id="sub-btn">
-                        SEND MESSAGE
+                        REGISTER NOW
                       </button>
                     </form>
                     <small>
-                      *Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Libero hic facere, minima impedit ea quasi nemo odio.
+                      *For more details, call +91 80562 86482 or visit
+                      www.shctpt.edu
                     </small>
                   </div>
                 </div>
@@ -1288,38 +1292,48 @@ function Home() {
           </div>
         </div>
       </section>
+
       {/*--FAQ Section end--*/}
 
       {/*--Direction Section start--*/}
       <section className="direction pb-0">
         <div className="container">
           <div className="section-title text-center pb-2 w-lg-60 m-auto">
-            <p className="mb-1  pink">REACH US</p>
+            <p className="mb-1 pink">REACH US</p>
             <h2 className="mb-1">
-              GET DIRECTION TO THE <span className="pink">EVENT HALL</span>
+              GET DIRECTION TO THE <span className="pink">SHC SUMMIT</span>
             </h2>
             <p className="mb-0">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+              Join us at Sacred Heart College, Tirupattur for the Platinum
+              Jubilee Celebration featuring the Science & Technology Innovation
+              Fest 2025.
             </p>
           </div>
           <div className="direction-content">
             <div className="direction-info">
               <div className="row">
                 <div className="col-lg-5 col-md-5 px-1">
-                  <div className="p-6 d-flex text-white w-100 h-100 rounded bg-pink ">
+                  <div className="p-6 d-flex text-white w-100 h-100 rounded bg-pink">
                     <div className="justify-content-center align-self-center ms-6">
                       <h5 className="text-white pb-2">EVENT VENUE:</h5>
                       <p className="pb-5 m-0">
-                        Galleria mall conference center
+                        Sacred Heart College, Tirupattur
                       </p>
                       <h5 className="text-white pb-2">ADDRESS:</h5>
                       <p className="pb-5 m-0">
-                        19 By Pass NR, Bali, Indonesia, BC 22196
+                        SHC Campus, Tirupattur – 635601, Tamil Nadu, India
                       </p>
                       <h5 className="text-white pb-2">RECEPTION INFO:</h5>
-                      <p className="pb-5 m-0">Booking: (+62) 1919-2020</p>
-                      <a>Get Directions</a>
+                      <p className="pb-5 m-0">
+                        Booking & Info: +91 80562 86482
+                      </p>
+                      <a
+                        href="https://maps.google.com/?q=Sacred+Heart+College+Tirupattur"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Get Directions
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -1327,7 +1341,10 @@ function Home() {
                   <iframe
                     height="400"
                     className="rounded w-100"
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=+(mangal%20bazar)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    src="https://maps.google.com/maps?q=Sacred%20Heart%20College%20Tirupattur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
               </div>
@@ -1342,7 +1359,7 @@ function Home() {
                     <img
                       src="assets/images/thumbnail/4.jpg"
                       className="w-100 rounded"
-                      alt="VR Presentation and conference"
+                      alt="Tech exhibition at SHC"
                     />
                   </a>
                 </div>
@@ -1354,7 +1371,7 @@ function Home() {
                     <img
                       src="assets/images/thumbnail/7.jpg"
                       className="w-100 rounded"
-                      alt="VR Presentation and conference"
+                      alt="Industry expert panel at SHC"
                     />
                   </a>
                 </div>
@@ -1366,7 +1383,7 @@ function Home() {
                     <img
                       src="assets/images/thumbnail/1.jpg"
                       className="w-100 rounded"
-                      alt="VR Presentation and conference"
+                      alt="Innovation showcase at SHC"
                     />
                   </a>
                 </div>
@@ -1375,10 +1392,11 @@ function Home() {
           </div>
         </div>
       </section>
+
       {/*--Direction Section end--*/}
 
       {/*--Blog Section start--*/}
-      <section className="blog">
+      {/* <section className="blog">
         <div className="container">
           <div className="blog-inner">
             <div className="row align-items-center">
@@ -1486,7 +1504,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*--Blog Section end--*/}
     </div>
   );

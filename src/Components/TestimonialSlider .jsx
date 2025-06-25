@@ -5,24 +5,25 @@ import "slick-carousel/slick/slick-theme.css";
 
 const testimonials = [
   {
-    name: 'DANIEL FRANKIE',
-    role: 'Manager',
-    image: 'assets/images/speakers/1.jpg',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua..'
+    name: 'Dr. Meena Suresh',
+    role: 'Professor, Computer Science',
+    image: 'https://ui-avatars.com/api/?name=Meena+Suresh&background=random&size=300',
+    text: 'The Innovation Fest at Sacred Heart College was a brilliant convergence of young minds and technology leaders. It was inspiring to see students present such impactful ideas.'
   },
   {
-    name: 'EMANUEL KELTON',
-    role: 'Planner',
-    image: 'assets/images/speakers/4.jpg',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua..'
+    name: 'Arun Prakash',
+    role: 'Alumnus & CTO, TechWave India',
+    image: 'https://ui-avatars.com/api/?name=Arun+Prakash&background=random&size=300',
+    text: 'Returning to SHC for the Platinum Jubilee and witnessing the fusion of tradition and innovation was truly moving. The event was flawlessly organized and full of potential.'
   },
   {
-    name: 'ROYLOR HENK',
-    role: 'Director',
-    image: 'assets/images/speakers/2.JPG',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua..'
+    name: 'Dr. Latha Menon',
+    role: 'STEM Advocate & Chief Guest',
+    image: 'https://ui-avatars.com/api/?name=Latha+Menon&background=random&size=300',
+    text: 'Empowering Minds & Transforming Lives isn’t just a theme—it was the reality of the day. The SHC Summit was a platform for breakthroughs and collaboration.'
   }
 ];
+
 
 const TestimonialSlider = () => {
   const settings = {
