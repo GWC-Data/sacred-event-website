@@ -1,7 +1,7 @@
-import React from 'react';
-import Navbar from './Navbar';
-import { Link } from 'react-router-dom';
-import Search from '../Components/Search'
+import React from "react";
+import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
+import Search from "../Components/Search";
 
 const Header = () => {
   return (
@@ -14,10 +14,18 @@ const Header = () => {
               <div className="col-lg-6">
                 <div className="social-links">
                   <ul className="m-0 p-0 d-flex gap-2">
-                    {['facebook', 'twitter', 'google', 'instagram', 'youtube-play'].map((icon, i) => (
+                    {[
+                      "facebook",
+                      "twitter",
+                      "google",
+                      "instagram",
+                      "youtube-play",
+                    ].map((icon, i) => (
                       <li key={i} className="d-inline">
                         <a href="#">
-                          <i className={`fa fa-${icon} border-social rounded-circle text-center`}></i>
+                          <i
+                            className={`fa fa-${icon} border-social rounded-circle text-center`}
+                          ></i>
                         </a>
                       </li>
                     ))}
@@ -55,22 +63,26 @@ const Header = () => {
             <div className="row w-100 align-items-center">
               <div className="col-lg-2 col-md-6">
                 <div className="navbar-brand m-0">
-                  <img src="assets/images/logo/1.png" alt="Logo" className="w-100" />
+                  <img
+                    src="https://shctpt.edu/assets/img/logo/logo.png"
+                    alt="Logo"
+                    className="w-100"
+                  />
                 </div>
               </div>
 
               <div className="col-lg-7 col-md-6">
-                <Navbar/>
-              </div>  
+                <Navbar />
+              </div>
 
-              <div className="col-lg-3">
+              {/* <div className="col-lg-3">
                 <div className="menu-search text-end">
                   <Search />
                   <Link to="/Booknow" className="btn btn3">
                     Buy Ticket <i className="fa fa-long-arrow-right ms-4"></i>
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </nav>
           <div id="slicknav-mobile"></div>
@@ -79,7 +91,9 @@ const Header = () => {
 
       {/* Search Overlay */}
       <div id="search1">
-        <button type="button" className="close">&times;</button>
+        <button type="button" className="close">
+          &times;
+        </button>
         <form>
           <input
             className="form-control form-control-lg rounded text-white"
