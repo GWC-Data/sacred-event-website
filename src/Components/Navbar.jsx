@@ -16,46 +16,20 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item">
-            <Link to="/About" className="nav-link px-2 my-4 py-0 text-white">
+            <Link to="/" className="nav-link px-2 my-4 py-0 text-white">
               About
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/About" className="nav-link px-2 my-4 py-0 text-white">
+            <Link to="/" className="nav-link px-2 my-4 py-0 text-white">
               Agenda
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/About" className="nav-link px-2 my-4 py-0 text-white">
+            <Link to="/" className="nav-link px-2 my-4 py-0 text-white">
               Alumni
             </Link>
           </li>
-          <div className="d-flex align-items-center">
-            <div className="d-flex ms-auto">
-              <Link
-                to="/BookPass"
-                className="btn btn-primary btn-sm mx-2"
-                style={{
-                  padding: "4px 10px",
-                  fontSize: "0.85rem",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Book your Pass
-              </Link>
-              <Link
-                to="/SecureStall"
-                className="btn btn-outline-light btn-sm mx-2"
-                style={{
-                  padding: "4px 10px",
-                  fontSize: "0.85rem",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Secure your Stall
-              </Link>
-            </div>
-          </div>
 
           {/* Dropdown example: use button for toggler */}
           {/* <li className="nav-item dropdown">
@@ -246,11 +220,11 @@ const Navbar = () => {
             </ul>
           </li> */}
 
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to="/Contact" className="nav-link px-2 my-4 py-0 text-white">
               Contact
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
