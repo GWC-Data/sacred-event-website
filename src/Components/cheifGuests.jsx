@@ -26,9 +26,9 @@ const ChiefGuestSection = () => {
       },
     },
     {
-      name: "M.Balasubramaniyam",
-      role: "CEO,Stratinfinity inc",
-      image: "/assets/images/cheifGuests/1.jpg",
+      name: "Ma Subramanian",
+      role: "Minister for Health and Family Welfare of Tamil Nadu",
+      image: "/assets/images/cheifGuests/2.jpg",
       socials: {
         facebook: "#",
         twitter: "#",
@@ -37,10 +37,9 @@ const ChiefGuestSection = () => {
       },
     },
     {
-      name: "Naveen Kumar",
-      role: "CEO & Founder, GWC Data.Ai",
-      image:
-        "https://media.licdn.com/dms/image/v2/C4D03AQEOZbLYAaWybA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653068198985?e=1756339200&v=beta&t=jp4QAQn2Og4FmiH8-URZug-TdQcDPFUtI9rrTipAlk4",
+      name: "Anbil Mahesh Poyyamozhi",
+      role: "Minister for School Education of Tamil Nadu",
+      image: "/assets/images/cheifGuests/3.jpg",
       socials: {
         facebook: "#",
         twitter: "#",
@@ -49,9 +48,9 @@ const ChiefGuestSection = () => {
       },
     },
     {
-      name: "M.Balasubramaniyam",
-      role: "CEO,Stratinfinity inc",
-      image: "/assets/images/cheifGuests/1.jpg",
+      name: "Mayilsamy Annadurai",
+      role: "Indian Aerospace Engineer and Former Director of ISRO",
+      image: "/assets/images/cheifGuests/4.jpg",
       socials: {
         facebook: "#",
         twitter: "#",
@@ -60,33 +59,9 @@ const ChiefGuestSection = () => {
       },
     },
     {
-      name: "Naveen Kumar",
-      role: "CEO & Founder, GWC Data.Ai",
-      image:
-        "https://media.licdn.com/dms/image/v2/C4D03AQEOZbLYAaWybA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653068198985?e=1756339200&v=beta&t=jp4QAQn2Og4FmiH8-URZug-TdQcDPFUtI9rrTipAlk4",
-      socials: {
-        facebook: "#",
-        twitter: "#",
-        google: "#",
-        instagram: "#",
-      },
-    },
-    {
-      name: "M.Balasubramaniyam",
-      role: "CEO,Stratinfinity inc",
-      image: "/assets/images/cheifGuests/1.jpg",
-      socials: {
-        facebook: "#",
-        twitter: "#",
-        google: "#",
-        instagram: "#",
-      },
-    },
-    {
-      name: "Naveen Kumar",
-      role: "CEO & Founder, GWC Data.Ai",
-      image:
-        "https://media.licdn.com/dms/image/v2/C4D03AQEOZbLYAaWybA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653068198985?e=1756339200&v=beta&t=jp4QAQn2Og4FmiH8-URZug-TdQcDPFUtI9rrTipAlk4",
+      name: "Viswanathan",
+      role: "Founder and Chancellor of Vellore Institute of Technology",
+      image: "/assets/images/cheifGuests/5.jpg",
       socials: {
         facebook: "#",
         twitter: "#",
@@ -106,7 +81,7 @@ const ChiefGuestSection = () => {
                 <div className="title-content text-lg-start mb-2">
                   <p className="mb-1 pink">Cheif Guest</p>
                   <h2 className="mb-1">
-                    MEET OUR <span className="pink">Cheif Guets</span>
+                    MEET OUR <span className="pink">Cheif Guests</span>
                   </h2>
                   <p className="m-0">
                     Our esteemed Chief Guests are trailblazers in their fields,
