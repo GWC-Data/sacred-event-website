@@ -5,7 +5,7 @@ const ChiefGuestSection = () => {
     {
       name: "M.Balasubramaniyam",
       role: "CEO,Stratinfinity inc",
-      image: "/assets/images/cheifGuests/1.jpg",
+      image: "/assets/images/cheifGuests/1.png",
       socials: {
         facebook: "#",
         twitter: "#",
