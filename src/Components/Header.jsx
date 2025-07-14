@@ -11,7 +11,7 @@ const Header = () => {
         <div className="container">
           <div className="header-content-inner py-2">
             <div className="row align-items-center">
-              <div className="col-lg-6">
+              <div className="col-lg-5">
                 <div className="social-links">
                   <ul className="m-0 p-0 d-flex gap-2">
                     {[
@@ -33,7 +33,7 @@ const Header = () => {
                 </div>
               </div>
 
-              <div className="col-lg-6">
+              <div className="col-lg-7">
                 <div className="header-event-info text-end">
                   <ul className="m-0 p-0">
                     <li className="px-2 border-end border-lightgrey border-opacity-50 d-inline">
@@ -42,7 +42,7 @@ const Header = () => {
                     </li>
                     <li className="px-2 border-end border-lightgrey border-opacity-50 d-inline">
                       <i className="fa fa-envelope-o pe-1"></i>
-                      <small>Sacredheart@website.com</small>
+                      <small>info@annamalai-foundation.com</small>
                     </li>
                     <li className="px-2 d-inline">
                       <i className="fa fa-clock-o pe-1"></i>
@@ -107,7 +107,7 @@ const Header = () => {
         <div className="container">
           <nav className="navbar navbar-expand-lg py-2 w-100">
             <div className="row w-100 align-items-center">
-              <div className="col-lg-2 col-md-6">
+              <div className="col-3 col-sm-5 col-md-5 col-lg-2">
                 <div className="navbar-brand m-0">
                   <img
                     src="https://shctpt.edu/assets/img/logo/logo.png"
@@ -117,23 +117,39 @@ const Header = () => {
                 </div>
               </div>
 
-              <div className="col-lg-7 col-md-6">
+              <div className="col-3 col-sm-1 col-md-1 col-lg-4">
                 <Navbar />
               </div>
 
-              <div className="col-lg-3">
+              <div className="col-3 col-sm-1 col-md-1 col-lg-4">
                 <span className="d-flex justify-content-end gap-2">
-                  <div className="menu-search" style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }}>
+                  <div
+                    className="menu-search"
+                    style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }}
+                  >
                     <Link to="/Booknow" className="btn btn3">
                       Book Your Pass <i className=""></i>
                     </Link>
                   </div>
-                  <div className="menu-search" style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }} >
+                  <div
+                    className="menu-search"
+                    style={{ fontSize: "0.8rem", whiteSpace: "nowrap" }}
+                  >
                     <Link to="/Booknow" className="btn btn3">
                       Secure Your Still <i className=" "></i>
                     </Link>
                   </div>
                 </span>
+              </div>
+              <div className="col-3 col-sm-5 col-md-5 col-lg-2 text-center">
+                <div className="navbar-brands m-0">
+                  <img
+                    src="/assets/images/logo/annamalai.png"
+                    alt="Logo"
+                    style={{ width: "42%" }}
+                    className="ms-4"
+                  />
+                </div>
               </div>
             </div>
           </nav>

@@ -22,6 +22,7 @@ import Productsingle from './Pages/Productsingle';
 import Testimonials from './Pages/Testimonials';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import Agenda from './Pages/Agenda';
 
 function App() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Agenda" element={<Agenda />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Ourgallery" element={<Ourgallery />} />
         <Route path="/Faq" element={<Faq />} />

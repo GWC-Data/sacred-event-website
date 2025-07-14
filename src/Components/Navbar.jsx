@@ -25,11 +25,11 @@ const Navbar = () => {
               Agenda
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to="/" className="nav-link px-2 my-4 py-0 text-white">
               Alumni
             </Link>
-          </li>
+          </li> */}
 
           {/* Dropdown example: use button for toggler */}
           {/* <li className="nav-item dropdown">

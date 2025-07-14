@@ -113,8 +113,20 @@
     color: #777 !important;
   }
 
+  .navbar-brand {
+    width: fit-content;
+  }
+
+  .navbar-brands{
+    width: fit-content;
+  }
+
   .navbar-brand img {
     width: 300% !important;
+  }
+
+  .navbar-brands img {
+    width: 170% !important;
   }
 
   .slicknav_nav a:hover,
@@ -180,6 +192,9 @@
   .navbar-brand img {
     width: 100% !important;
   }
+  .navbar-brands img {
+    width: 100% !important;
+  }
 
   .slicknav_btn.slicknav_open:before,
   .slicknav_btn.slicknav_collapsed:before {
@@ -190,6 +205,10 @@
 @media (max-width: 576px) {
   .navbar-brand img {
     width: 40% !important;
+    align-items: start;
+  }
+  .navbar-brands img {
+    width: 50% !important;
     align-items: start;
   }
 

@@ -5,7 +5,7 @@ const EventSchedules = () => {
   const schedulesData = {
     title: {
       subtitle: "OUR SCHEDULES",
-      mainTitle: "SCIENCE & TECHNOLOGY INNOVATION FEST 2025",
+      mainTitle: "SCIENCE & TECHNOLOGY AI INNOVATION AI FEST 2025",
       description:
         "Explore a day of innovation, inspiration, and collaboration at Sacred Heart College’s Platinum Jubilee Celebration. Join visionaries, creators, and industry leaders shaping the future of science and technology.",
     },

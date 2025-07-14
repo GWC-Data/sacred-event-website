@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
+// Scroll to top
+export const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -12,14 +20,6 @@ const BackToTop = () => {
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
-
-  // Scroll to top
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
 
   return (
     <button

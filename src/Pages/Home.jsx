@@ -43,11 +43,12 @@ function Home() {
                 <div className="banner-right ms-2 text-center text-lg-start pb-8">
                   <div className="banner-title pb-3">
                     <h4 className="text-white pb-3">
-                    <span className="pink"> PLATINUM JUBILEE </span>  <span className="">CELEBRATION</span>
+                      <span className="pink"> PLATINUM JUBILEE </span>{" "}
+                      <span className="">CELEBRATION</span>
                     </h4>
                     <h2 className="text-white">
                       SCIENCE & TECHNOLOGY{" "}
-                      <span className="pink">INNOVATION FEST 2025</span>
+                      <span className="pink">INNOVATION AI FEST 2025</span>
                     </h2>
                   </div>
                   <div className="banner-event-info pb-3">
@@ -63,44 +64,64 @@ function Home() {
                   </div>
                   <div className="event-discription">
                     <p className="pb-4 m-0">
-                      Discover cutting-edge innovations, connect with industry
-                      experts, and explore the future of technology at Sacred
-                      Heart College's 75th Jubilee celebration. Proudly powered
-                      by GWC DATA.AI and Annamalai Foundation, USA.
+                      Discover cutting-edge AI innovations, connect with
+                      industry experts, and explore the future of technology at
+                      Sacred Heart College's 75th Jubilee celebration. Proudly
+                      powered by GWC DATA.AI
                     </p>
 
                     {/* Powered By Logos */}
-                    <div className="powered-by d-flex align-items-center mt-3 gap-3 flex-wrap">
-                      <h4>
-                        <span className="text-white fw-semibold">
-                          Powered by:
-                        </span>
-                      </h4>
-                      <div
-                        className="bg-white p-2 rounded d-inline-flex align-items-center"
-                        style={{ height: "50px" }}
-                      >
-                        <img
-                          src="https://gwcdata.ai/assets/Logo-zBt8xU73.svg"
-                          alt="GWC DATA.AI Logo"
-                          className="powered-logo"
-                          style={{ height: "100%", objectFit: "contain" }}
-                        />
+                    <div className="col-span-12 d-flex">
+                      <div className="powered-by p-2 d-flex align-items-center mt-3 gap-3 col-span-6 w-50">
+                        <h4>
+                          <span className="text-white fw-semibold">
+                            Powered by:
+                          </span>
+                        </h4>
+                        <div
+                          className="bg-white p-2 rounded d-inline-flex align-items-center"
+                          style={{ height: "50px" }}
+                        >
+                          <img
+                            src="https://gwcdata.ai/assets/Logo-zBt8xU73.svg"
+                            alt="GWC DATA.AI Logo"
+                            className="powered-logo"
+                            style={{ height: "100%", objectFit: "contain" }}
+                          />
+                        </div>
+                      </div>
+                      <div className="powered-by p-2 d-flex align-items-center mt-3 gap-3 col-span-6 w-50">
+                        <h4>
+                          <span className="text-white fw-semibold">
+                            Association With:
+                          </span>
+                        </h4>
+                        <div
+                          className="bg-white p-2 rounded d-inline-flex align-items-center"
+                          style={{ height: "50px" }}
+                        >
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwwJFUz91ATiDWH8DT3NcDt3uZ_tOXZwR5w&s"
+                            alt="GWC DATA.AI Logo"
+                            className="powered-logo"
+                            style={{ height: "100%", objectFit: "contain" }}
+                          />
+                        </div>
                       </div>
                     </div>
 
                     <div className="banner-button mt-4">
-                      <div className="row">
-                        <div className="col-lg-6 col-md-6">
-                          <Link to="/" className="btn me-3 my-1 w-100">
+                      <div className="row text-center">
+                        <div className="col-lg-12 col-md-12">
+                          <Link to="/" className="btn me-3 my-1 w-50">
                             REGISTER NOW
                           </Link>
                         </div>
                         {/* <div className="col-lg-6 col-md-6">
-        <Link to="/Schedule" className="btn btn2 my-1 w-100">
-          VIEW SCHEDULE
-        </Link>
-      </div> */}
+                          <Link to="/Schedule" className="btn btn2 my-1 w-100">
+                            VIEW SCHEDULE
+                          </Link>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -141,21 +162,23 @@ function Home() {
                   <div className="overview-title pb-4">
                     <p className="mb-1 pink">OVERVIEW</p>
                     <h2 className="mb-2">
-                      CELEBRATING 75 YEARS OF{" "}
+                      CELEBRATING 75 YEARS OF
+                      <br />
                       <span className="pink">IMPACT & INNOVATION</span>
                     </h2>
                     <p>
-                      Join us for the{" "}
-                      <strong>Science & Technology Innovation Fest 2025</strong>
-                      , as Sacred Heart College, Tirupattur, celebrates its
-                      Platinum Jubilee. This milestone event will showcase
-                      groundbreaking innovations, foster industry-academia
-                      collaboration, and empower minds for a transformative
-                      future.
+                      Join us for the <strong>Innovation AI Fest 2025</strong>,
+                      as Sacred Heart College, Tirupattur, celebrates its
+                      Platinum Jubilee. Jointly organized by{" "}
+                      <strong>Sacred Heart College (Autonomous)</strong> and{" "}
+                      <strong>Annamalai Foundation</strong>. This milestone
+                      event will showcase groundbreaking innovations, foster
+                      industry-academia collaboration, and empower minds for a
+                      transformative future.
                     </p>
                     <p className="mb-2">
-                      Powered by <strong>GWC DATA.AI</strong> and presented by{" "}
-                      <strong>Annamalai Foundation, USA</strong>, the fest
+                      Powered by <strong>GWC DATA.AI</strong> and associated by{" "}
+                      <strong>Vellore Institute of Technology</strong>, the fest
                       brings together experts, students, and pioneers in science
                       and technology.
                     </p>
@@ -240,154 +263,594 @@ function Home() {
         </div>
       </section>
 
+      <section className="conference">
+        <div className="container">
+          <div className="conference-inner text-center">
+            <div className="row gx-lg-5 align-items-center">
+              <div className="col-lg-6 order-2 order-lg-1">
+                <div className="conference-left ">
+                  <div className="row align-items-center">
+                    <div className="col-lg-6 col-md-6 px-2 pt-2">
+                      <div className="event-benifit-list-left mb-4">
+                        <div className="benifit-list-box py-7 px-4 rounded mb-4 box-shadow bg-white">
+                          <div className="list-box-icon">
+                            <i
+                              className="fa fa-university pink mb-3"
+                              aria-hidden="true"
+                            ></i>
+                          </div>
+                          <div className="list-box-body">
+                            <h5 className="mb-2">A Historic Milestone</h5>
+                            <p className="mb-2 w-75 m-auto">
+                              We proudly welcome you to this Platinum Jubilee
+                              celebration, honoring 75 years of academic
+                              excellence, leadership, and societal contribution.
+                            </p>
+                            {/* <div className="box-btn">
+                              <Link to="/Eventdetail" className="p-0 pink">
+                                Learn More
+                                <i className="fa fa-long-arrow-right ms-2"></i>
+                              </Link>
+                            </div> */}
+                          </div>
+                        </div>
+                        <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
+                          <div className="list-box-icon">
+                            <i
+                              className="fa fa-lightbulb-o pink mb-3"
+                              aria-hidden="true"
+                            ></i>
+                          </div>
+                          <div className="list-box-body">
+                            <h5 className="mb-2">Theme and Vision</h5>
+                            <p className="mb-2 w-75 m-auto">
+                              With the theme "Igniting Young Minds," the fest
+                              unites students, researchers, and experts to
+                              inspire innovation and future-focused
+                              collaboration.
+                            </p>
+                            {/* <div className="box-btn">
+                              <Link to="/Eventdetail" className="p-0 pink">
+                                Learn More
+                                <i className="fa fa-long-arrow-right ms-2"></i>
+                              </Link>
+                            </div> */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 px-2">
+                      <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
+                        <div className="list-box-icon">
+                          <i
+                            className="fa fa-users pink mb-3"
+                            aria-hidden="true"
+                          ></i>
+                        </div>
+                        <div className="list-box-body">
+                          <h5 className="mb-2">A Call to Collaborate</h5>
+                          <p className="mb-2 w-75 m-auto">
+                            This event bridges academia and industry,
+                            encouraging global partnerships to shape a
+                            sustainable, inclusive, and knowledge-driven future
+                            together.
+                          </p>
+                          {/* <div className="box-btn">
+                            <Link to="/Eventdetail" className="p-0 pink">
+                              Learn More
+                              <i className="fa fa-long-arrow-right ms-2"></i>
+                            </Link>
+                          </div> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6 order-1 order-lg-2">
+                <div className="event-benifit-list-right text-lg-start">
+                  <div className="overview-title pb-6">
+                    <p className="mb-1 pink">WHY ATTEND </p>
+                    <h2 className="mb-2">
+                      What you’ll discover at{" "}
+                      <span className="pink">Event</span>
+                    </h2>
+                  </div>
+                  <div className="overview-info">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        ✔️ 150+ organizations, 50+ keynote speakers and global
+                        experts
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ 15,000+ students expected from across Tamil Nadu
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ 50+ stalls showcasing emerging tech, AI, and startups
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ Workshops, hackathons, research paper presentations,
+                        and product showcases
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ Campus placement drives and career guidance sessions
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ A melting pot of academia, industry, and
+                        innovation—where future-ready students meet
+                        forward-looking industries for mutual growth
+                      </li>
+                    </ul>
+                    <div className="overview-btn mt-4">
+                      <Link
+                        // to="/Eventdetail"
+                        className="btn"
+                      >
+                        Join Event
+                        <i className="fa fa-long-arrow-right ms-4"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/*--Overview Section end--*/}
 
       {/*--Features Section start--*/}
-      <section className="feature text-white position-relative z-0 start-0">
-        <div className="overlay z-n1"></div>
-        <div className="container">
+      <section className="feature text-white position-relative z-0 start-0 py-6">
+        <div className="overlay z-n1 text-center"></div>
+        <div className="my-3 text-center">
+          <h2 className="text-white">ONE DAY. ONE LEGACY.</h2>
+          <h2>ONE Vision For the Future.</h2>
+        </div>
+        <div className="container mt-6">
           <div className="feature-inner">
             <div className="counter text-center border-bottom border-white border-opacity-25">
               <div className="inner-counter mb-7">
                 <div className="row">
-                  <div className="col-lg-3 col-md-3 p-2">
+                  {/* <div className="col-lg-3 col-md-3 p-2">
                     <div className="counter-box p-2 border-end border-white border-opacity-25">
                       <CountUpBox end={75} label="Years of Excellence" />
                     </div>
-                  </div>
+                  </div> */}
                   <div className="col-lg-3 col-md-3 p-2">
                     <div className="counter-box p-2 border-end border-white border-opacity-25">
-                      <CountUpBox end={200} label="Innovations Showcased" />
+                      <CountUpBox end={15000} label="Attendees" />
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-3 p-2">
                     <div className="counter-box p-2 border-end border-white border-opacity-25">
-                      <CountUpBox end={50} label="Expert Speakers" />
+                      <CountUpBox end={50} label="Speakers" />
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-3 p-2">
+                    <div className="counter-box p-2 border-end border-white border-opacity-25">
+                      <CountUpBox end={150} label="Organizations" />
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-3 p-2">
                     <div className="counter-box p-2 border-opacity-25">
-                      <CountUpBox end={3000} label="Participants" />
+                      <CountUpBox end={50} label="Exhibitors" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* <div className="feature-lists pt-8">
+            <div className="feature-lists pt-8">
+              <h2 className="text-center text-white">Tracks at Innovate 25</h2>
               <div className="row g-4">
                 <div className="col-lg-4 col-md-6">
                   <div className="feature-box py-7 px-6 rounded text bg-black bg-opacity-25">
-                    <a>
-                      <div className="feature-box-icon mb-4">
-                        <i className="fa fa-address-book-o text-white bg-pink rounded-circle text-center"></i>
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">TECH TALKS</h5>
                       </div>
-                      <div className="feature-box-info ">
-                        <h5 className="text-white mb-2">LIVE STREAMING</h5>
-                        <small>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore.
-                        </small>
+                      <div className="feature-box-icon mb-4 col-span-6">
+                        <i className="fa fa-arrow-down text-white bg-pink rounded-circle text-center"></i>
                       </div>
                     </a>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
                   <div className="feature-box py-7 px-6 rounded  bg-black bg-opacity-25">
-                    <a>
-                      <div className="feature-box-icon mb-4">
-                        <i className="fa fa-comments text-white bg-pink rounded-circle text-center"></i>
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">HACKATHON</h5>
                       </div>
-                      <div className="feature-box-info">
-                        <h5 className="text-white mb-2">FIRESIDE CHATS</h5>
-                        <small>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore.
-                        </small>
+                      <div className="feature-box-icon mb-4 col-span-6">
+                        <i className="fa fa-arrow-down text-white bg-pink rounded-circle text-center"></i>
                       </div>
                     </a>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
                   <div className="feature-box py-7 px-6 rounded bg-black bg-opacity-25">
-                    <a>
-                      <div className="feature-box-icon mb-4">
-                        <i className="fa fa-desktop text-white bg-pink rounded-circle text-center"></i>
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">STARTUP PITCH</h5>
                       </div>
-                      <div className="feature-box-info">
-                        <h5 className="text-white mb-2">NETWORKING</h5>
-                        <small>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore.
-                        </small>
+                      <div className="feature-box-icon mb-4 col-span-6">
+                        <i className="fa fa-arrow-down text-white bg-pink rounded-circle text-center"></i>
                       </div>
                     </a>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
                   <div className="feature-box py-7 px-6 rounded bg-black bg-opacity-25">
-                    <a>
-                      <div className="feature-box-icon mb-4">
-                        <i className="fa fa-cogs text-white bg-pink rounded-circle text-center"></i>
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">EXPO</h5>
                       </div>
-                      <div className="feature-box-info">
-                        <h5 className="text-white mb-2">HIGH VALUE LEARNING</h5>
-                        <small>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore.
-                        </small>
+                      <div className="feature-box-icon mb-4 col-span-6">
+                        <i className="fa fa-arrow-down text-white bg-pink rounded-circle text-center"></i>
                       </div>
                     </a>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
                   <div className="feature-box py-7 px-6 rounded bg-black bg-opacity-25">
-                    <a>
-                      <div className="feature-box-icon mb-4">
-                        <i className="fa fa-gift text-white bg-pink rounded-circle text-center"></i>
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">NETWORK LUNCH</h5>
                       </div>
-                      <div className="feature-box-info">
-                        <h5 className="text-white mb-2">EXICITING GIVEAWAYS</h5>
-                        <small>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore.
-                        </small>
+                      <div className="feature-box-icon mb-4 col-span-6">
+                        <i className="fa fa-arrow-down text-white bg-pink rounded-circle text-center"></i>
                       </div>
                     </a>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
                   <div className="feature-box py-7 px-6 rounded bg-black bg-opacity-25">
-                    <a>
-                      <div className="feature-box-icon mb-4">
-                        <i className="fa fa-graduation-cap text-white bg-pink rounded-circle text-center"></i>
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">ALUMNI CONNECT</h5>
                       </div>
-                      <div className="feature-box-info">
-                        <h5 className="text-white mb-2">1-ON-1 SESSIONS</h5>
-                        <small>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore.
-                        </small>
+                      <div className="feature-box-icon mb-4 col-span-6">
+                        <i className="fa fa-arrow-down text-white bg-pink rounded-circle text-center"></i>
                       </div>
                     </a>
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
       {/*--Features Section end--*/}
 
+      <section className="conference">
+        <div className="container">
+          <div className="conference-inner text-center">
+            <div className="row gx-lg-5 align-items-center">
+              <div className="col-lg-6 order-2 order-lg-1">
+                <div className="conference-left ">
+                  <div className="row align-items-center">
+                    <div className="col-lg-6 col-md-6 px-2 pt-2">
+                      <div className="event-benifit-list-left mb-4">
+                        <div className="benifit-list-box py-7 px-4 rounded mb-4 box-shadow bg-white">
+                          {/* <div className="list-box-icon">
+                            <i
+                              className="fa fa-users pink mb-3"
+                              aria-hidden="true"
+                            ></i>
+                          </div> */}
+                          <div className="list-box-body">
+                            {/* <h5 className="mb-2">Event Conference</h5> */}
+                            <h6 className="mb-2 w-75 m-auto">
+                              <small>-</small>Partnerships with U.S.
+                              universities, Sessions with ISRO and NASA
+                              scientists, Industrial Specialists, SME's
+                            </h6>
+                            <div className="box-btn">
+                              {/* <Link to="/Eventdetail" className="p-0 pink">
+                                Learn More
+                                <i className="fa fa-long-arrow-right ms-2"></i>
+                              </Link> */}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
+                          {/* <div className="list-box-icon">
+                            <i
+                              className="fa fa-globe pink mb-3"
+                              aria-hidden="true"
+                            ></i>
+                          </div> */}
+                          <div className="list-box-body">
+                            {/* <h5 className="mb-2">Culture Leadership</h5> */}
+                            <h6 className="mb-2 w-75 m-auto">
+                              <small>-</small>Career mentoring from global
+                              experts
+                            </h6>
+                            <div className="box-btn">
+                              {/* <Link to="/Eventdetail" className="p-0 pink">
+                                Learn More
+                                <i className="fa fa-long-arrow-right ms-2"></i>
+                              </Link> */}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 px-2">
+                      <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
+                        {/* <div className="list-box-icon">
+                          <i
+                            className="fa fa-bar-chart pink mb-3"
+                            aria-hidden="true"
+                          ></i>
+                        </div> */}
+                        <div className="list-box-body">
+                          {/* <h5 className="mb-2">Digital Marketing</h5> */}
+                          <h6 className="mb-2 w-75 m-auto">
+                            <small>-</small>STEM labs and incubation centers and
+                            ISRO outreach for rural students
+                          </h6>
+                          <div className="box-btn">
+                            {/* <Link to="/Eventdetail" className="p-0 pink">
+                              Learn More
+                              <i className="fa fa-long-arrow-right ms-2"></i>
+                            </Link> */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6 order-1 order-lg-2">
+                <div className="event-benifit-list-right text-lg-start">
+                  <div className="overview-title pb-6">
+                    <p className="mb-1">ABOUT</p>
+                    <h2 className="mb-2">
+                      <span className="pink">
+                        Annamalai Foundation USA & Annamalai Trust, India
+                      </span>
+                    </h2>
+                  </div>
+                  <div className="overview-info">
+                    <p>
+                      Annamalai Foundation is a global nonprofit dedicated to
+                      uplifting talented students—particularly from government
+                      schools in India—through access to STEM education,
+                      international academic collaborations, mentorship, and
+                      innovation-driven programs.
+                    </p>
+                    {/* <div className="overview-btn mt-4">
+                                <Link to="/Eventdetail" className="btn">Join Event<i className="fa fa-long-arrow-right ms-4"></i></Link>
+                            </div>       */}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/*--Conference Section end--*/}
+
+      <section className="next-sponser position-relative">
+        <div className="overlay"></div>
+        <div className="container">
+          <div className="next-sponser-inner w-lg-80 w-md-95 mx-auto text-center position-relative text-white">
+            <div className="next-sponser-title">
+              <h5 className="text-white mb-1">WHY?</h5>
+            </div>
+            <div className="next-sponser-info mt-8">
+              <div className="row g-4">
+                <div className="col-lg-6 d-flex">
+                  <div className="feature-box py-7 px-6 rounded text bg-black bg-opacity-25">
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">
+                          Why Sacred Heart College?
+                        </h5>
+                        <p>
+                          Ranked 47th by NIRF among 40,000+ institutions in
+                          India, Sacred Heart College is home to 5,000+
+                          students, of which over 48% are first-generation
+                          graduates. With 17 undergraduate and 15 postgraduate
+                          programs, the college stands as a model of academic
+                          equity and excellence.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div className="col-lg-6 d-flex">
+                  <div className="feature-box py-7 px-6 rounded  bg-black bg-opacity-25">
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">Why Tirupattur?</h5>
+                        <p>
+                          Tirupattur, a rapidly growing Tier-4 city surrounded
+                          by 150+ villages, holds immense untapped potential.
+                          Many students here are first-generation learners with
+                          exceptional talent. This Fest aims to provide them
+                          exposure to cutting-edge science, technology, and
+                          career possibilities
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/*--Ticketbook Section start--*/}
+      {/* <section className="feature text-white position-relative z-0 start-0 py-6">
+        <div className="overlay z-n1 text-center"></div>
+        <div className="container mt-6">
+          <div className="feature-inner">
+            <div className="feature-lists">
+              <h2 className="text-center text-white pb-4">WHY?</h2>
+              <div className="row g-4">
+                <div className="col-lg-6">
+                  <div className="feature-box py-7 px-6 rounded text bg-black bg-opacity-25">
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">
+                          Why Sacred Heart College?
+                        </h5>
+                        <p>
+                          Ranked 47th by NIRF among 40,000+ institutions in
+                          India, Sacred Heart College is home to 5,000+
+                          students, of which over 48% are first-generation
+                          graduates. With 17 undergraduate and 15 postgraduate
+                          programs, the college stands as a model of academic
+                          equity and excellence.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="feature-box py-7 px-6 rounded  bg-black bg-opacity-25">
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">Why Tirupattur?</h5>
+                        <p>
+                          Tirupattur, a rapidly growing Tier-4 city surrounded
+                          by 150+ villages, holds immense untapped potential.
+                          Many students here are first-generation learners with
+                          exceptional talent. This Fest aims to provide them
+                          exposure to cutting-edge science, technology, and
+                          career possibilities
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
       {/*--Cheif Guests Section start--*/}
       <CheifGuestSection />
       {/*--Cheif Guests Section end--*/}
+
+      <section className="feature text-white position-relative z-0 start-0 py-6 my-8">
+        <div className="overlay z-n1 text-center"></div>
+        <div className="container mt-6">
+          <div className="feature-inner">
+            <div className="feature-lists">
+              <h2 className="text-center text-white pb-4">
+                Why Should you Attend?
+              </h2>
+              <div className="row g-4">
+                {/* Column 1 */}
+                <div className="col-lg-4 d-flex ">
+                  <div className="feature-box py-5 px-4 rounded bg-black bg-opacity-25 w-100 h-100">
+                    <div className="feature-box-info">
+                      <h5 className="text-white mb-3">Students</h5>
+                      <ul className="list-unstyled text-white">
+                        <li className="mt-2 ms-4">
+                          -Celebrate your institution’s Platinum Jubilee with
+                          pride and participation
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Join hands-on workshops on AI, Robotics, and Emerging
+                          Tech
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Present your projects and ideas to gain recognition
+                          and feedback
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Compete in hackathons and science competitions
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Connect with industry experts for internships and
+                          career insights
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Enjoy cultural events and meet like-minded peers from
+                          other institutions
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Column 2 */}
+                <div className="col-lg-4 d-flex">
+                  <div className="feature-box py-5 px-4 rounded bg-black bg-opacity-25 w-100 h-100">
+                    <div className="feature-box-info">
+                      <h5 className="text-white mb-3">
+                        Industry Professionals & Alumni
+                      </h5>
+                      <ul className="list-unstyled text-white">
+                        <li className="mt-2 ms-4">
+                          -Discover student-led innovations and talent ready for
+                          industry engagement
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Participate in talks, panels, and fireside chats to
+                          share insights and stories
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Build connections with educators, researchers, and
+                          fellow alumni
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Contribute to Sacred Heart’s legacy by supporting or
+                          sponsoring impactful segments
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Relive memories and celebrate the 75-year journey of
+                          your alma mater
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Column 3 */}
+                <div className="col-lg-4 d-flex">
+                  <div className="feature-box py-5 px-4 rounded bg-black bg-opacity-25 w-100 h-100">
+                    <div className="feature-box-info">
+                      <h5 className="text-white mb-3">
+                        Educators & Researchers
+                      </h5>
+                      <ul className="list-unstyled text-white">
+                        <li className="mt-2 ms-4">
+                          -Attend keynotes and panel discussions from national
+                          and international thought leaders
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Inspire young minds through mentorship and guidance
+                          opportunities
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Engage in faculty-industry roundtables on research,
+                          NEP 2020, and innovation
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Explore collaborations for interdisciplinary research
+                          and funding
+                        </li>
+                        <li className="mt-2 ms-4">
+                          -Nominate and showcase your department’s innovations
+                          on a prestigious platform
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/*--Speakers Section Start--*/}
       <section className="speakers">
@@ -547,7 +1010,7 @@ function Home() {
               <h1 className="text-white mb-2">
                 PLATINUM JUBILEE CELEBRATION{" "}
                 <span className="pink">
-                  SCIENCE & TECHNOLOGY INNOVATION FEST 2025
+                  SCIENCE & TECHNOLOGY INNOVATION AI FEST 2025
                 </span>
               </h1>
             </div>
@@ -1112,7 +1575,7 @@ function Home() {
             <p className="mb-1 pink">GUEST EXPERIENCES</p>
             <h2 className="mb-1">
               WHAT PEOPLE SAY ABOUT{" "}
-              <span className="pink">SHC INNOVATION FEST</span>
+              <span className="pink">SHC INNOVATION AI FEST</span>
             </h2>
             <p className="m-0">
               Hear from distinguished guests, participants, and innovators who
@@ -1169,9 +1632,9 @@ function Home() {
                           data-bs-parent="#accordionFlushExample"
                         >
                           <div className="accordion-body bg-lightgrey p-6">
-                            The Science & Technology Innovation Fest 2025 is the
-                            core event, celebrating innovation under the theme
-                            "Empowering Minds & Transforming Lives".
+                            The Science & Technology Innovation AI Fest 2025 is
+                            the core event, celebrating innovation under the
+                            theme "Empowering Minds & Transforming Lives".
                           </div>
                         </div>
                       </div>

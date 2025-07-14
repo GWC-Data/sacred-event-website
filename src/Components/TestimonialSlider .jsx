@@ -8,7 +8,7 @@ const testimonials = [
     name: 'Dr. Meena Suresh',
     role: 'Professor, Computer Science',
     image: 'https://ui-avatars.com/api/?name=Meena+Suresh&background=random&size=300',
-    text: 'The Innovation Fest at Sacred Heart College was a brilliant convergence of young minds and technology leaders. It was inspiring to see students present such impactful ideas.'
+    text: 'The Innovation AI Fest at Sacred Heart College was a brilliant convergence of young minds and technology leaders. It was inspiring to see students present such impactful ideas.'
   },
   {
     name: 'Arun Prakash',

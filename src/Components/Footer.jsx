@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BackToTop from "../Components/Backtotop";
+import BackToTop, { scrollToTop } from "../Components/Backtotop";
 import SubscribeForm from "./SubscribeForm";
 
 function Footer() {
@@ -40,7 +40,9 @@ function Footer() {
         <div className="container">
           <div className="footer-content w-lg-50 m-auto">
             <div className="footer-logo mb-4 pt-1">
-              <a href="index.html">
+              <a
+                onClick={scrollToTop}
+              >
                 <img
                   src="https://shctpt.edu/assets/img/logo/logo.png"
                   className="w-50"

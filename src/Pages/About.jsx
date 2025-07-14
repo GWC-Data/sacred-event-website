@@ -1,16 +1,16 @@
-import React from 'react'
-import Breadcrumb from '../Components/Breadcrumb'
-import { Link } from 'react-router-dom'
-import Pagehelmet from '../Components/Pagehelmet'
+import React from "react";
+import Breadcrumb from "../Components/Breadcrumb";
+import { Link } from "react-router-dom";
+import Pagehelmet from "../Components/Pagehelmet";
 
 function About() {
   return (
     <div>
-        <Pagehelmet pageTitle="About Us" />
-        <Breadcrumb title="About Us" />
+      <Pagehelmet pageTitle="About Us" />
+      <Breadcrumb title="About Us" />
 
-        {/*--Overview Section start--*/}
-        <section className="overview pb-0">
+      {/*--Overview Section start--*/}
+      {/* <section className="overview pb-0">
             <div className="container">
             <div className="inner-overview pb-10 position-relative border-dashed-bottom-2">
                 <div className="row">
@@ -81,215 +81,321 @@ function About() {
                 </div>
             </div>
             </div>
-        </section>
-        {/*--Overview Section end--*/}
+        </section> */}
+      {/*--Overview Section end--*/}
 
-        {/*--Conference Section Start--*/}
-        <section className="conference">
-            <div className="container">
-                <div className="conference-inner text-center">
-                <div className="row gx-lg-5 align-items-center">
-                    <div className="col-lg-6 order-2 order-lg-1">
-                    <div className="conference-left ">
-                        <div className="row align-items-center">
-                        <div className="col-lg-6 col-md-6 px-2 pt-2">
-                            <div className="event-benifit-list-left mb-4">
-                            <div className="benifit-list-box py-7 px-4 rounded mb-4 box-shadow bg-white">
-                                <div className="list-box-icon">
-                                    <i className="fa fa-users pink mb-3" aria-hidden="true"></i>
-                                </div> 
-                                <div className="list-box-body">
-                                    <h5 className="mb-2">Event Conference</h5>
-                                    <p className="mb-2 w-75 m-auto">Duis aute irure dolor in reprehenderit</p>
-                                    <div className="box-btn">
-                                        <Link to="/Eventdetail" className="p-0 pink">Learn More<i className="fa fa-long-arrow-right ms-2"></i></Link>
-                                    </div>  
-                                </div>  
+      {/*--Conference Section Start--*/}
+      <section className="conference">
+        <div className="container">
+          <div className="conference-inner text-center">
+            <div className="row gx-lg-5 align-items-center">
+              <div className="col-lg-6 order-2 order-lg-1">
+                <div className="conference-left ">
+                  <div className="row align-items-center">
+                    <div className="col-lg-6 col-md-6 px-2 pt-2">
+                      <div className="event-benifit-list-left mb-4">
+                        <div className="benifit-list-box py-7 px-4 rounded mb-4 box-shadow bg-white">
+                          {/* <div className="list-box-icon">
+                            <i
+                              className="fa fa-users pink mb-3"
+                              aria-hidden="true"
+                            ></i>
+                          </div> */}
+                          <div className="list-box-body">
+                            {/* <h5 className="mb-2">Event Conference</h5> */}
+                            <h6 className="mb-2 w-75 m-auto">
+                              <small>-</small>Partnerships with U.S.
+                              universities, Sessions with ISRO and NASA
+                              scientists, Industrial Specialists, SME's
+                            </h6>
+                            <div className="box-btn">
+                              {/* <Link to="/Eventdetail" className="p-0 pink">
+                                Learn More
+                                <i className="fa fa-long-arrow-right ms-2"></i>
+                              </Link> */}
                             </div>
-                            <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
-                                <div className="list-box-icon">
-                                    <i className="fa fa-globe pink mb-3" aria-hidden="true"></i>
-                                </div> 
-                                <div className="list-box-body">
-                                    <h5 className="mb-2">Culture Leadership</h5>
-                                    <p className="mb-2 w-75 m-auto">Duis aute irure dolor in reprehenderit</p>
-                                    <div className="box-btn">
-                                        <Link to="/Eventdetail" className="p-0 pink">Learn More<i className="fa fa-long-arrow-right ms-2"></i></Link>
-                                    </div>  
-                                </div>  
-                            </div>
-                            </div>
+                          </div>
                         </div>
-                        <div className="col-lg-6 col-md-6 px-2">
-                            <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
-                                <div className="list-box-icon">
-                                    <i className="fa fa-bar-chart pink mb-3" aria-hidden="true"></i>
-                                </div> 
-                                <div className="list-box-body">
-                                    <h5 className="mb-2">Digital Marketing</h5>
-                                    <p className="mb-2 w-75 m-auto">Duis aute irure dolor in reprehenderit</p>
-                                    <div className="box-btn">
-                                    <Link to="/Eventdetail" className="p-0 pink">Learn More<i className="fa fa-long-arrow-right ms-2"></i></Link>
-                                </div>  
-                            </div>  
+                        <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
+                          {/* <div className="list-box-icon">
+                            <i
+                              className="fa fa-globe pink mb-3"
+                              aria-hidden="true"
+                            ></i>
+                          </div> */}
+                          <div className="list-box-body">
+                            {/* <h5 className="mb-2">Culture Leadership</h5> */}
+                            <h6 className="mb-2 w-75 m-auto">
+                              <small>-</small>Career mentoring from global
+                              experts
+                            </h6>
+                            <div className="box-btn">
+                              {/* <Link to="/Eventdetail" className="p-0 pink">
+                                Learn More
+                                <i className="fa fa-long-arrow-right ms-2"></i>
+                              </Link> */}
                             </div>
+                          </div>
                         </div>
-                        </div>
+                      </div>
                     </div>
+                    <div className="col-lg-6 col-md-6 px-2">
+                      <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
+                        {/* <div className="list-box-icon">
+                          <i
+                            className="fa fa-bar-chart pink mb-3"
+                            aria-hidden="true"
+                          ></i>
+                        </div> */}
+                        <div className="list-box-body">
+                          {/* <h5 className="mb-2">Digital Marketing</h5> */}
+                          <h6 className="mb-2 w-75 m-auto">
+                            <small>-</small>STEM labs and incubation centers and
+                            ISRO outreach for rural students
+                          </h6>
+                          <div className="box-btn">
+                            {/* <Link to="/Eventdetail" className="p-0 pink">
+                              Learn More
+                              <i className="fa fa-long-arrow-right ms-2"></i>
+                            </Link> */}
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="col-lg-6 order-1 order-lg-2">
-                    <div className="event-benifit-list-right text-lg-start">
-                        <div className="overview-title pb-6">
-                            <p className="mb-1 pink">WHY ATTEND CONFERENCE</p>
-                            <h2 className="mb-2">What you’ll discover at <span className="pink">Events</span></h2>
-                            </div>
-                            <div className="overview-info">  
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <p className="mb-0">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <div className="overview-btn mt-4">
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6 order-1 order-lg-2">
+                <div className="event-benifit-list-right text-lg-start">
+                  <div className="overview-title pb-6">
+                    <p className="mb-1">ABOUT</p>
+                    <h2 className="mb-2">
+                      <span className="pink">
+                        Annamalai Foundation USA & Annamalai Trust, India
+                      </span>
+                    </h2>
+                  </div>
+                  <div className="overview-info">
+                    <p>
+                      Annamalai Foundation is a global nonprofit dedicated to
+                      uplifting talented students—particularly from government
+                      schools in India—through access to STEM education,
+                      international academic collaborations, mentorship, and
+                      innovation-driven programs.
+                    </p>
+                    {/* <div className="overview-btn mt-4">
                                 <Link to="/Eventdetail" className="btn">Join Event<i className="fa fa-long-arrow-right ms-4"></i></Link>
-                            </div>      
-                        </div> 
-                    </div>  
-                    </div>
+                            </div>       */}
+                  </div>
                 </div>
-                </div>
+              </div>
             </div>
-        </section>
-        {/*--Conference Section end--*/}
+          </div>
+        </div>
+      </section>
+      {/*--Conference Section end--*/}
 
-        {/*--Speakers Section Start--*/}
-        <section className="speakers pt-0">
-            <div className="container">
-            <div className="speaker-inner">
-                <div className="speaker-title text-center p-2">
-                <div className="row align-items-center ">
-                    <div className="col-lg-6">
-                    <div className="title-content  text-lg-start mb-2">
-                        <p className="mb-1 pink">EVENT SPEAKERS</p>
-                        <h2 className="mb-1">MEET OUR <span className="pink">SPEAKERS</span></h2>
-                        <p className="m-0">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</p>
-                    </div>
-                    </div>
-                    <div className="col-lg-6">
-                    <div className="speaker-button text-lg-end">
-                        <Link to="/Speakerlists" className="btn">VIEW MORE SPEAKERS</Link>
-                    </div>
-                    </div>
+      {/*--Ticketbook Section start--*/}
+      <section className="feature text-white position-relative z-0 start-0 py-6">
+        <div className="overlay z-n1 text-center"></div>
+        <div className="container mt-6">
+          <div className="feature-inner">
+            <div className="feature-lists">
+              <h2 className="text-center text-white pb-4">WHY?</h2>
+              <div className="row g-4">
+                <div className="col-lg-6">
+                  <div className="feature-box py-7 px-6 rounded text bg-black bg-opacity-25">
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">
+                          Why Sacred Heart College?
+                        </h5>
+                        <p>
+                          Ranked 47th by NIRF among 40,000+ institutions in
+                          India, Sacred Heart College is home to 5,000+
+                          students, of which over 48% are first-generation
+                          graduates. With 17 undergraduate and 15 postgraduate
+                          programs, the college stands as a model of academic
+                          equity and excellence.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
+                <div className="col-lg-6">
+                  <div className="feature-box py-7 px-6 rounded  bg-black bg-opacity-25">
+                    <a className="d-flex col-span-12 justify-content-between align-items-center">
+                      <div className="feature-box-info col-span-6">
+                        <h5 className="text-white mb-2">Why Tirupattur?</h5>
+                        <p>
+                          Tirupattur, a rapidly growing Tier-4 city surrounded
+                          by 150+ villages, holds immense untapped potential.
+                          Many students here are first-generation learners with
+                          exceptional talent. This Fest aims to provide them
+                          exposure to cutting-edge science, technology, and
+                          career possibilities
+                        </p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <div className="sepaker-list text-center text-white">
-                <div className="row">
-                    <div className=" col-lg-3 col-md-6 p-2">
-                    <div className="speaker-box  position-relative overflow-hidden text-white">
-                        <img className="speaker-image rounded w-100" src="assets/images/speakers/1.jpg" alt="speaker-image"/>
-                        <div className="box-content position-absolute bottom-0 z-1">
-                            <h6 className="speaker-title d-block text-white pb-1"><Link to="/Speakerdetail">GERARDO AMBROSE</Link>
-                            </h6>
-                            <span className="speaker-post d-block pb-2">Marketing Expert</span>
-                            <ul className="social-link pb-2 ps-0 d-flex gap-2 position-relative justify-content-center">
-                                {['facebook', 'twitter', 'google', 'instagram'].map((icon, i) => (
-                                <li key={i} className="d-inline-block">
-                                    <a href="#" className="rounded d-block">
-                                    <i className={`fa fa-${icon}`}></i>
-                                    </a>
-                                </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                    <div className=" col-lg-3 col-md-6 p-2">
-                    <div className="speaker-box position-relative overflow-hidden">
-                        <img className="speaker-image rounded w-100" src="assets/images/speakers/2.jpg" alt="speaker-image"/>
-                        <div className="box-content position-absolute bottom-0 z-1">
-                            <h6 className="speaker-title d-block text-white pb-1"><Link to="/Speakerdetail">GERARDO AMBROSE</Link>
-                            </h6>
-                            <span className="speaker-post d-block pb-2">Marketing Expert</span>
-                            <ul className="social-link pb-2 ps-0 d-flex gap-2 position-relative justify-content-center">
-                                {['facebook', 'twitter', 'google', 'instagram'].map((icon, i) => (
-                                <li key={i} className="d-inline-block">
-                                    <a href="#" className="rounded d-block">
-                                    <i className={`fa fa-${icon}`}></i>
-                                    </a>
-                                </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 p-2">
-                    <div className="speaker-box position-relative overflow-hidden">
-                        <img className="speaker-image rounded w-100" src="assets/images/speakers/3.jpg" alt="speaker-image"/>
-                        <div className="box-content position-absolute bottom-0 z-1">
-                            <h6 className="speaker-title d-block text-white pb-1"><Link to="/Speakerdetail">GERARDO AMBROSE</Link>
-                            </h6>
-                            <span className="speaker-post d-block pb-2">Marketing Expert</span>
-                            <ul className="social-link pb-2 ps-0 d-flex gap-2 position-relative justify-content-center">
-                                {['facebook', 'twitter', 'google', 'instagram'].map((icon, i) => (
-                                <li key={i} className="d-inline-block">
-                                    <a href="#" className="rounded d-block">
-                                    <i className={`fa fa-${icon}`}></i>
-                                    </a>
-                                </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 p-2">
-                    <div className="speaker-box position-relative overflow-hidden">
-                        <img className="speaker-image rounded w-100" src="assets/images/speakers/4.jpg" alt="speaker-image"/>
-                        <div className="box-content position-absolute bottom-0 z-1">
-                            <h6 className="speaker-title d-block text-white pb-1"><Link to="/Speakerdetail">GERARDO AMBROSE</Link>
-                            </h6>
-                            <span className="speaker-post d-block pb-2">Marketing Expert</span>
-                            <ul className="social-link pb-2 ps-0 d-flex gap-2 position-relative justify-content-center">
-                                {['facebook', 'twitter', 'google', 'instagram'].map((icon, i) => (
-                                <li key={i} className="d-inline-block">
-                                    <a href="#" className="rounded d-block">
-                                    <i className={`fa fa-${icon}`}></i>
-                                    </a>
-                                </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
+              </div>
             </div>
-            </div>
-        </section>
-        {/*--Speakers Section end--*/}
+          </div>
+        </div>
+      </section>
 
-        {/*--Ticketbook Section start--*/}
-        <section className="ticket position-relative">
-            <div className="overlay">
-            </div>
-            <div className="container">
-            <div className="ticket-inner w-lg-75 mx-auto text-center position-relative text-white">
-                <div className="ticket-title">
-                <h5 className="text-white mb-1">LET'S DO IT HURRY</h5>
-                <h1 className="text-white mb-2">HAVEN'T BOOKED YOUR SEAT YET?
-                    <span className='pink'>Get Ticket</span>
-                </h1>
+      {/*--Speakers Section Start--*/}
+      <section className="speakers pt-0">
+        <div className="container">
+          <div className="speaker-inner">
+            <div className="speaker-title text-center p-2">
+              <div className="row align-items-center ">
+                <div className="col-lg-6">
+                  <div className="title-content  text-lg-start mb-2">
+                    <p className="mb-1 pink">EVENT SPEAKERS</p>
+                    <h2 className="mb-1">
+                      MEET OUR <span className="pink">SPEAKERS</span>
+                    </h2>
+                    <p className="m-0">
+                      Excepteur sint occaecat cupidatat non proident, sunt in
+                      culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
                 </div>
-                <div className="ticket-info">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
-                    pulvinar dapibus leo.</p>
-                <div className="ticket-button">
-                    <a className="btn btn1" href="book-now.html">GET TICKETS NOW</a>
+                <div className="col-lg-6">
+                  <div className="speaker-button text-lg-end">
+                    <Link to="/Speakerlists" className="btn">
+                      VIEW MORE SPEAKERS
+                    </Link>
+                  </div>
                 </div>
+              </div>
+            </div>
+            <div className="sepaker-list text-center text-white">
+              <div className="row">
+                <div className=" col-lg-3 col-md-6 p-2">
+                  <div className="speaker-box  position-relative overflow-hidden text-white">
+                    <img
+                      className="speaker-image rounded w-100"
+                      src="assets/images/speakers/1.jpg"
+                      alt="speaker-image"
+                    />
+                    <div className="box-content position-absolute bottom-0 z-1">
+                      <h6 className="speaker-title d-block text-white pb-1">
+                        <Link to="/Speakerdetail">GERARDO AMBROSE</Link>
+                      </h6>
+                      <span className="speaker-post d-block pb-2">
+                        Marketing Expert
+                      </span>
+                      <ul className="social-link pb-2 ps-0 d-flex gap-2 position-relative justify-content-center">
+                        {["facebook", "twitter", "google", "instagram"].map(
+                          (icon, i) => (
+                            <li key={i} className="d-inline-block">
+                              <a href="#" className="rounded d-block">
+                                <i className={`fa fa-${icon}`}></i>
+                              </a>
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
+                <div className=" col-lg-3 col-md-6 p-2">
+                  <div className="speaker-box position-relative overflow-hidden">
+                    <img
+                      className="speaker-image rounded w-100"
+                      src="assets/images/speakers/2.jpg"
+                      alt="speaker-image"
+                    />
+                    <div className="box-content position-absolute bottom-0 z-1">
+                      <h6 className="speaker-title d-block text-white pb-1">
+                        <Link to="/Speakerdetail">GERARDO AMBROSE</Link>
+                      </h6>
+                      <span className="speaker-post d-block pb-2">
+                        Marketing Expert
+                      </span>
+                      <ul className="social-link pb-2 ps-0 d-flex gap-2 position-relative justify-content-center">
+                        {["facebook", "twitter", "google", "instagram"].map(
+                          (icon, i) => (
+                            <li key={i} className="d-inline-block">
+                              <a href="#" className="rounded d-block">
+                                <i className={`fa fa-${icon}`}></i>
+                              </a>
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3 col-md-6 p-2">
+                  <div className="speaker-box position-relative overflow-hidden">
+                    <img
+                      className="speaker-image rounded w-100"
+                      src="assets/images/speakers/3.jpg"
+                      alt="speaker-image"
+                    />
+                    <div className="box-content position-absolute bottom-0 z-1">
+                      <h6 className="speaker-title d-block text-white pb-1">
+                        <Link to="/Speakerdetail">GERARDO AMBROSE</Link>
+                      </h6>
+                      <span className="speaker-post d-block pb-2">
+                        Marketing Expert
+                      </span>
+                      <ul className="social-link pb-2 ps-0 d-flex gap-2 position-relative justify-content-center">
+                        {["facebook", "twitter", "google", "instagram"].map(
+                          (icon, i) => (
+                            <li key={i} className="d-inline-block">
+                              <a href="#" className="rounded d-block">
+                                <i className={`fa fa-${icon}`}></i>
+                              </a>
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3 col-md-6 p-2">
+                  <div className="speaker-box position-relative overflow-hidden">
+                    <img
+                      className="speaker-image rounded w-100"
+                      src="assets/images/speakers/4.jpg"
+                      alt="speaker-image"
+                    />
+                    <div className="box-content position-absolute bottom-0 z-1">
+                      <h6 className="speaker-title d-block text-white pb-1">
+                        <Link to="/Speakerdetail">GERARDO AMBROSE</Link>
+                      </h6>
+                      <span className="speaker-post d-block pb-2">
+                        Marketing Expert
+                      </span>
+                      <ul className="social-link pb-2 ps-0 d-flex gap-2 position-relative justify-content-center">
+                        {["facebook", "twitter", "google", "instagram"].map(
+                          (icon, i) => (
+                            <li key={i} className="d-inline-block">
+                              <a href="#" className="rounded d-block">
+                                <i className={`fa fa-${icon}`}></i>
+                              </a>
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            </div>
-        </section>
-        {/*--Ticketbook Section end--*/}
+          </div>
+        </div>
+      </section>
+      {/*--Speakers Section end--*/}
+      {/*--Ticketbook Section end--*/}
 
-        {/*--Direction Section start--*/}
-        <section className="direction">
+      {/*--Direction Section start--*/}
+      {/* <section className="direction">
             <div className="container">
             <div className="section-title text-center pb-2 w-lg-60 m-auto">
                 <p className="mb-1  pink">REACH US</p>
@@ -335,10 +441,10 @@ function About() {
                 </div>
             </div>
             </div>
-        </section>
-        {/*--Direction Section end--*/}
+        </section> */}
+      {/*--Direction Section end--*/}
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
