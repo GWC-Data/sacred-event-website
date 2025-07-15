@@ -103,11 +103,11 @@ function About() {
                           </div> */}
                           <div className="list-box-body">
                             {/* <h5 className="mb-2">Event Conference</h5> */}
-                            <h6 className="mb-2 w-75 m-auto">
-                              <small>-</small>Partnerships with U.S.
-                              universities, Sessions with ISRO and NASA
-                              scientists, Industrial Specialists, SME's
-                            </h6>
+                            <img
+                              src="https://shctpt.edu/assets/img/logo/logo.png"
+                              alt="Logo"
+                              className="w-100"
+                            />
                             <div className="box-btn">
                               {/* <Link to="/Eventdetail" className="p-0 pink">
                                 Learn More
@@ -125,10 +125,12 @@ function About() {
                           </div> */}
                           <div className="list-box-body">
                             {/* <h5 className="mb-2">Culture Leadership</h5> */}
-                            <h6 className="mb-2 w-75 m-auto">
-                              <small>-</small>Career mentoring from global
-                              experts
-                            </h6>
+                            <img
+                              src="/assets/images/logo/annamalai.png"
+                              alt="Logo"
+                              style={{ width: "42%" }}
+                              className=""
+                            />
                             <div className="box-btn">
                               {/* <Link to="/Eventdetail" className="p-0 pink">
                                 Learn More
@@ -149,10 +151,11 @@ function About() {
                         </div> */}
                         <div className="list-box-body">
                           {/* <h5 className="mb-2">Digital Marketing</h5> */}
-                          <h6 className="mb-2 w-75 m-auto">
-                            <small>-</small>STEM labs and incubation centers and
-                            ISRO outreach for rural students
-                          </h6>
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJvofK6zZPeSuCofBJY8ItX7uxyJKMHQpUiw&s"
+                            alt="Logo"
+                            className="w-100"
+                          />
                           <div className="box-btn">
                             {/* <Link to="/Eventdetail" className="p-0 pink">
                               Learn More
@@ -183,6 +186,20 @@ function About() {
                       international academic collaborations, mentorship, and
                       innovation-driven programs.
                     </p>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        ✔️ Partnerships with U.S. universities, Sessions with
+                        ISRO and NASA scientists, Industrial Specialists, SME's
+                        experts
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ STEM labs and incubation centers and ISRO outreach
+                        for rural students
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ Career mentoring from global experts
+                      </li>
+                    </ul>
                     {/* <div className="overview-btn mt-4">
                                 <Link to="/Eventdetail" className="btn">Join Event<i className="fa fa-long-arrow-right ms-4"></i></Link>
                             </div>       */}

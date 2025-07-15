@@ -71,8 +71,8 @@ function Home() {
                     </p>
 
                     {/* Powered By Logos */}
-                    <div className="col-span-12 d-flex">
-                      <div className="powered-by p-2 d-flex align-items-center mt-3 gap-3 col-span-6 w-50">
+                    <div className="row g-2">
+                      <div className="powered-by p-2 d-flex align-items-center mt-3 gap-3 col-12 col-md-6">
                         <h4>
                           <span className="text-white fw-semibold">
                             Powered by:
@@ -90,7 +90,7 @@ function Home() {
                           />
                         </div>
                       </div>
-                      <div className="powered-by p-2 d-flex align-items-center mt-3 gap-3 col-span-6 w-50">
+                      <div className="powered-by p-2 d-flex align-items-center mt-3 gap-3 col-12 col-md-6">
                         <h4>
                           <span className="text-white fw-semibold">
                             Association With:
@@ -443,7 +443,7 @@ function Home() {
 
             <div className="feature-lists pt-8">
               <h2 className="text-center text-white">Tracks at Innovate 25</h2>
-              <div className="row g-4">
+              <div className="row g-4 mt-6">
                 <div className="col-lg-4 col-md-6">
                   <div className="feature-box py-7 px-6 rounded text bg-black bg-opacity-25">
                     <a className="d-flex col-span-12 justify-content-between align-items-center">
@@ -541,11 +541,11 @@ function Home() {
                           </div> */}
                           <div className="list-box-body">
                             {/* <h5 className="mb-2">Event Conference</h5> */}
-                            <h6 className="mb-2 w-75 m-auto">
-                              <small>-</small>Partnerships with U.S.
-                              universities, Sessions with ISRO and NASA
-                              scientists, Industrial Specialists, SME's
-                            </h6>
+                            <img
+                              src="https://shctpt.edu/assets/img/logo/logo.png"
+                              alt="Logo"
+                              className="w-100"
+                            />
                             <div className="box-btn">
                               {/* <Link to="/Eventdetail" className="p-0 pink">
                                 Learn More
@@ -563,10 +563,12 @@ function Home() {
                           </div> */}
                           <div className="list-box-body">
                             {/* <h5 className="mb-2">Culture Leadership</h5> */}
-                            <h6 className="mb-2 w-75 m-auto">
-                              <small>-</small>Career mentoring from global
-                              experts
-                            </h6>
+                            <img
+                              src="/assets/images/logo/annamalai.png"
+                              alt="Logo"
+                              style={{ width: "42%" }}
+                              className=""
+                            />
                             <div className="box-btn">
                               {/* <Link to="/Eventdetail" className="p-0 pink">
                                 Learn More
@@ -587,10 +589,11 @@ function Home() {
                         </div> */}
                         <div className="list-box-body">
                           {/* <h5 className="mb-2">Digital Marketing</h5> */}
-                          <h6 className="mb-2 w-75 m-auto">
-                            <small>-</small>STEM labs and incubation centers and
-                            ISRO outreach for rural students
-                          </h6>
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJvofK6zZPeSuCofBJY8ItX7uxyJKMHQpUiw&s"
+                            alt="Logo"
+                            className="w-100"
+                          />
                           <div className="box-btn">
                             {/* <Link to="/Eventdetail" className="p-0 pink">
                               Learn More
@@ -621,6 +624,20 @@ function Home() {
                       international academic collaborations, mentorship, and
                       innovation-driven programs.
                     </p>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        ✔️ Partnerships with U.S. universities, Sessions with
+                        ISRO and NASA scientists, Industrial Specialists, SME's
+                        experts
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ STEM labs and incubation centers and ISRO outreach
+                        for rural students
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ Career mentoring from global experts
+                      </li>
+                    </ul>
                     {/* <div className="overview-btn mt-4">
                                 <Link to="/Eventdetail" className="btn">Join Event<i className="fa fa-long-arrow-right ms-4"></i></Link>
                             </div>       */}
