@@ -13,18 +13,18 @@ const ChiefGuestSection = () => {
         instagram: "#",
       },
     },
-    {
-      name: "Naveen Kumar",
-      role: "CEO & Founder, GWC Data.Ai",
-      image:
-        "https://media.licdn.com/dms/image/v2/C4D03AQEOZbLYAaWybA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653068198985?e=1756339200&v=beta&t=jp4QAQn2Og4FmiH8-URZug-TdQcDPFUtI9rrTipAlk4",
-      socials: {
-        facebook: "#",
-        twitter: "#",
-        google: "#",
-        instagram: "#",
-      },
-    },
+    // {
+    //   name: "Naveen Kumar",
+    //   role: "CEO & Founder, GWC Data.Ai",
+    //   image:
+    //     "https://media.licdn.com/dms/image/v2/C4D03AQEOZbLYAaWybA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653068198985?e=1756339200&v=beta&t=jp4QAQn2Og4FmiH8-URZug-TdQcDPFUtI9rrTipAlk4",
+    //   socials: {
+    //     facebook: "#",
+    //     twitter: "#",
+    //     google: "#",
+    //     instagram: "#",
+    //   },
+    // },
     {
       name: "Ma Subramanian",
       role: "Minister for Health and Family Welfare of Tamil Nadu",
