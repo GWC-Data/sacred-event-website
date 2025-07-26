@@ -104,7 +104,7 @@ function Home() {
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwwJFUz91ATiDWH8DT3NcDt3uZ_tOXZwR5w&s"
                             alt="GWC DATA.AI Logo"
                             className="powered-logo"
-                            style={{ height: "100%", objectFit: "contain" }}
+                            style={{ height: "100%", objectFit: "contain", width: "111.8px" }}
                           />
                         </div>
                       </div>
@@ -870,7 +870,7 @@ function Home() {
       </section>
 
       {/*--Speakers Section Start--*/}
-      <section className="speakers">
+      {/* <section className="speakers">
         <div className="container">
           <div className="speaker-inner">
             <div className="speaker-title text-center p-2">
@@ -887,13 +887,6 @@ function Home() {
                     </p>
                   </div>
                 </div>
-                {/* <div className="col-lg-6">
-                  <div className="speaker-button text-lg-end">
-                    <Link to="/Speakerlist" className="btn my-2">
-                      VIEW MORE SPEAKERS
-                    </Link>
-                  </div>
-                </div> */}
               </div>
             </div>
             <div className="sepaker-list text-center text-white">
@@ -1014,7 +1007,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*--Speakers Section end--*/}
 
       {/*--Ticketbook Section start--*/}
