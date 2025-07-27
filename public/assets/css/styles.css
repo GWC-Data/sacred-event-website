@@ -117,7 +117,7 @@
     width: fit-content;
   }
 
-  .navbar-brands{
+  .navbar-brands {
     width: fit-content;
   }
 
@@ -258,13 +258,12 @@
 }
 
 .inner-banner {
-  padding-top: 150px;
+  padding-top: 65px;
 }
 
 .countdown-inner span {
   color: #e91e63a1;
 }
-
 .banner-image {
   background-image: url(../images/pattern/3.png);
   background-size: contain;
@@ -306,7 +305,7 @@
   }
 
   .countdown-inner {
-    padding: 20px !important;
+    padding: 10px !important;
   }
 }
 

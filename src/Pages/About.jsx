@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumb from "../Components/Breadcrumb";
 import { Link } from "react-router-dom";
 import Pagehelmet from "../Components/Pagehelmet";
+import ChiefGuestSection from "../Components/cheifGuests";
 
 function About() {
   return (
@@ -262,8 +263,10 @@ function About() {
         </div>
       </section>
 
+      <ChiefGuestSection />
+
       {/*--Speakers Section Start--*/}
-      <section className="speakers pt-0">
+      {/* <section className="speakers pt-0">
         <div className="container">
           <div className="speaker-inner">
             <div className="speaker-title text-center p-2">
@@ -407,7 +410,7 @@ function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*--Speakers Section end--*/}
       {/*--Ticketbook Section end--*/}
 
