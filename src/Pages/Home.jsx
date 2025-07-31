@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CountUpBox from "../Components/CountUpBox";
 import TestimonialSlider from "../Components/TestimonialSlider ";
 import Gallery from "../Components/Gallery";
@@ -6,12 +6,21 @@ import { Link } from "react-router-dom";
 import Countdown from "../Components/Countdown";
 import CheifGuestSection from "../Components/cheifGuests";
 import EventSchedules from "../Components/EventsSchedules";
+import "./header.css";
+import Aos from "aos";
 
 function Home() {
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+    });
+  }, []);
   return (
     <div>
       {/*!-- Bannner section starts --*/}
-      <section className="banner position-relative pb-0">
+      <section className="banner position-relative pb-0 pb-sm-25">
         <div className="overlay"></div>
         <div className="container">
           <div className="inner-banner position-relative text-white">
@@ -19,6 +28,10 @@ function Home() {
               {/* Left Column */}
               <div className="col-lg-6 order-2 order-lg-1">
                 <div className="banner-left text-center pb-lg-5 p-md-0">
+                  <h4 className="text-white pb-3">
+                    <span className="pink"> PLATINUM JUBILEE </span>{" "}
+                    <span className="">CELEBRATION</span>
+                  </h4>
                   <div className="banner-image">
                     <img
                       src="assets/images/bannerImages/75.png"
@@ -42,10 +55,20 @@ function Home() {
               <div className="col-lg-6 order-1 order-lg-2">
                 <div className="banner-right ms-2 text-center text-lg-start pb-8">
                   <div className="banner-title pb-3">
-                    <h4 className="text-white pb-3">
-                      <span className="pink"> PLATINUM JUBILEE </span>{" "}
-                      <span className="">CELEBRATION</span>
+                    <h4 className="text-white pb-2">
+                      <span className=""> ANNAMALAI FOUNDATION , USA</span>{" "}
+                      <span className="pink"> & </span>
                     </h4>
+                    <h4 className="text-white pb-2">
+                      <span className="">
+                        {" "}
+                        SACRED HEART COLLEGE(AUTONOMOUS)
+                      </span>{" "}
+                    </h4>
+                    <i className="text-white pb-2 ">
+                      Jointly Presents & Celebrates{" "}
+                    </i>
+
                     <h2 className="text-white">
                       SCIENCE & TECHNOLOGY{" "}
                       <span className="pink">INNOVATION AI FEST 2025</span>
@@ -62,7 +85,7 @@ function Home() {
                       </li>
                     </ul>
                   </div>
-                  <div className="event-discription">
+                  <div className="event-description text-left">
                     <p className="pb-4 m-0">
                       Discover cutting-edge AI innovations, connect with
                       industry experts, and explore the future of technology at
@@ -71,41 +94,38 @@ function Home() {
                     </p>
 
                     {/* Powered By Logos */}
-                    <div className="row g-2">
-                      <div className="powered-by p-2 d-flex align-items-center mt-3 gap-3 col-12 col-md-6">
-                        <h4>
-                          <span className="text-white fw-semibold">
+                    <div class="container py-4">
+                      <div class="d-flex flex-row flex-wrap justify-content-center gap-4">
+                        <div class="text-center px-3" data-aos="fade-right">
+                          <h6 class="text-white fw-semibold mb-3">
                             Powered by:
-                          </span>
-                        </h4>
-                        <div
-                          className="bg-white p-2 rounded d-inline-flex align-items-center"
-                          style={{ height: "50px" }}
-                        >
-                          <img
-                            src="https://gwcdata.ai/assets/Logo-zBt8xU73.svg"
-                            alt="GWC DATA.AI Logo"
-                            className="powered-logo"
-                            style={{ height: "100%", objectFit: "contain" }}
-                          />
+                          </h6>
+                          <div class="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center">
+                            <img
+                              src="https://gwcdata.ai/assets/Logo-zBt8xU73.svg"
+                              alt="GWC DATA.AI Logo"
+                              class="img-fluid powered-logo"
+                              style={{ maxHeight: "60px" }}
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="powered-by p-2 d-flex align-items-center mt-3 gap-3 col-12 col-md-6">
-                        <h4>
-                          <span className="text-white fw-semibold">
-                            Association With:
-                          </span>
-                        </h4>
+
                         <div
-                          className="bg-white p-2 rounded d-inline-flex align-items-center"
-                          style={{ height: "50px" }}
+                          class="text-center px-3"
+                          data-aos="fade-left"
+                          data-aos-delay="200"
                         >
-                          <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwwJFUz91ATiDWH8DT3NcDt3uZ_tOXZwR5w&s"
-                            alt="GWC DATA.AI Logo"
-                            className="powered-logo"
-                            style={{ height: "100%", objectFit: "contain", width: "111.8px" }}
-                          />
+                          <h6 class="text-white fw-semibold mb-3">
+                            Association With:
+                          </h6>
+                          <div class="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center">
+                            <img
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwwJFUz91ATiDWH8DT3NcDt3uZ_tOXZwR5w&s"
+                              alt="Association Partner Logo"
+                              class="img-fluid powered-logo"
+                              style={{ maxHeight: "60px" }}
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -158,7 +178,7 @@ function Home() {
             <div className="row">
               {/* Left Section - Overview Text */}
               <div className="col-lg-6">
-                <div className="overview-left text-center text-lg-start">
+                <div className="overview-left  text-lg-start">
                   <div className="overview-title pb-4">
                     <p className="mb-1 pink">OVERVIEW</p>
                     <h2 className="mb-2">
@@ -230,16 +250,16 @@ function Home() {
                   <div className="row align-items-center">
                     <div className="col-lg-6 col-md-6 p-0">
                       <div className="container-img-left mb-2">
-                        <div className="img-left-1 float-end w-lg-80">
+                        <div className="img-left-1 float-end w-lg-80 d-none d-sm-block">
                           <img
                             className="mb-2 w-100 rounded"
                             src="assets/images/group/1.jpg"
                             alt="group-image"
                           />
                         </div>
-                        <div className="img-left-2">
+                        <div className="img-left-2  ">
                           <img
-                            src="assets/images/group/2.jpg"
+                            src="https://news.uppersetup.com/wp-content/uploads/2025/03/dubai-ai-festival-2025-set-to-showcase-ai-innovations-in-tra.jpg"
                             alt="group-image"
                             className="w-100 rounded"
                           />
@@ -247,9 +267,9 @@ function Home() {
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
-                      <div className="container-img-right w-lg-75">
+                      <div className="container-img-right w-lg-75 d-none d-sm-block">
                         <img
-                          src="assets/images/group/3.jpg"
+                          src="https://images.squarespace-cdn.com/content/v1/675bc0189928d830bf489125/5fe9feb3-ecde-47e2-a177-413e712f6e6a/DubaiAI+Festival+Main+Stage.jpg?format=1000w"
                           alt="group-image"
                           className="w-100 rounded"
                         />
@@ -309,12 +329,6 @@ function Home() {
                               inspire innovation and future-focused
                               collaboration.
                             </p>
-                            {/* <div className="box-btn">
-                              <Link to="/Eventdetail" className="p-0 pink">
-                                Learn More
-                                <i className="fa fa-long-arrow-right ms-2"></i>
-                              </Link>
-                            </div> */}
                           </div>
                         </div>
                       </div>
@@ -400,6 +414,10 @@ function Home() {
 
       {/*--Overview Section end--*/}
 
+      {/*--Cheif Guests Section start--*/}
+      <CheifGuestSection />
+      {/*--Cheif Guests Section end--*/}
+
       {/*--Features Section start--*/}
       <section className="feature text-white position-relative z-0 start-0 py-6">
         <div className="overlay z-n1 text-center"></div>
@@ -444,8 +462,8 @@ function Home() {
             <div className="feature-lists pt-8">
               <h2 className="text-center text-white">Tracks at Innovate 25</h2>
               <div className="row g-4 mt-6">
-                <div className="col-lg-4 col-md-6">
-                  <div className="feature-box py-7 px-6 rounded text bg-black bg-opacity-25">
+                <div className="col-lg-4 col-md-4">
+                  <div className="feature-box py-3 px-6 rounded text bg-black bg-opacity-25">
                     <a className="d-flex col-span-12 justify-content-between align-items-center">
                       <div className="feature-box-info col-span-6">
                         <h5 className="text-white mb-2">TECH TALKS</h5>
@@ -457,7 +475,7 @@ function Home() {
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
-                  <div className="feature-box py-7 px-6 rounded  bg-black bg-opacity-25">
+                  <div className="feature-box py-3 px-6 rounded  bg-black bg-opacity-25">
                     <a className="d-flex col-span-12 justify-content-between align-items-center">
                       <div className="feature-box-info col-span-6">
                         <h5 className="text-white mb-2">HACKATHON</h5>
@@ -469,7 +487,7 @@ function Home() {
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
-                  <div className="feature-box py-7 px-6 rounded bg-black bg-opacity-25">
+                  <div className="feature-box py-3 px-6 rounded bg-black bg-opacity-25">
                     <a className="d-flex col-span-12 justify-content-between align-items-center">
                       <div className="feature-box-info col-span-6">
                         <h5 className="text-white mb-2">STARTUP PITCH</h5>
@@ -481,7 +499,7 @@ function Home() {
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
-                  <div className="feature-box py-7 px-6 rounded bg-black bg-opacity-25">
+                  <div className="feature-box py-3 px-6 rounded bg-black bg-opacity-25">
                     <a className="d-flex col-span-12 justify-content-between align-items-center">
                       <div className="feature-box-info col-span-6">
                         <h5 className="text-white mb-2">EXPO</h5>
@@ -493,7 +511,7 @@ function Home() {
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
-                  <div className="feature-box py-7 px-6 rounded bg-black bg-opacity-25">
+                  <div className="feature-box py-3 px-6 rounded bg-black bg-opacity-25">
                     <a className="d-flex col-span-12 justify-content-between align-items-center">
                       <div className="feature-box-info col-span-6">
                         <h5 className="text-white mb-2">NETWORK LUNCH</h5>
@@ -505,7 +523,7 @@ function Home() {
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
-                  <div className="feature-box py-7 px-6 rounded bg-black bg-opacity-25">
+                  <div className="feature-box py-3 px-6 rounded bg-black bg-opacity-25">
                     <a className="d-flex col-span-12 justify-content-between align-items-center">
                       <div className="feature-box-info col-span-6">
                         <h5 className="text-white mb-2">ALUMNI CONNECT</h5>
@@ -544,7 +562,7 @@ function Home() {
                             <img
                               src="https://shctpt.edu/assets/img/logo/logo.png"
                               alt="Logo"
-                              className="w-100"
+                              className="w-100 "
                             />
                             <div className="box-btn">
                               {/* <Link to="/Eventdetail" className="p-0 pink">
@@ -554,20 +572,20 @@ function Home() {
                             </div>
                           </div>
                         </div>
-                        <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
+                        <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white d-none d-sm-block">
                           {/* <div className="list-box-icon">
                             <i
                               className="fa fa-globe pink mb-3"
                               aria-hidden="true"
                             ></i>
                           </div> */}
-                          <div className="list-box-body">
+                          <div className="list-box-body d-none d-sm-block">
                             {/* <h5 className="mb-2">Culture Leadership</h5> */}
                             <img
                               src="/assets/images/logo/annamalai.png"
                               alt="Logo"
                               style={{ width: "42%" }}
-                              className=""
+                              className="d-none d-sm-block"
                             />
                             <div className="box-btn">
                               {/* <Link to="/Eventdetail" className="p-0 pink">
@@ -580,19 +598,19 @@ function Home() {
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6 px-2">
-                      <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
+                      <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white d-none d-sm-block">
                         {/* <div className="list-box-icon">
                           <i
                             className="fa fa-bar-chart pink mb-3"
                             aria-hidden="true"
                           ></i>
                         </div> */}
-                        <div className="list-box-body">
+                        <div className="list-box-body d-none d-sm-block">
                           {/* <h5 className="mb-2">Digital Marketing</h5> */}
                           <img
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJvofK6zZPeSuCofBJY8ItX7uxyJKMHQpUiw&s"
                             alt="Logo"
-                            className="w-100"
+                            className="w-100 d-none d-sm-block"
                           />
                           <div className="box-btn">
                             {/* <Link to="/Eventdetail" className="p-0 pink">
@@ -750,10 +768,6 @@ function Home() {
           </div>
         </div>
       </section> */}
-
-      {/*--Cheif Guests Section start--*/}
-      <CheifGuestSection />
-      {/*--Cheif Guests Section end--*/}
 
       <section className="feature text-white position-relative z-0 start-0 py-6 my-8">
         <div className="overlay z-n1 text-center"></div>
@@ -1055,6 +1069,7 @@ function Home() {
                     href="https://www.shctpt.edu"
                     target="_blank"
                     className="text-white"
+                    rel="noreferrer"
                   >
                     www.shctpt.edu
                   </a>
@@ -1822,7 +1837,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="location-gallery">
+            {/* <div className="location-gallery">
               <div id="selector" className="row pt-1 justify-content-center">
                 <div
                   className="item col-lg-4 col-md-6 p-1"
@@ -1861,7 +1876,7 @@ function Home() {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

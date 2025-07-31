@@ -10,6 +10,7 @@
 /* color */
 .pink {
   color: #e91e63;
+  text-shadow: 2px 0 2px #ffffff;
 }
 .black {
   color: #223645;
@@ -976,7 +977,7 @@ textarea::placeholder {
 
 /* Overlay */
 .overlay {
-  background-image: linear-gradient(180deg, #c40f4c 0%, #24369c 100%);
+  background-image: linear-gradient(37deg, #6c0528 0%, #000d59 100%);
   background-blend-mode: overlay;
   background-size: auto;
   position: absolute;

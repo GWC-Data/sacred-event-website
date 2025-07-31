@@ -1,32 +1,41 @@
-import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
-import Ourgallery from './Pages/Ourgallery';
-import Bloglists from './Pages/Bloglists';
-import Blogsingle from './Pages/Blogsingle';
-import Pricing from './Pages/Pricing';
-import Booknow from './Pages/Booknow';
-import Comingsoon from './Pages/Comingsoon';
-import Faq from './Pages/Faq';
-import Error from './Pages/Error';
-import Sponsers from './Pages/Sponsers';
-import Speakerlists from './Pages/Speakerlists';
-import Speakerdetail from './Pages/Speakerdetail';
-import Eventlists from './Pages/Eventlists';
-import Eventdetail from './Pages/Eventdetail';
-import Searchresult from './Pages/Searchresult';
-import Productlists from './Pages/Productlists';
-import Productsingle from './Pages/Productsingle';
-import Testimonials from './Pages/Testimonials';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import Agenda from './Pages/Agenda';
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import Ourgallery from "./Pages/Ourgallery";
+import Bloglists from "./Pages/Bloglists";
+import Blogsingle from "./Pages/Blogsingle";
+import Pricing from "./Pages/Pricing";
+import Booknow from "./Pages/Booknow";
+import Comingsoon from "./Pages/Comingsoon";
+import Faq from "./Pages/Faq";
+import Error from "./Pages/Error";
+import Sponsers from "./Pages/Sponsers";
+import Speakerlists from "./Pages/Speakerlists";
+import Speakerdetail from "./Pages/Speakerdetail";
+import Eventlists from "./Pages/Eventlists";
+import Eventdetail from "./Pages/Eventdetail";
+import Searchresult from "./Pages/Searchresult";
+import Productlists from "./Pages/Productlists";
+import Productsingle from "./Pages/Productsingle";
+import Testimonials from "./Pages/Testimonials";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Agenda from "./Pages/Agenda";
+import Aos from "aos";
 
 function App() {
   const location = useLocation();
-  const hideHeaderFooter = location.pathname === '/Comingsoon';
+  const hideHeaderFooter = location.pathname === "/Comingsoon";
+
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+    });
+  }, []);
 
   return (
     <div>
