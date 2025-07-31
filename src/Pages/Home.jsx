@@ -92,38 +92,72 @@ function Home() {
                       Sacred Heart College's 75th Jubilee celebration. Proudly
                       powered by GWC DATA.AI
                     </p>
-
-                    {/* Powered By Logos */}
-                    <div class="container py-4">
-                      <div class="d-flex flex-row flex-wrap justify-content-center gap-4">
-                        <div class="text-center px-3" data-aos="fade-right">
-                          <h6 class="text-white fw-semibold mb-3">
+                    <div className="container py-4">
+                      {/* Rendered on md and up */}
+                      <div className="d-none d-md-flex flex-row justify-content-center gap-4">
+                        <div className="text-center px-3" data-aos="fade-right">
+                          <h6 className="text-white fw-semibold mb-3">
                             Powered by:
                           </h6>
-                          <div class="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center">
+                          <div className="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center">
                             <img
                               src="https://gwcdata.ai/assets/Logo-zBt8xU73.svg"
                               alt="GWC DATA.AI Logo"
-                              class="img-fluid powered-logo"
-                              style={{ maxHeight: "60px" }}
+                              className="img-fluid powered-logo"
+                              style={{ maxHeight: "60px", minWidth: "230px" }}
                             />
                           </div>
                         </div>
 
                         <div
-                          class="text-center px-3"
+                          className="text-center px-3"
                           data-aos="fade-left"
                           data-aos-delay="200"
                         >
-                          <h6 class="text-white fw-semibold mb-3">
+                          <h6 className="text-white fw-semibold mb-3">
                             Association With:
                           </h6>
-                          <div class="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center">
+                          <div className="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center">
                             <img
                               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwwJFUz91ATiDWH8DT3NcDt3uZ_tOXZwR5w&s"
                               alt="Association Partner Logo"
-                              class="img-fluid powered-logo"
-                              style={{ maxHeight: "60px" }}
+                              className="img-fluid powered-logo"
+                              style={{ maxHeight: "60px", minWidth: "230px" }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Rendered below md */}
+                      <div className="d-flex d-md-none flex-row flex-wrap justify-content-center gap-4 mt-3">
+                        <div className="text-center px-3" data-aos="fade-up">
+                          <h6 className="text-white fw-semibold mb-3">
+                            Powered by:
+                          </h6>
+                          <div className="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center">
+                            <img
+                              src="https://gwcdata.ai/assets/Logo-zBt8xU73.svg"
+                              alt="GWC DATA.AI Logo"
+                              className="img-fluid powered-logo"
+                              style={{ maxHeight: "60px", minWidth: "230px" }}
+                            />
+                          </div>
+                        </div>
+
+                        <div
+                          className="text-center px-3"
+                          data-aos="fade-up"
+                          data-aos-delay="200"
+                        >
+                          <h6 className="text-white fw-semibold mb-3">
+                            Association With:
+                          </h6>
+                          <div className="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center">
+                            <img
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwwJFUz91ATiDWH8DT3NcDt3uZ_tOXZwR5w&s"
+                              alt="Association Partner Logo"
+                              className="img-fluid powered-logo"
+                              style={{ maxHeight: "60px", minWidth: "230px" }}
                             />
                           </div>
                         </div>
