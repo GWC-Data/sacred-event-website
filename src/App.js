@@ -24,6 +24,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Agenda from "./Pages/Agenda";
 import Aos from "aos";
+import GuideLine from "./Components/GuideLine";
 
 function App() {
   const location = useLocation();
@@ -62,6 +63,7 @@ function App() {
         <Route path="/Testimonials" element={<Testimonials />} />
         <Route path="/Bloglists" element={<Bloglists />} />
         <Route path="/Blogsingle" element={<Blogsingle />} />
+        <Route path="/Guideline" element={<GuideLine />} />
       </Routes>
       {!hideHeaderFooter && <Footer />}
     </div>

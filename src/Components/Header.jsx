@@ -77,7 +77,7 @@ const Header = () => {
                       Book Your Pass
                     </Link>
                     <Link
-                      to="/Booknow"
+                      to="/Guideline"
                       className="btn btn3 text-nowrap"
                       style={{ fontSize: "0.8rem" }}
                     >
