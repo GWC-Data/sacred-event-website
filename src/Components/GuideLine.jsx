@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import PageHelmet from "./Pagehelmet";
 import Breadcrumb from "./Breadcrumb";
 import { Link } from "react-router-dom";
-import { FaMedal } from "react-icons/fa";
+import { FaUserPlus, FaFileUpload, FaBullhorn, FaMedal } from "react-icons/fa";
 
 const GuideLine = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
@@ -16,7 +16,7 @@ const GuideLine = () => {
     {
       title: "TEAM COMPOSITION",
       content:
-        "Each team must consist of a minimum of 3 members (Minimum 1 Female participant should be present in each team). All team members must be from the same institution. Participants are allowed to be part of only one team.",
+        "Each team must consist of a maximum of 3 members (Minimum 1 Female participant should be present in each team). All team members must be from the same institution. Participants are allowed to be part of only one team.",
     },
     {
       title: "REGISTRATION",
@@ -62,8 +62,8 @@ const GuideLine = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <PageHelmet pageTitle="Sample Event Name" />
-      <Breadcrumb title="Guidelines" />
+      <PageHelmet pageTitle="Guidelines" />
+      <Breadcrumb title="Hackathon Guidelines" />
 
       {/* Main Content */}
       <section className="py-8">
@@ -72,6 +72,107 @@ const GuideLine = () => {
             {/* Left Column - Main Content */}
             <div className="col-lg-8 w-full lg:w-2/3 px-4">
               <div className="news-left">
+                {/* Timeline Section */}
+                <section className="py-4 bg-white rounded pb-6 mb-3">
+                  <div className="container">
+                    <div className="row justify-content-center">
+                      <div className="col-lg-10">
+                        <div className="text-center mb-5">
+                          <h3 className="display-7 fw-bold text-secondary-emphasis mb-3">
+                            Event Timeline
+                          </h3>
+                          <div
+                            className="bg-danger mx-auto mb-4"
+                            style={{ width: "100px", height: "4px" }}
+                          ></div>
+                          <p className="text-muted lead">
+                            Important dates and deadlines for the hackathon
+                          </p>
+                        </div>
+
+                        <div className="row g-4">
+                          <div className="col-md-4">
+                            <div className="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+                              <div className="card-body p-4 text-center">
+                                <div
+                                  className="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                  style={{ width: "60px", height: "60px" }}
+                                >
+                                  <FaUserPlus className="text-white fs-4" />
+                                </div>
+                                <h6 className="card-title fw-bold text-primary">
+                                  Registration Deadline
+                                </h6>
+                                <h5 className="text-danger fw-bold mb-2">
+                                  15-08-2025
+                                </h5>
+                                <p className="card-text text-muted small">
+                                  Last date to register your team for the
+                                  hackathon. Don't miss out!
+                                </p>
+                              </div>
+                              <div className="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 rounded-bottom-start">
+                                <small className="fw-bold">STEP 1</small>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="col-md-4">
+                            <div className="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+                              <div className="card-body p-4 text-center">
+                                <div
+                                  className="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                  style={{ width: "60px", height: "60px" }}
+                                >
+                                  <FaFileUpload className="text-white fs-4" />
+                                </div>
+                                <h6 className="card-title fw-bold text-success">
+                                  Submission Deadline
+                                </h6>
+                                <h5 className="text-danger fw-bold mb-2">
+                                  20-08-2025
+                                </h5>
+                                <p className="card-text text-muted small">
+                                  Final date to submit your project proposal and
+                                  documentation.
+                                </p>
+                              </div>
+                              <div className="position-absolute top-0 end-0 bg-success text-white px-2 py-1 rounded-bottom-start">
+                                <small className="fw-bold">STEP 2</small>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="col-md-4">
+                            <div className="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+                              <div className="card-body p-4 text-center">
+                                <div
+                                  className="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                  style={{ width: "60px", height: "60px" }}
+                                >
+                                  <FaBullhorn className="text-white fs-4" />
+                                </div>
+                                <h6 className="card-title fw-bold text-warning">
+                                  Results Announcement
+                                </h6>
+                                <h5 className="text-danger fw-bold mb-2">
+                                  24-08-2025
+                                </h5>
+                                <p className="card-text text-muted small">
+                                  Selected teams will be announced and notified
+                                  via registered email.
+                                </p>
+                              </div>
+                              <div className="position-absolute top-0 end-0 bg-warning text-white px-2 py-1 rounded-bottom-start">
+                                <small className="fw-bold">FINAL</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
                 {/* Event Image Section - Replacing Quick Registration */}
                 <div className="news-img mb-4 w-3/4 mx-auto">
                   <img
@@ -81,28 +182,53 @@ const GuideLine = () => {
                   />
                 </div>
 
-                {/* Event Guidelines Section - Similar to BlogSingle */}
-                <div className="pb-4 mb-6">
-                  <h4 className="news-description mb-4 text-2xl md:text-3xl font-bold text-blue-900">
+                {/* Event Guidelines Section */}
+                <div className="mt-8">
+                  <h4 className="news-description text-secondary-emphasis mb-4 fw-bold">
                     Event Guidelines
                   </h4>
-
                   {guidelines.map((guideline, index) => (
                     <div
                       key={index}
-                      className={`catagories mb-6 transition-all duration-300 ${
-                        animationStarted
-                          ? "opacity-100 translate-y-0"
-                          : "opacity-0 translate-y-8"
+                      className={`mb-4 transition-all ${
+                        animationStarted ? "opacity-100" : "opacity-0"
                       }`}
-                      style={{ transitionDelay: `${index * 100}ms` }}
+                      style={{
+                        transitionDelay: `${index * 100}ms`,
+                        transitionDuration: "300ms",
+                      }}
                     >
-                      <h5 className="text-lg md:text-xl font-semibold text-blue-900 mb-3">
+                      <h5 className="h6 text-secondary-emphasis fw-semibold mb-3">
                         {guideline.title}
                       </h5>
-                      <p className="text-gray-700 leading-relaxed mb-4">
-                        {guideline.content}
-                      </p>
+                      <div className="text-muted lh-base mb-6">
+                        {guideline.content
+                          .split(". ")
+                          .map((sentence, sentenceIndex) => {
+                            const trimmedSentence = sentence.trim();
+                            if (trimmedSentence) {
+                              return (
+                                <div
+                                  key={sentenceIndex}
+                                  className="d-flex align-items-start mb-2"
+                                >
+                                  <span className="me-3 mt-1 flex-shrink-0">
+                                    •
+                                  </span>
+                                  <span>
+                                    {trimmedSentence}
+                                    {sentenceIndex <
+                                      guideline.content.split(". ").length -
+                                        1 && !trimmedSentence.endsWith(".")
+                                      ? "."
+                                      : ""}
+                                  </span>
+                                </div>
+                              );
+                            }
+                            return null;
+                          })}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -153,7 +279,7 @@ const GuideLine = () => {
                 </div>
 
                 {/* Prizes Section*/}
-                <div className="prizes p-6 pb-1 mb-6 rounded box-shadow shadow-lg bg-white">
+                {/* <div className="prizes p-6 pb-1 mb-6 rounded box-shadow shadow-lg bg-white">
                   <h6 className="text-lg md:text-xl font-semibold text-blue-900 mb-3">
                     Winning Prizes
                   </h6>
@@ -164,12 +290,12 @@ const GuideLine = () => {
                       className="py-1 border-b border-gray-200 border-dashed"
                     >
                       <div className="flex items-center">
-                        {/* <div className="relative w-6 h-6 mr-2 text-yellow-500"> */}
+                        <div className="relative w-6 h-6 mr-2 text-yellow-500">
                         <FaMedal className="w-full h-full" />
                         <span className="flex justify-center items-center text-xs font-bold text-black">
                           {index + 1}
                         </span>{" "}
-                        {/* </div> */}
+                        </div>
                         <span className="font-semibold text-pink-500">
                           {prize.title}:
                         </span>{" "}
@@ -177,10 +303,77 @@ const GuideLine = () => {
                       </div>
                     </div>
                   ))}
+                </div> */}
+                {/* Prizes Section*/}
+                <div className="prizes p-4 mb-4 rounded shadow bg-white">
+                  <h6 className="h5 fw-semibold text-primary mb-3">
+                    Winning Prizes
+                  </h6>
+                  <div
+                    className="bg-danger mb-4"
+                    style={{ width: "80px", height: "4px" }}
+                  ></div>
+                  {prizes.map((prize, index) => (
+                    <div
+                      key={index}
+                      className="mb-3 p-3 border rounded-3 position-relative overflow-hidden"
+                      style={{
+                        background:
+                          index === 0
+                            ? "linear-gradient(135deg, #ffd700, #ffed4e)"
+                            : index === 1
+                            ? "linear-gradient(135deg, #c0c0c0, #e8e8e8)"
+                            : "linear-gradient(135deg, #cd7f32, #daa520)",
+                        border:
+                          "2px solid " +
+                          (index === 0
+                            ? "#ffd700"
+                            : index === 1
+                            ? "#c0c0c0"
+                            : "#cd7f32"),
+                      }}
+                    >
+                      <div className="d-flex align-items-center justify-content-between">
+                        <div className="d-flex align-items-center">
+                          <div className="me-3 position-relative">
+                            <FaMedal
+                              className="fs-2"
+                              style={{
+                                color:
+                                  index === 0
+                                    ? "#b8860b"
+                                    : index === 1
+                                    ? "#708090"
+                                    : "#8b4513",
+                              }}
+                            />
+                            <span
+                              className="position-absolute top-50 start-50 translate-middle fw-bold text-white"
+                              style={{ fontSize: "12px" }}
+                            >
+                              {index + 1}
+                            </span>
+                          </div>
+                          <div>
+                            <h6 className="mb-0 fw-bold text-dark">
+                              {prize.title}
+                            </h6>
+                            <small className="text-muted">Winner</small>
+                          </div>
+                        </div>
+                        <div className="text-end">
+                          <h4 className="mb-0 fw-bold text-success">
+                            {prize.amount}
+                          </h4>
+                          <small className="text-muted">Prize Money</small>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
 
                 {/* Categories */}
-                <div className="catagories p-6 pb-1 mb-6 rounded box-shadow mb-2 shadow-lg bg-white">
+                {/* <div className="catagories p-6 pb-1 mb-6 rounded box-shadow mb-2 shadow-lg bg-white">
                   <h6 className="text-lg md:text-xl font-semibold text-blue-900 mb-3">
                     Event Categories
                   </h6>
@@ -207,21 +400,34 @@ const GuideLine = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
 
-                {/* Event Address */}
-                <div className="bg-gradient-to-r from-red-500 to-red-600 p-4 md:p-6 pb-0 rounded-lg text-center mt-6">
+                {/* Event Organizer Section */}
+                <div className="rounded-lg text-center p-6 pb-4 mt-3 rounded box-shadow shadow-lg bg-white">
                   <h6 className="font-semibold mb-3 text-black">
-                    Event Address
+                    Contact Details
                   </h6>
                   <div className="sperator mb-4 md:mb-6 w-20 border-bottom border-2 border-pink mx-auto h-1 bg-pink-500"></div>
                   <p className="text-sm leading-relaxed text-black">
-                    Sacred Heart College
+                    Dr. P. Saranraj
                     <br />
-                    Tirupattur-635 601, Tirupattur District
+                    +91 9994146964
                     <br />
-                    Tamil Nadu, India.
+                    techinnovationfest@shctpt.edu
                   </p>
+                  {/* Event Address */}
+                  <div className="bg-gradient-to-r from-red-500 to-red-600 p-4 md:p-6 pb-0 rounded-lg text-center mt-6">
+                    <h6 className="font-semibold mb-3 text-black">
+                      Event Address
+                    </h6>
+                    <div className="sperator mb-4 md:mb-6 w-20 border-bottom border-2 border-pink mx-auto h-1 bg-pink-500"></div>
+                    <p className="text-sm leading-relaxed text-black">
+                      Sacred Heart College
+                      <br />
+                      Tirupattur-635 601, Tirupattur District, Tamil Nadu,
+                      India.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Social Media Links */}
@@ -271,11 +477,11 @@ const GuideLine = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white text-center py-8">
+      {/* <footer className="bg-gray-800 text-white text-center py-8">
         <p className="text-gray-300">
           Ready to innovate? Join us for an unforgettable coding experience!
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 };

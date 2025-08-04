@@ -69,7 +69,7 @@ const Header = () => {
                   {/* Desktop buttons */}
                   <div className="d-none d-lg-flex gap-2">
                     <Link
-                      to="/Guideline"
+                      to="/Booknow"
                       className="btn btn3 text-nowrap"
                       style={{ fontSize: "0.8rem" }}
                     >
