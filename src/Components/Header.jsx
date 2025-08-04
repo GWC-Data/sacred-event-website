@@ -69,7 +69,7 @@ const Header = () => {
                   {/* Desktop buttons */}
                   <div className="d-none d-lg-flex gap-2">
                     <Link
-                      to="/Booknow"
+                      to="/Guideline"
                       className="btn btn3 text-nowrap"
                       style={{ fontSize: "0.8rem" }}
                     >
@@ -100,7 +100,7 @@ const Header = () => {
                       Book Pass
                     </Link>
                     <Link
-                      to="/Booknow"
+                      to="/Guideline"
                       className="btn btn3"
                       style={{
                         fontSize: "0.75rem",
@@ -144,7 +144,7 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/Booknow">
+                        <Link className="dropdown-item" to="/Guideline">
                           <i className="fa fa-lock me-2"></i>
                           Hackthon Registration
                         </Link>

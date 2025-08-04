@@ -116,7 +116,7 @@ const GuideLine = () => {
                 <div className="about-organizer p-6 box-shadow rounded text-center mb-6 bg-white shadow-lg">
                   <div className="organizer-title mb-3">
                     <h6 className="text-lg md:text-xl font-semibold text-blue-900">
-                      Scan QR For Booking
+                      Scan QR For Registration
                     </h6>
                   </div>
                   <div className="sperator mb-6 w-20 border-bottom border-2 border-pink mx-auto h-1 bg-pink-500"></div>
@@ -126,7 +126,7 @@ const GuideLine = () => {
                     <img
                       src="/assets/images/qr-code.png"
                       alt="qr-code"
-                      className="w-32 h-32 md:w-40 md:h-40 mx-auto object-cover rounded-lg shadow-md"
+                      className="mx-auto object-cover rounded-lg shadow-md w-[200px] sm:w-[180px] md:w-[180px] lg:w-full"
                     />
                   </div>
 
@@ -141,12 +141,14 @@ const GuideLine = () => {
 
                   {/* Book Ticket Link */}
                   <div className="mb-2">
-                    <Link
-                      to="/Booknow"
+                    <a
+                      href="https://forms.gle/pzrCueqY2cRBj8AP6"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-blue rounded inline-block text-white px-6 py-3 rounded-lg font-semibold hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
                     >
-                      Book Ticket
-                    </Link>
+                      Register Now
+                    </a>
                   </div>
                 </div>
 
