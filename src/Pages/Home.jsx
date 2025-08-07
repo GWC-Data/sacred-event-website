@@ -8,6 +8,7 @@ import CheifGuestSection from "../Components/cheifGuests";
 import EventSchedules from "../Components/EventsSchedules";
 import "./header.css";
 import Aos from "aos";
+import BlurFadeDemo from "../Components/DateFade";
 
 function Home() {
   useEffect(() => {
@@ -36,9 +37,12 @@ function Home() {
                     <img
                       src="assets/images/bannerImages/75.png"
                       alt="banner-image"
-                      className="w-50"
+                      className="w-40"
                     />
                     <br />
+                  </div>
+                  <div className="mt-3 mb-3">
+                    <BlurFadeDemo />
                   </div>
                   <div className="countdown">
                     <div
