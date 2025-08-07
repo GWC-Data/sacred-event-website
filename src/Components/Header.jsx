@@ -9,13 +9,13 @@ const Header = () => {
   return (
     <header className="main_header_area position-absolute w-100 site-header">
       {/* Top bar with social and contact info */}
-      <div className="header-content text-white d-none d-lg-block">
+      {/* <div className="header-content text-white d-none d-lg-block">
         <div className="container">
           <div className="header-content-inner py-2">
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="social-links">
-                  {/* Social links commented out as in original */}
+                  Social links commented out as in original
                 </div>
               </div>
 
@@ -40,7 +40,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="header_menu" id="header_menu">
         <div className="container">
@@ -69,7 +69,7 @@ const Header = () => {
                   {/* Desktop buttons */}
                   <div className="d-none d-lg-flex gap-2">
                     <Link
-                      to="/Booknow"
+                      to="/"
                       className="btn btn3 text-nowrap"
                       style={{ fontSize: "0.8rem" }}
                     >

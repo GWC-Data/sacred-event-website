@@ -16,7 +16,7 @@ const GuideLine = () => {
     {
       title: "TEAM COMPOSITION",
       content:
-        "Each team must consist of a maximum of 3 members (Minimum 1 Female participant should be present in each team). All team members must be from the same institution. Participants are allowed to be part of only one team.",
+        "3 Members - Minimum 1 Female participant in a team is encouraged. All team members must be from the same institution. Participants are allowed to be part of only one team.",
     },
     {
       title: "REGISTRATION",
@@ -104,7 +104,7 @@ const GuideLine = () => {
                                   Registration Deadline
                                 </h6>
                                 <h5 className="text-danger fw-bold mb-2">
-                                  15-08-2025
+                                  17-08-2025
                                 </h5>
                                 <p className="card-text text-muted small">
                                   Last date to register your team for the
@@ -373,19 +373,20 @@ const GuideLine = () => {
                 </div>
 
                 {/* Categories */}
-                {/* <div className="catagories p-6 pb-1 mb-6 rounded box-shadow mb-2 shadow-lg bg-white">
-                  <h6 className="text-lg md:text-xl font-semibold text-blue-900 mb-3">
-                    Event Categories
-                  </h6>
+                <div className="catagories p-6 pb-1 mb-6 rounded box-shadow mb-2 shadow-lg bg-white">
+                  <h6 className="font-semibold mb-3 text-black">Themes</h6>
+                  <div className="sperator mb-4 md:mb-6 w-20 border-bottom border-2 border-pink h-1 bg-pink-500"></div>
                   <div className="w-20 h-1 bg-pink-500 mb-4"></div>
                   <ul className="space-y-3">
                     {[
-                      "Coding Competition",
-                      "Innovation Track",
-                      "AI/ML Challenge",
-                      "Web Development",
-                      "Mobile App Dev",
-                      "Blockchain Track",
+                      "Management",
+                      "Agriculture",
+                      "Health Science",
+                      "Drone Technology",
+                      "Artificial Intelligence (AI)",
+                      "Industries",
+                      "Coding",
+                      "Social Problems",
                     ].map((category, index) => (
                       <li
                         key={index}
@@ -400,7 +401,7 @@ const GuideLine = () => {
                       </li>
                     ))}
                   </ul>
-                </div> */}
+                </div>
 
                 {/* Event Organizer Section */}
                 <div className="rounded-lg text-center p-6 pb-4 mt-3 rounded box-shadow shadow-lg bg-white">

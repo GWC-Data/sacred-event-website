@@ -39,7 +39,7 @@ function Footer() {
         <div className="overlay z-n1 start-0"></div>
         <div className="container">
           <div className="footer-content w-lg-50 m-auto">
-            <div className="footer-logo mb-4 pt-1">
+            {/* <div className="footer-logo mb-4 pt-1">
               <a
                 onClick={scrollToTop}
               >
@@ -49,9 +49,9 @@ function Footer() {
                   alt="footer-logo"
                 />
               </a>
-            </div>
+            </div> */}
             <div className="footer-disciption border-bottom border-white border-opacity-25 m-auto mb-6">
-              <p className=" mb-6">Sacred heart college (Autonomous)</p>
+              <p className=" mb-6">Sacred Heart College (Autonomous)</p>
               <div className="footer-socials pb-6">
                 <ul className="m-0 p-0 d-flex gap-2 justify-content-center">
                   {[
