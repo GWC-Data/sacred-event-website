@@ -146,7 +146,7 @@ const Header = () => {
                       <li>
                         <Link className="dropdown-item" to="/Guideline">
                           <i className="fa fa-lock me-2"></i>
-                          Hackthon Registration
+                          Hackathon Registration
                         </Link>
                       </li>
                     </ul>

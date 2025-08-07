@@ -19,10 +19,9 @@ const GuideLine = () => {
   const [pageImage, setPageImage] = useState(null);
   const [pdf, setPdf] = useState(null);
   const canvasRef = useRef(null);
-  const pageCache = useRef({}); // Cache for rendered pages
-  const renderTaskRef = useRef(null); // Track active render task
+  const pageCache = useRef({}); 
+  const renderTaskRef = useRef(null);
 
-  // Handle window resize and initial animation
   useEffect(() => {
     setTimeout(() => setAnimationStarted(true), 500);
 
@@ -35,7 +34,6 @@ const GuideLine = () => {
     return () => window.removeEventListener("resize", updatePageWidth);
   }, []);
 
-  // Load PDF
   useEffect(() => {
     const loadPDF = async () => {
       try {
@@ -51,12 +49,10 @@ const GuideLine = () => {
     loadPDF();
   }, []);
 
-  // Render page when pdf or currentPage changes
   useEffect(() => {
     if (pdf && canvasRef.current) {
       renderPage(pdf, currentPage);
     }
-    // Cleanup: Cancel any ongoing render task on unmount or page change
     return () => {
       if (renderTaskRef.current) {
         renderTaskRef.current.cancel();
@@ -65,7 +61,6 @@ const GuideLine = () => {
     };
   }, [pdf, currentPage]);
 
-  // Render a single page efficiently
   const renderPage = async (pdfDoc, pageNum) => {
     if (pageCache.current[pageNum]) {
       setPageImage(pageCache.current[pageNum]);
@@ -89,32 +84,26 @@ const GuideLine = () => {
       canvas.width = scaledViewport.width;
       canvas.height = scaledViewport.height;
 
-      // Check page rotation and apply corrective transformation
       const rotation = page.rotate;
       context.save();
       if (rotation === 180) {
-        // Correct upside-down page
         context.translate(canvas.width, canvas.height);
-        context.rotate(Math.PI); // 180 degrees in radians
+        context.rotate(Math.PI); 
       } else if (rotation === 90) {
-        // Correct 90° clockwise rotation
         context.translate(canvas.width, 0);
         context.rotate((90 * Math.PI) / 180);
-        [canvas.width, canvas.height] = [canvas.height, canvas.width]; // Swap dimensions
+        [canvas.width, canvas.height] = [canvas.height, canvas.width]; 
       } else if (rotation === 270) {
-        // Correct 270° clockwise (90° counterclockwise)
         context.translate(0, canvas.height);
         context.rotate((-90 * Math.PI) / 180);
-        [canvas.width, canvas.height] = [canvas.height, canvas.width]; // Swap dimensions
+        [canvas.width, canvas.height] = [canvas.height, canvas.width];
       }
 
-      // Cancel previous render task if it exists
       if (renderTaskRef.current) {
         renderTaskRef.current.cancel();
         renderTaskRef.current = null;
       }
 
-      // Start new render task
       renderTaskRef.current = page.render({
         canvasContext: context,
         viewport: scaledViewport,
@@ -125,8 +114,8 @@ const GuideLine = () => {
       const imageData = canvas.toDataURL("image/png");
       pageCache.current[pageNum] = imageData;
       setPageImage(imageData);
-      renderTaskRef.current = null; // Clear task after completion
-      context.restore(); // Restore context to avoid affecting future renders
+      renderTaskRef.current = null;
+      context.restore(); 
     } catch (error) {
       if (error.name === "RenderingCancelledException") {
         console.log("Render cancelled for page", pageNum);
@@ -136,7 +125,6 @@ const GuideLine = () => {
     }
   };
 
-  // Debounce navigation to prevent rapid render calls
   const debounce = (func, delay) => {
     let timeoutId;
     return (...args) => {
@@ -170,10 +158,8 @@ const GuideLine = () => {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="row gx-lg-5 gy-5 flex flex-wrap -mx-4">
-            {/* Left Column */}
             <div className="col-lg-8 w-full lg:w-2/3 px-4">
               <div className="news-left">
-                {/* Timeline Section */}
                 <section className="py-4 bg-white rounded pb-6 mb-3">
                   <div className="container">
                     <div className="row justify-content-center">
@@ -307,7 +293,7 @@ const GuideLine = () => {
                       href="https://forms.gle/pzrCueqY2cRBj8AP6"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-blue-500 rounded inline-block text-white px-6 py-3 rounded-lg font-semibold hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
+                      className="btn bg-blue-500 rounded inline-block text-white px-6 py-3 rounded-lg font-semibold hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
                     >
                       Register Now
                     </a>
@@ -371,9 +357,9 @@ const GuideLine = () => {
                     {["Management", "Agriculture", "Technology", "Industries", "Social Problems"].map(
                       (category, index) => (
                         <li key={index} className="py-2 border-b border-gray-200 border-dashed">
-                          <a href="#" className="text-black transition hover:text-pink-500">
+                          <div className="text-black transition hover:text-pink-500">
                             {category}
-                          </a>
+                          </div>
                         </li>
                       )
                     )}
