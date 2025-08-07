@@ -1,75 +1,176 @@
-import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom"; // Removed for artifact compatibility
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import PageHelmet from "./Pagehelmet";
 import Breadcrumb from "./Breadcrumb";
-import { Link } from "react-router-dom";
 import { FaUserPlus, FaFileUpload, FaBullhorn, FaMedal } from "react-icons/fa";
+import { getDocument, GlobalWorkerOptions } from "pdfjs-dist";
+import filePdf from "../pdf/file.pdf";
+
+// Set PDF.js worker source
+GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${
+  GlobalWorkerOptions.version || "3.11.174"
+}/pdf.worker.min.js`;
 
 const GuideLine = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
+  const [pageWidth, setPageWidth] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+  const [pageImage, setPageImage] = useState(null);
+  const [pdf, setPdf] = useState(null);
+  const canvasRef = useRef(null);
+  const pageCache = useRef({}); // Cache for rendered pages
+  const renderTaskRef = useRef(null); // Track active render task
 
+  // Handle window resize and initial animation
   useEffect(() => {
     setTimeout(() => setAnimationStarted(true), 500);
+
+    const updatePageWidth = () => {
+      const containerWidth = window.innerWidth > 800 ? 400 : window.innerWidth * 0.9;
+      setPageWidth(containerWidth);
+    };
+    updatePageWidth();
+    window.addEventListener("resize", updatePageWidth);
+    return () => window.removeEventListener("resize", updatePageWidth);
   }, []);
 
-  const guidelines = [
-    {
-      title: "TEAM COMPOSITION",
-      content:
-        "3 Members - Minimum 1 Female participant in a team is encouraged. All team members must be from the same institution. Participants are allowed to be part of only one team.",
-    },
-    {
-      title: "REGISTRATION",
-      content:
-        "Registration must be completed through the official website. The registration link will be available on the website. A team has to be identified with a Unique name during the Registration. A single point of contact (Team Leader) must be designated to complete the Registration form. The Final team composition, including all members, must be submitted during registration.",
-    },
-    {
-      title: "PROJECT SCOPE",
-      content:
-        "Projects must align with the track selected during registration. All submissions must be original and developed exclusively during the Hackathon period. The use of libraries, APIs, or laboratory resources is permitted, but their usage must be clearly disclosed in the submission.",
-    },
-    {
-      title: "PROJECT SUBMISSION GUIDE",
-      content:
-        "Teams must submit their Complete design and concept through the assigned Registration link. The project proposal must include: PDF and PPT files, and a YouTube video link (set to Private). The Project proposal should contain: First page with logo, Project Title, Team details, Problem Statement, Existing solutions, Team's solution, and Execution. All submissions will undergo Plagiarism and AI-content checks (Turnitin) and must have a similarity score below 20%. The Expert committee will evaluate proposals, and selected teams will be notified via Registered email. Late submissions will not be accepted.",
-    },
-    {
-      title: "CODE OF CONDUCT",
-      content:
-        "Professionalism: All participants must maintain professionalism and integrity. Harassment-Free Environment: The event has a zero-tolerance policy for harassment, discrimination, or misconduct. Violations will result in immediate disqualification. Original Work: Projects must be the team's original work. Plagiarism leads to disqualification. Dispute Resolution: All disputes will be resolved at the organizers' discretion.",
-    },
-    {
-      title: "GENERAL INFORMATION",
-      content:
-        "Tracks and Problem Statements have been shared in a separate document via the introduction email. Participants must strictly adhere to the provided Problem statements. Teams working on prototypes may purchase basic components worth up to ₹1,500, reimbursable after the final presentation. Valid GST invoices must be submitted for reimbursement.",
-    },
-  ];
+  // Load PDF
+  useEffect(() => {
+    const loadPDF = async () => {
+      try {
+        const loadingTask = getDocument(filePdf);
+        const pdfDoc = await loadingTask.promise;
+        setPdf(pdfDoc);
+        setTotalPages(pdfDoc.numPages);
+      } catch (error) {
+        console.error("Error loading PDF:", error);
+      }
+    };
+
+    loadPDF();
+  }, []);
+
+  // Render page when pdf or currentPage changes
+  useEffect(() => {
+    if (pdf && canvasRef.current) {
+      renderPage(pdf, currentPage);
+    }
+    // Cleanup: Cancel any ongoing render task on unmount or page change
+    return () => {
+      if (renderTaskRef.current) {
+        renderTaskRef.current.cancel();
+        renderTaskRef.current = null;
+      }
+    };
+  }, [pdf, currentPage]);
+
+  // Render a single page efficiently
+  const renderPage = async (pdfDoc, pageNum) => {
+    if (pageCache.current[pageNum]) {
+      setPageImage(pageCache.current[pageNum]);
+      return;
+    }
+
+    try {
+      const page = await pdfDoc.getPage(pageNum);
+      const container = document.querySelector(".news-description");
+      const containerWidth = container ? container.offsetWidth : pageWidth;
+      const viewport = page.getViewport({ scale: 0.8 });
+      const scale = containerWidth / viewport.width;
+      const scaledViewport = page.getViewport({ scale });
+
+      const canvas = canvasRef.current;
+      if (!canvas) {
+        console.error("Canvas element is not available");
+        return;
+      }
+      const context = canvas.getContext("2d");
+      canvas.width = scaledViewport.width;
+      canvas.height = scaledViewport.height;
+
+      // Check page rotation and apply corrective transformation
+      const rotation = page.rotate;
+      context.save();
+      if (rotation === 180) {
+        // Correct upside-down page
+        context.translate(canvas.width, canvas.height);
+        context.rotate(Math.PI); // 180 degrees in radians
+      } else if (rotation === 90) {
+        // Correct 90° clockwise rotation
+        context.translate(canvas.width, 0);
+        context.rotate((90 * Math.PI) / 180);
+        [canvas.width, canvas.height] = [canvas.height, canvas.width]; // Swap dimensions
+      } else if (rotation === 270) {
+        // Correct 270° clockwise (90° counterclockwise)
+        context.translate(0, canvas.height);
+        context.rotate((-90 * Math.PI) / 180);
+        [canvas.width, canvas.height] = [canvas.height, canvas.width]; // Swap dimensions
+      }
+
+      // Cancel previous render task if it exists
+      if (renderTaskRef.current) {
+        renderTaskRef.current.cancel();
+        renderTaskRef.current = null;
+      }
+
+      // Start new render task
+      renderTaskRef.current = page.render({
+        canvasContext: context,
+        viewport: scaledViewport,
+      });
+
+      await renderTaskRef.current.promise;
+
+      const imageData = canvas.toDataURL("image/png");
+      pageCache.current[pageNum] = imageData;
+      setPageImage(imageData);
+      renderTaskRef.current = null; // Clear task after completion
+      context.restore(); // Restore context to avoid affecting future renders
+    } catch (error) {
+      if (error.name === "RenderingCancelledException") {
+        console.log("Render cancelled for page", pageNum);
+      } else {
+        console.error("Error rendering page:", error);
+      }
+    }
+  };
+
+  // Debounce navigation to prevent rapid render calls
+  const debounce = (func, delay) => {
+    let timeoutId;
+    return (...args) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => func(...args), delay);
+    };
+  };
+
+  const handleNextPage = debounce(() => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  }, 300);
+
+  const handlePrevPage = debounce(() => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  }, 300);
 
   const prizes = [
-    {
-      title: "First Place",
-      amount: "₹1,00,000",
-    },
-    {
-      title: "Second Place",
-      amount: "₹75,000",
-    },
-    {
-      title: "Third Place",
-      amount: "₹50,000",
-    },
+    { title: "First Place", amount: "₹1,00,000" },
+    { title: "Second Place", amount: "₹75,000" },
+    { title: "Third Place", amount: "₹50,000" },
   ];
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <PageHelmet pageTitle="Guidelines" />
+        <PageHelmet pageTitle="Guidelines" />
       <Breadcrumb title="Hackathon Guidelines" />
-
-      {/* Main Content */}
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="row gx-lg-5 gy-5 flex flex-wrap -mx-4">
-            {/* Left Column - Main Content */}
+            {/* Left Column */}
             <div className="col-lg-8 w-full lg:w-2/3 px-4">
               <div className="news-left">
                 {/* Timeline Section */}
@@ -89,165 +190,108 @@ const GuideLine = () => {
                             Important dates and deadlines for the hackathon
                           </p>
                         </div>
-
                         <div className="row g-4">
-                          <div className="col-md-4">
-                            <div className="card h-100 border-0 shadow-sm position-relative overflow-hidden">
-                              <div className="card-body p-4 text-center">
-                                <div
-                                  className="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                                  style={{ width: "60px", height: "60px" }}
-                                >
-                                  <FaUserPlus className="text-white fs-4" />
+                          {[
+                            ["Registration Deadline", "17-08-2025", FaUserPlus, "primary", "STEP 1"],
+                            ["Submission Deadline", "20-08-2025", FaFileUpload, "success", "STEP 2"],
+                            ["Results Announcement", "24-08-2025", FaBullhorn, "warning", "FINAL"],
+                          ].map(([title, date, Icon, color, step], idx) => (
+                            <div key={idx} className="col-md-4">
+                              <div className="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+                                <div className="card-body p-4 text-center">
+                                  <div
+                                    className={`bg-${color} rounded-circle d-inline-flex align-items-center justify-content-center mb-3`}
+                                    style={{ width: "60px", height: "60px" }}
+                                  >
+                                    <Icon className="text-white fs-4" />
+                                  </div>
+                                  <h6 className={`card-title fw-bold text-${color}`}>{title}</h6>
+                                  <h5 className="text-danger fw-bold mb-2">{date}</h5>
+                                  <p className="card-text text-muted small">
+                                    {idx === 0
+                                      ? "Last date to register your team for the hackathon. Don't miss out!"
+                                      : idx === 1
+                                      ? "Final date to submit your project proposal and documentation."
+                                      : "Selected teams will be announced and notified via registered email."}
+                                  </p>
                                 </div>
-                                <h6 className="card-title fw-bold text-primary">
-                                  Registration Deadline
-                                </h6>
-                                <h5 className="text-danger fw-bold mb-2">
-                                  17-08-2025
-                                </h5>
-                                <p className="card-text text-muted small">
-                                  Last date to register your team for the
-                                  hackathon. Don't miss out!
-                                </p>
-                              </div>
-                              <div className="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 rounded-bottom-start">
-                                <small className="fw-bold">STEP 1</small>
+                                <div
+                                  className={`position-absolute top-0 end-0 bg-${color} text-white px-2 py-1 rounded-bottom-start`}
+                                >
+                                  <small className="fw-bold">{step}</small>
+                                </div>
                               </div>
                             </div>
-                          </div>
-
-                          <div className="col-md-4">
-                            <div className="card h-100 border-0 shadow-sm position-relative overflow-hidden">
-                              <div className="card-body p-4 text-center">
-                                <div
-                                  className="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                                  style={{ width: "60px", height: "60px" }}
-                                >
-                                  <FaFileUpload className="text-white fs-4" />
-                                </div>
-                                <h6 className="card-title fw-bold text-success">
-                                  Submission Deadline
-                                </h6>
-                                <h5 className="text-danger fw-bold mb-2">
-                                  20-08-2025
-                                </h5>
-                                <p className="card-text text-muted small">
-                                  Final date to submit your project proposal and
-                                  documentation.
-                                </p>
-                              </div>
-                              <div className="position-absolute top-0 end-0 bg-success text-white px-2 py-1 rounded-bottom-start">
-                                <small className="fw-bold">STEP 2</small>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="col-md-4">
-                            <div className="card h-100 border-0 shadow-sm position-relative overflow-hidden">
-                              <div className="card-body p-4 text-center">
-                                <div
-                                  className="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                                  style={{ width: "60px", height: "60px" }}
-                                >
-                                  <FaBullhorn className="text-white fs-4" />
-                                </div>
-                                <h6 className="card-title fw-bold text-warning">
-                                  Results Announcement
-                                </h6>
-                                <h5 className="text-danger fw-bold mb-2">
-                                  24-08-2025
-                                </h5>
-                                <p className="card-text text-muted small">
-                                  Selected teams will be announced and notified
-                                  via registered email.
-                                </p>
-                              </div>
-                              <div className="position-absolute top-0 end-0 bg-warning text-white px-2 py-1 rounded-bottom-start">
-                                <small className="fw-bold">FINAL</small>
-                              </div>
-                            </div>
-                          </div>
+                          ))}
                         </div>
                       </div>
                     </div>
                   </div>
                 </section>
-                {/* Event Image Section - Replacing Quick Registration */}
+
+                {/* Event Image */}
                 <div className="news-img mb-4 w-3/4 mx-auto">
-                  <img
-                    src="assets/images/group/1.jpg"
-                    alt="event-image"
-                    className="w-100 rounded"
-                  />
+                  <img src="assets/images/group/1.jpg" alt="event-image" className="w-100 rounded" />
                 </div>
 
-                {/* Event Guidelines Section */}
+                {/* Guidelines + PDF Viewer */}
                 <div className="mt-8">
                   <h4 className="news-description text-secondary-emphasis mb-4 fw-bold">
                     Event Guidelines
                   </h4>
-                  {guidelines.map((guideline, index) => (
-                    <div
-                      key={index}
-                      className={`mb-4 transition-all ${
-                        animationStarted ? "opacity-100" : "opacity-0"
-                      }`}
-                      style={{
-                        transitionDelay: `${index * 100}ms`,
-                        transitionDuration: "300ms",
-                      }}
-                    >
-                      <h5 className="h6 text-secondary-emphasis fw-semibold mb-3">
-                        {guideline.title}
-                      </h5>
-                      <div className="text-muted lh-base mb-6">
-                        {guideline.content
-                          .split(". ")
-                          .map((sentence, sentenceIndex) => {
-                            const trimmedSentence = sentence.trim();
-                            if (trimmedSentence) {
-                              return (
-                                <div
-                                  key={sentenceIndex}
-                                  className="d-flex align-items-start mb-2"
-                                >
-                                  <span className="me-3 mt-1 flex-shrink-0">
-                                    •
-                                  </span>
-                                  <span>
-                                    {trimmedSentence}
-                                    {sentenceIndex <
-                                      guideline.content.split(". ").length -
-                                        1 && !trimmedSentence.endsWith(".")
-                                      ? "."
-                                      : ""}
-                                  </span>
-                                </div>
-                              );
-                            }
-                            return null;
-                          })}
+                  <div className=" mt-6 bg-white p-6 rounded-lg shadow-lg">
+                    <div className="flex justify-center">
+                      <div className="w-full max-w-md">
+                        {/* Hidden canvas for rendering */}
+                        <canvas ref={canvasRef} style={{ display: "none" }} />
+                        {pageImage ? (
+                          <img
+                            src={pageImage}
+                            alt={`Page ${currentPage}`}
+                            className="w-full h-auto rounded-lg shadow-md"
+                            style={{ maxWidth: "100%", objectFit: "contain" }}
+                          />
+                        ) : (
+                          <p className="text-center text-muted">Loading PDF...</p>
+                        )}
+                        <div className="flex justify-between mt-4 " style={{display: "flex", alignItems: "center" , justifyContent: "space-between"}}>
+                          <button
+                            onClick={handlePrevPage}
+                            disabled={currentPage === 1}
+                            className="btn   text-white px-2 py-1  disabled:bg-gray-300"
+                          >
+                            Previous
+                          </button>
+                          <span className="text-muted">
+                            Page {currentPage} of {totalPages}
+                          </span>
+                          <button
+                            onClick={handleNextPage}
+                            disabled={currentPage === totalPages}
+                            className=" btn  text-white px-2 py-1  disabled:bg-gray-300"
+                          >
+                            Next
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  ))}
+                    <p className="text-muted text-center mt-4">
+                      Navigate through the brochure to explore detailed event guidelines.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Column - Sidebar */}
+            {/* Right Column */}
             <div className="col-lg-4 w-full lg:w-1/3 px-4">
               <div className="news-right space-y-6">
-                {/* QR Code Booking Section - Replacing About Organizer */}
+                {/* QR Code */}
                 <div className="about-organizer p-6 box-shadow rounded text-center mb-6 bg-white shadow-lg">
-                  <div className="organizer-title mb-3">
-                    <h6 className="text-lg md:text-xl font-semibold text-blue-900">
-                      Scan QR For Registration
-                    </h6>
-                  </div>
+                  <h6 className="text-lg md:text-xl font-semibold text-blue-900">
+                    Scan QR For Registration
+                  </h6>
                   <div className="sperator mb-6 w-20 border-bottom border-2 border-pink mx-auto h-1 bg-pink-500"></div>
-
-                  {/* QR Code Image */}
                   <div className="qr-code-image mb-4">
                     <img
                       src="/assets/images/qr-code.png"
@@ -255,64 +299,25 @@ const GuideLine = () => {
                       className="mx-auto object-cover rounded-lg shadow-md w-[200px] sm:w-[180px] md:w-[180px] lg:w-full"
                     />
                   </div>
-
-                  {/* OR Text */}
                   <div className="text-center mb-7">
-                    <span className="text-gray-600 font-medium text-lg">
-                      OR
-                    </span>
+                    <span className="text-gray-600 font-medium text-lg">OR</span>
                   </div>
-
-                  {/* <div className="mb-7 border-bottom border-2 border-grey border-opacity-25 border-bottom-dashed"></div> */}
-
-                  {/* Book Ticket Link */}
                   <div className="mb-2">
                     <a
                       href="https://forms.gle/pzrCueqY2cRBj8AP6"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-blue rounded inline-block text-white px-6 py-3 rounded-lg font-semibold hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
+                      className="bg-blue-500 rounded inline-block text-white px-6 py-3 rounded-lg font-semibold hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
                     >
                       Register Now
                     </a>
                   </div>
                 </div>
 
-                {/* Prizes Section*/}
-                {/* <div className="prizes p-6 pb-1 mb-6 rounded box-shadow shadow-lg bg-white">
-                  <h6 className="text-lg md:text-xl font-semibold text-blue-900 mb-3">
-                    Winning Prizes
-                  </h6>
-                  <div className="w-20 h-1 bg-pink-500 mb-4"></div>
-                  {prizes.map((prize, index) => (
-                    <div
-                      key={index}
-                      className="py-1 border-b border-gray-200 border-dashed"
-                    >
-                      <div className="flex items-center">
-                        <div className="relative w-6 h-6 mr-2 text-yellow-500">
-                        <FaMedal className="w-full h-full" />
-                        <span className="flex justify-center items-center text-xs font-bold text-black">
-                          {index + 1}
-                        </span>{" "}
-                        </div>
-                        <span className="font-semibold text-pink-500">
-                          {prize.title}:
-                        </span>{" "}
-                        {prize.amount}
-                      </div>
-                    </div>
-                  ))}
-                </div> */}
-                {/* Prizes Section*/}
+                {/* Prizes */}
                 <div className="prizes p-4 mb-4 rounded shadow bg-white">
-                  <h6 className="h5 fw-semibold text-primary mb-3">
-                    Winning Prizes
-                  </h6>
-                  <div
-                    className="bg-danger mb-4"
-                    style={{ width: "80px", height: "4px" }}
-                  ></div>
+                  <h6 className="h5 fw-semibold text-primary mb-3">Prizes</h6>
+                  <div className="bg-danger mb-4" style={{ width: "80px", height: "4px" }}></div>
                   {prizes.map((prize, index) => (
                     <div
                       key={index}
@@ -326,11 +331,7 @@ const GuideLine = () => {
                             : "linear-gradient(135deg, #cd7f32, #daa520)",
                         border:
                           "2px solid " +
-                          (index === 0
-                            ? "#ffd700"
-                            : index === 1
-                            ? "#c0c0c0"
-                            : "#cd7f32"),
+                          (index === 0 ? "#ffd700" : index === 1 ? "#c0c0c0" : "#cd7f32"),
                       }}
                     >
                       <div className="d-flex align-items-center justify-content-between">
@@ -339,12 +340,7 @@ const GuideLine = () => {
                             <FaMedal
                               className="fs-2"
                               style={{
-                                color:
-                                  index === 0
-                                    ? "#b8860b"
-                                    : index === 1
-                                    ? "#708090"
-                                    : "#8b4513",
+                                color: index === 0 ? "#b8860b" : index === 1 ? "#708090" : "#8b4513",
                               }}
                             />
                             <span
@@ -355,16 +351,11 @@ const GuideLine = () => {
                             </span>
                           </div>
                           <div>
-                            <h6 className="mb-0 fw-bold text-dark">
-                              {prize.title}
-                            </h6>
-                            <small className="text-muted">Winner</small>
+                            <h6 className="mb-0 fw-bold text-dark">{prize.title}</h6>
                           </div>
                         </div>
                         <div className="text-end">
-                          <h4 className="mb-0 fw-bold text-success">
-                            {prize.amount}
-                          </h4>
+                          <h4 className="mb-0 fw-bold text-success">{prize.amount}</h4>
                           <small className="text-muted">Prize Money</small>
                         </div>
                       </div>
@@ -376,38 +367,22 @@ const GuideLine = () => {
                 <div className="catagories p-6 pb-1 mb-6 rounded box-shadow mb-2 shadow-lg bg-white">
                   <h6 className="font-semibold mb-3 text-black">Themes</h6>
                   <div className="sperator mb-4 md:mb-6 w-20 border-bottom border-2 border-pink h-1 bg-pink-500"></div>
-                  <div className="w-20 h-1 bg-pink-500 mb-4"></div>
                   <ul className="space-y-3">
-                    {[
-                      "Management",
-                      "Agriculture",
-                      "Health Science",
-                      "Drone Technology",
-                      "Artificial Intelligence (AI)",
-                      "Industries",
-                      "Coding",
-                      "Social Problems",
-                    ].map((category, index) => (
-                      <li
-                        key={index}
-                        className="py-2 border-b border-gray-200 border-dashed"
-                      >
-                        <a
-                          href="#"
-                          className="text-black transition hover:text-pink-500"
-                        >
-                          {category}
-                        </a>
-                      </li>
-                    ))}
+                    {["Management", "Agriculture", "Technology", "Industries", "Social Problems"].map(
+                      (category, index) => (
+                        <li key={index} className="py-2 border-b border-gray-200 border-dashed">
+                          <a href="#" className="text-black transition hover:text-pink-500">
+                            {category}
+                          </a>
+                        </li>
+                      )
+                    )}
                   </ul>
                 </div>
 
-                {/* Event Organizer Section */}
+                {/* Contact Details */}
                 <div className="rounded-lg text-center p-6 pb-4 mt-3 rounded box-shadow shadow-lg bg-white">
-                  <h6 className="font-semibold mb-3 text-black">
-                    Contact Details
-                  </h6>
+                  <h6 className="font-semibold mb-3 text-black">Contact Details</h6>
                   <div className="sperator mb-4 md:mb-6 w-20 border-bottom border-2 border-pink mx-auto h-1 bg-pink-500"></div>
                   <p className="text-sm leading-relaxed text-black">
                     Dr. P. Saranraj
@@ -416,73 +391,22 @@ const GuideLine = () => {
                     <br />
                     techinnovationfest@shctpt.edu
                   </p>
-                  {/* Event Address */}
                   <div className="bg-gradient-to-r from-red-500 to-red-600 p-4 md:p-6 pb-0 rounded-lg text-center mt-6">
-                    <h6 className="font-semibold mb-3 text-black">
-                      Event Address
-                    </h6>
+                    <h6 className="font-semibold mb-3 text-black">Event Address</h6>
                     <div className="sperator mb-4 md:mb-6 w-20 border-bottom border-2 border-pink mx-auto h-1 bg-pink-500"></div>
                     <p className="text-sm leading-relaxed text-black">
                       Sacred Heart College
                       <br />
-                      Tirupattur-635 601, Tirupattur District, Tamil Nadu,
-                      India.
+                      Tirupattur-635 601, Tirupattur District, Tamil Nadu, India.
                     </p>
                   </div>
                 </div>
-
-                {/* Social Media Links */}
-                {/* <div className="social-media-links pb-5">
-                  <h6 className="text-lg md:text-xl font-semibold text-blue-900 mb-3">
-                    Social Media
-                  </h6>
-                  <div className="w-20 h-1 bg-pink-500 mb-4"></div>
-                  <div className="grid grid-cols-2 gap-3">
-                    {[
-                      {
-                        name: "Facebook",
-                        icon: "facebook-official",
-                        color: "bg-blue-600",
-                      },
-                      {
-                        name: "Twitter",
-                        icon: "twitter",
-                        color: "bg-blue-400",
-                      },
-                      {
-                        name: "WhatsApp",
-                        icon: "whatsapp",
-                        color: "bg-green-500",
-                      },
-                      {
-                        name: "LinkedIn",
-                        icon: "linkedin-square",
-                        color: "bg-blue-700",
-                      },
-                    ].map((social, index) => (
-                      <a
-                        key={index}
-                        href="#"
-                        className="rounded-lg p-3 text-sm text-black font-medium flex items-center hover:bg-gray-100 transition-colors duration-200"
-                      >
-                        <i className={`fa fa-${social.icon} mr-2`}></i>
-                        {social.name}
-                      </a>
-                    ))}
-                  </div>
-                </div> */}
               </div>
             </div>
+            {/* End Right Column */}
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      {/* <footer className="bg-gray-800 text-white text-center py-8">
-        <p className="text-gray-300">
-          Ready to innovate? Join us for an unforgettable coding experience!
-        </p>
-      </footer> */}
     </div>
   );
 };

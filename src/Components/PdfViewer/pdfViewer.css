@@ -1,0 +1,44 @@
+
+.zoom-item {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.zoom-link {
+  outline: initial !important;
+  box-shadow: initial !important;
+  line-height: 1.5;
+  border-radius: 37px !important;
+  min-width: 35px;
+  text-align: center;
+  height: 35px;
+  padding: 0.5rem 0;
+  background-color: transparent;
+  border: 1px solid #ff69b4; /* Pink border */
+  color: #ff69b4; /* Pink text */
+}
+
+.zoom-link:hover {
+  background: #ff69b4; /* Pink background on hover */
+  color: #ffffff; /* White text on hover */
+  border: 1px solid #ff69b4; /* Pink border on hover */
+}
+
+.pdf-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 10px;
+}
+
+.pdf-canvas-container {
+  display: flex;
+  position: relative;
+  flex-direction: column; 
+  align-items: flex-start;
+  overflow-y: auto; 
+  width: 100%;
+  height: 100%;
+}
