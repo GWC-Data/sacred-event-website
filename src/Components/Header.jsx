@@ -68,14 +68,14 @@ const Header = () => {
                 <div className="d-flex justify-content-end align-items-center">
                   {/* Desktop buttons */}
                   <div className="d-none d-lg-flex gap-2">
-                    <Link
+                    {/* <Link
                       to="/"
                       className="btn btn3 text-nowrap"
                       style={{ fontSize: "0.8rem" }}
                     >
                       <i className="fa fa-ticket me-1"></i>
                       Book Your Pass
-                    </Link>
+                    </Link> */}
                     <Link
                       to="/Guideline"
                       className="btn btn3 text-nowrap"
@@ -132,15 +132,15 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/">
+                        <Link className="dropdown-item" to="/About">
                           <i className="fa fa-question me-2"></i>
                           About
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/Booknow">
+                        <Link className="dropdown-item" to="/Agenda">
                           <i className="fa fa-ticket me-2"></i>
-                          Book Your Pass
+                          Agenda
                         </Link>
                       </li>
                       <li>

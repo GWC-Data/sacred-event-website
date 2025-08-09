@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import PageHelmet from "./Pagehelmet";
 import Breadcrumb from "./Breadcrumb";
 import { FaUserPlus, FaFileUpload, FaBullhorn, FaMedal } from "react-icons/fa";
@@ -12,7 +11,6 @@ GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 }/pdf.worker.min.js`;
 
 const GuideLine = () => {
-  const [animationStarted, setAnimationStarted] = useState(false);
   const [pageWidth, setPageWidth] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -23,7 +21,6 @@ const GuideLine = () => {
   const renderTaskRef = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => setAnimationStarted(true), 500);
 
     const updatePageWidth = () => {
       const containerWidth = window.innerWidth > 800 ? 400 : window.innerWidth * 0.9;

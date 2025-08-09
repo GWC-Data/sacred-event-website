@@ -7,12 +7,11 @@ class PageHelmet extends Component {
     return (
       <>
         <Helmet>
-          <title>{pageTitle ? `${pageTitle} | Eventen – Event Conference React Template` : "Eventen – Event Conference React Template"}</title>
+          <title>{pageTitle ? `${pageTitle}` : "Welcome to Sacred Heart!"}</title>
           <meta
             name="description"
-            content="Eventen – Event Conference React Template is a multi-use React template."
+            content="Sacred Heart is a vibrant and welcoming community dedicated to spiritual growth, service, and celebration."
           />
-          {/* You can add other dynamic meta tags here as needed */}
         </Helmet>
       </>
     );

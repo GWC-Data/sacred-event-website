@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import BackToTop, { scrollToTop } from "../Components/Backtotop";
-import SubscribeForm from "./SubscribeForm";
+import BackToTop from "../Components/Backtotop";
 
 function Footer() {
   return (
@@ -25,7 +23,6 @@ function Footer() {
                     Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
                   </p>
-                  <SubscribeForm />
                 </div>
               </div>
             </div>
@@ -39,17 +36,6 @@ function Footer() {
         <div className="overlay z-n1 start-0"></div>
         <div className="container">
           <div className="footer-content w-lg-50 m-auto">
-            {/* <div className="footer-logo mb-4 pt-1">
-              <a
-                onClick={scrollToTop}
-              >
-                <img
-                  src="https://shctpt.edu/assets/img/logo/logo.png"
-                  className="w-50"
-                  alt="footer-logo"
-                />
-              </a>
-            </div> */}
             <div className="footer-disciption border-bottom border-white border-opacity-25 m-auto mb-6">
               <p className=" mb-6">Sacred Heart College (Autonomous)</p>
               <div className="footer-socials pb-6">

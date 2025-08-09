@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import CountUpBox from "../Components/CountUpBox";
-import TestimonialSlider from "../Components/TestimonialSlider ";
-import Gallery from "../Components/Gallery";
 import { Link } from "react-router-dom";
 import Countdown from "../Components/Countdown";
 import CheifGuestSection from "../Components/cheifGuests";
@@ -170,9 +168,9 @@ function Home() {
 
                     <div className="banner-button mt-4">
                       <div className="row text-center">
-                        <div className="col-lg-12 col-md-12">
-                          <Link to="/" className="btn me-3 my-1 w-50">
-                            REGISTER NOW
+                        <div className="col-lg-12 col-md-12 ">
+                          <Link to="/Guideline" className="btn me-3 my-1 w-50">
+                            HACKATHON REGISTRATION
                           </Link>
                         </div>
                         {/* <div className="col-lg-6 col-md-6">
@@ -433,7 +431,7 @@ function Home() {
                         forward-looking industries for mutual growth
                       </li>
                     </ul>
-                    <div className="overview-btn mt-4">
+                    {/* <div className="overview-btn mt-4">
                       <Link
                         // to="/Eventdetail"
                         className="btn"
@@ -441,7 +439,7 @@ function Home() {
                         Join Event
                         <i className="fa fa-long-arrow-right ms-4"></i>
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -449,7 +447,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       {/*--Overview Section end--*/}
 
       {/*--Cheif Guests Section start--*/}
@@ -1068,7 +1065,7 @@ function Home() {
         <div className="container">
           <div className="ticket-inner w-lg-75 mx-auto text-center position-relative text-white">
             <div className="ticket-title">
-              <h5 className="text-white mb-1">BE OUR GUEST</h5>
+              <h5 className="text-white mb-1">HACKATHON REGISTRATION</h5>
               <h1 className="text-white mb-2">
                 PLATINUM JUBILEE CELEBRATION{" "}
                 <span className="pink">
@@ -1090,8 +1087,8 @@ function Home() {
                 <em>Solution Matters</em>.
               </p>
               <div className="ticket-button">
-                <Link to="/" className="btn">
-                  REGISTER NOW
+                <Link to="/Guideline" className="btn">
+                  HACKATHON REGISTRATION
                 </Link>
               </div>
               <div className="pt-3 small">
@@ -1653,7 +1650,7 @@ function Home() {
       {/*--Testimonials Section end--*/}
 
       {/*--FAQ Section start--*/}
-      <section className="faq pb-0 overflow-visible d-block position-relative z-1 pb-10">
+      {/* <section className="faq pb-0 overflow-visible d-block position-relative z-1 pb-10">
         <div className="overlay bg-blue opacity-25 z-n1"></div>
         <div className="container">
           <div>
@@ -1817,12 +1814,12 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/*--FAQ Section end--*/}
 
       {/*--Direction Section start--*/}
-      <section className="direction pb-0">
+      <section className="direction pt-9 pb-8">
         <div className="container">
           <div className="section-title text-center pb-2 w-lg-60 m-auto">
             <p className="mb-1 pink">REACH US</p>

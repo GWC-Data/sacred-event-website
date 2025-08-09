@@ -281,6 +281,7 @@
   left: 0;
   line-height: 0;
   bottom: -1px;
+  pointer-events: none;
 }
 
 .wave .elementor-shape-fill {
