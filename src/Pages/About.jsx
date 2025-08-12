@@ -127,7 +127,7 @@ function About() {
                           <div className="list-box-body">
                             {/* <h5 className="mb-2">Culture Leadership</h5> */}
                             <img
-                              src="/assets/images/logo/annamalai.png"
+                              src={`${process.env.PUBLIC_URL}/assets/images/logo/annamalai.png`}
                               alt="Logo"
                               style={{ width: "42%" }}
                               className=""

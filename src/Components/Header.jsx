@@ -77,7 +77,7 @@ const Header = () => {
                       Book Your Pass
                     </Link> */}
                     <Link
-                      to="/Guideline"
+                      to="/shcaifest/HackathonRegistration"
                       className="btn btn3 text-nowrap"
                       style={{ fontSize: "0.8rem" }}
                     >
@@ -89,18 +89,7 @@ const Header = () => {
                   {/* Tablet buttons */}
                   <div className="d-none d-md-flex d-lg-none gap-1">
                     <Link
-                      to="/Booknow"
-                      className="btn btn3"
-                      style={{
-                        fontSize: "0.75rem",
-                        padding: "0.375rem 0.75rem",
-                      }}
-                    >
-                      <i className="fa fa-ticket me-1"></i>
-                      Book Pass
-                    </Link>
-                    <Link
-                      to="/Guideline"
+                      to="/shcaifest/HackathonRegistration"
                       className="btn btn3"
                       style={{
                         fontSize: "0.75rem",
@@ -126,25 +115,25 @@ const Header = () => {
                     </button>
                     <ul className="dropdown-menu dropdown-menu-end">
                       <li>
-                        <Link className="dropdown-item" to="/">
+                        <Link className="dropdown-item" to="/shcaifest/">
                           <i className="fa fa-home me-2"></i>
                           Home
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/About">
+                        <Link className="dropdown-item" to="/shcaifest/About">
                           <i className="fa fa-question me-2"></i>
                           About
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/Agenda">
+                        <Link className="dropdown-item" to="/shcaifest/Agenda">
                           <i className="fa fa-ticket me-2"></i>
                           Agenda
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/Guideline">
+                        <Link className="dropdown-item" to="/shcaifest/HackathonRegistration">
                           <i className="fa fa-lock me-2"></i>
                           Hackathon Registration
                         </Link>

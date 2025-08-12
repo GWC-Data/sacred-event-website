@@ -3,7 +3,6 @@ import PageHelmet from "./Pagehelmet";
 import Breadcrumb from "./Breadcrumb";
 import { FaUserPlus, FaFileUpload, FaBullhorn, FaMedal } from "react-icons/fa";
 import { getDocument, GlobalWorkerOptions } from "pdfjs-dist";
-import filePdf from "../pdf/file.pdf";
 
 // Set PDF.js worker source
 GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${
@@ -34,7 +33,7 @@ const GuideLine = () => {
   useEffect(() => {
     const loadPDF = async () => {
       try {
-        const loadingTask = getDocument(filePdf);
+        const loadingTask = getDocument(`${process.env.PUBLIC_URL}/assets/pdf/file.pdf`);
         const pdfDoc = await loadingTask.promise;
         setPdf(pdfDoc);
         setTotalPages(pdfDoc.numPages);
@@ -214,7 +213,7 @@ const GuideLine = () => {
 
                 {/* Event Image */}
                 <div className="news-img mb-4 w-3/4 mx-auto">
-                  <img src="assets/images/group/1.jpg" alt="event-image" className="w-100 rounded" />
+                  <img src={`${process.env.PUBLIC_URL}/assets/images/group/1.jpg`} alt="event-image" className="w-100 rounded" />
                 </div>
 
                 {/* Guidelines + PDF Viewer */}
@@ -276,11 +275,12 @@ const GuideLine = () => {
                   </h6>
                   <div className="sperator mb-6 w-20 border-bottom border-2 border-pink mx-auto h-1 bg-pink-500"></div>
                   <div className="qr-code-image mb-4">
-                    <img
-                      src="/assets/images/qr-code.png"
-                      alt="qr-code"
-                      className="mx-auto object-cover rounded-lg shadow-md w-[200px] sm:w-[180px] md:w-[180px] lg:w-full"
-                    />
+                   <img
+  src={`${process.env.PUBLIC_URL}/assets/images/qr-code.png`}
+  alt="qr-code"
+  className="mx-auto object-cover rounded-lg shadow-md w-[200px] sm:w-[180px] md:w-[180px] lg:w-full"
+/>
+
                   </div>
                   <div className="text-center mb-7">
                     <span className="text-gray-600 font-medium text-lg">OR</span>

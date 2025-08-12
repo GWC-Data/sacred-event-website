@@ -33,7 +33,7 @@ function Home() {
                   </h4>
                   <div className="banner-image">
                     <img
-                      src="assets/images/bannerImages/75.png"
+                      src={`${process.env.PUBLIC_URL}/assets/images/bannerImages/75.png`}
                       alt="banner-image"
                       className="w-40"
                     />
@@ -169,7 +169,7 @@ function Home() {
                     <div className="banner-button mt-4">
                       <div className="row text-center">
                         <div className="col-lg-12 col-md-12 ">
-                          <Link to="/Guideline" className="btn me-3 my-1 w-50">
+                          <Link to="/shcaifest/HackathonRegistration" className="btn me-3 my-1 w-50">
                             HACKATHON REGISTRATION
                           </Link>
                         </div>
@@ -289,7 +289,7 @@ function Home() {
                         <div className="img-left-1 float-end w-lg-80 d-none d-sm-block">
                           <img
                             className="mb-2 w-100 rounded"
-                            src="assets/images/group/1.jpg"
+                            src={`${process.env.PUBLIC_URL}/assets/images/group/1.jpg`}
                             alt="group-image"
                           />
                         </div>
@@ -617,7 +617,7 @@ function Home() {
                           <div className="list-box-body d-none d-sm-block">
                             {/* <h5 className="mb-2">Culture Leadership</h5> */}
                             <img
-                              src="/assets/images/logo/annamalai.png"
+                              src={`${process.env.PUBLIC_URL}/assets/images/logo/annamalai.png`}
                               alt="Logo"
                               style={{ width: "42%" }}
                               className="d-none d-sm-block"
@@ -1087,7 +1087,7 @@ function Home() {
                 <em>Solution Matters</em>.
               </p>
               <div className="ticket-button">
-                <Link to="/Guideline" className="btn">
+                <Link to="/shcaifest/HackathonRegistration" className="btn">
                   HACKATHON REGISTRATION
                 </Link>
               </div>
