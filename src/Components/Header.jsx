@@ -44,11 +44,17 @@ const Header = () => {
 
       <div className="header_menu" id="header_menu">
         <div className="container">
-          <nav className="navbar navbar-expand-lg py-2 w-100">
-            <div className="row w-100 align-items-center">
+          <nav className="navbar navbar-expand-lg py-3 w-100">
+            <div className="row w-100 align-items-center gx-3">
               {/* Logo - Responsive sizing */}
-              <div className="col-6 col-md-4 col-lg-2">
-                <div className="navbar-brand m-0">
+              <div className="col-6 col-md-4 col-lg-3">
+                <div className="navbar-brand d-flex justify-content-start justify-content-md-center align-items-center m-0 gap-2 gap-md-3">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/logo/annamalai.png`}
+                    alt="Logo"
+                    className="img-fluid"
+                    style={{ maxHeight: "60px", width: "auto" }}
+                  />
                   <img
                     src="https://shctpt.edu/assets/img/logo/logo.png"
                     alt="Logo"
@@ -59,82 +65,112 @@ const Header = () => {
               </div>
 
               {/* Navigation - Hide on small screens, show on medium+ */}
-              <div className="col-12 col-lg-7 order-3 order-lg-2">
-                <Navbar />
+              <div className="col-7 col-lg-6 order-3 order-lg-2 mt-3 mt-lg-0">
+                <div className="d-flex justify-content-center">
+                  <Navbar />
+                </div>
               </div>
 
               {/* Action buttons - Responsive layout */}
               <div className="col-6 col-md-8 col-lg-3 order-2 order-lg-3">
-                <div className="d-flex justify-content-end align-items-center">
+                <div className="d-flex justify-content-end align-items-center h-100">
                   {/* Desktop buttons */}
-                  <div className="d-none d-lg-flex gap-2">
-                    {/* <Link
-                      to="/"
-                      className="btn btn3 text-nowrap"
-                      style={{ fontSize: "0.8rem" }}
-                    >
-                      <i className="fa fa-ticket me-1"></i>
-                      Book Your Pass
-                    </Link> */}
+                  <div className="d-none d-lg-flex">
                     <Link
                       to="/shcaifest/HackathonRegistration"
-                      className="btn btn3 text-nowrap"
-                      style={{ fontSize: "0.8rem" }}
+                      className="btn btn3 text-nowrap px-3 py-2"
+                      style={{ fontSize: "0.85rem" }}
                     >
-                      <i className="fa fa-lock me-1"></i>
-                      Hackthon Registration
+                      <i className="fa fa-lock me-2"></i>
+                      Hackathon Registration
                     </Link>
                   </div>
 
                   {/* Tablet buttons */}
-                  <div className="d-none d-md-flex d-lg-none gap-1">
+                  <div className="d-none d-md-flex d-lg-none">
                     <Link
                       to="/shcaifest/HackathonRegistration"
-                      className="btn btn3"
+                      className="btn btn3 text-nowrap"
                       style={{
-                        fontSize: "0.75rem",
-                        padding: "0.375rem 0.75rem",
+                        fontSize: "0.8rem",
+                        padding: "0.5rem 1rem",
                       }}
                     >
                       <i className="fa fa-lock me-1"></i>
-                      Hackthon Registration
+                      Hackathon
                     </Link>
                   </div>
 
                   {/* Mobile dropdown button */}
                   <div className="d-md-none dropdown">
                     <button
-                      className="btn btn3 dropdown-toggle"
+                      className="btn btn3 dropdown-toggle px-3 py-2"
                       type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
-                      style={{ fontSize: "0.75rem" }}
+                      style={{ fontSize: "0.8rem" }}
                     >
+                      <i className="fa fa-bars me-2"></i>
                       Menu
-                      <i className="ms-1 fa fa-bars me-1"></i>
                     </button>
-                    <ul className="dropdown-menu dropdown-menu-end">
+                    <ul
+                      className="dropdown-menu dropdown-menu-end shadow-sm"
+                      style={{ minWidth: "200px" }}
+                    >
                       <li>
-                        <Link className="dropdown-item" to="/shcaifest/">
-                          <i className="fa fa-home me-2"></i>
+                        <Link className="dropdown-item py-2" to="/shcaifest/">
+                          <i className="fa fa-home me-3"></i>
                           Home
                         </Link>
                       </li>
+                      {/* <li>
+                        <hr className="dropdown-divider" />
+                      </li> */}
                       <li>
-                        <Link className="dropdown-item" to="/shcaifest/About">
-                          <i className="fa fa-question me-2"></i>
+                        <Link
+                          className="dropdown-item py-2"
+                          to="/shcaifest/About"
+                        >
+                          <i className="fa fa-question me-3"></i>
                           About
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/shcaifest/Agenda">
-                          <i className="fa fa-ticket me-2"></i>
+                        <Link
+                          className="dropdown-item py-2"
+                          to="/shcaifest/Agenda"
+                        >
+                          <i className="fa fa-ticket me-3"></i>
                           Agenda
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/shcaifest/HackathonRegistration">
-                          <i className="fa fa-lock me-2"></i>
+                        <Link
+                          className="dropdown-item py-2"
+                          to="/shcaifest/Guests"
+                        >
+                          <i className="fa fa-calendar me-3"></i>
+                          Guests
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="dropdown-item py-2"
+                          to="/shcaifest/Sponsers"
+                        >
+                          <i className="fa fa-users me-3"></i>
+                          Sponsors
+                        </Link>
+                      </li>
+                      {/* <li>
+                        <hr className="dropdown-divider" />
+                      </li> */}
+                      <li>
+                        <Link
+                          className="dropdown-item py-2 fw-bold"
+                          to="/shcaifest/HackathonRegistration"
+                        >
+                          <i className="fa fa-lock me-3"></i>
                           Hackathon Registration
                         </Link>
                       </li>

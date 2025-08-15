@@ -10,6 +10,8 @@ import Footer from "./Components/Footer";
 import Agenda from "./Pages/Agenda";
 import Aos from "aos";
 import GuideLine from "./Components/GuideLine";
+import Guests from "./Pages/Guests";
+import Sponsers from "./Pages/Sponsers";
 
 function App() {
   const location = useLocation();
@@ -30,6 +32,8 @@ function App() {
         <Route path="/shcaifest/" element={<Home />} />
         <Route path="/shcaifest/About" element={<About />} />
         <Route path="/shcaifest/Agenda" element={<Agenda />} />
+        <Route path="/shcaifest/Guests" element={<Guests />} />
+        <Route path="/shcaifest/Sponsers" element={<Sponsers />} />
         <Route path="/shcaifest/Contact" element={<Contact />} />
         <Route path="/shcaifest/Booknow" element={<Booknow />} />
         <Route path="/shcaifest/Error" element={<Error />} />

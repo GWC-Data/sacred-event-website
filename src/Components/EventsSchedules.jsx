@@ -298,40 +298,142 @@ const EventSchedules = () => {
             location: "Kamarajar Arangam",
             backgroundColor: "bg-lightgrey",
           },
+          // {
+          //   id: 2,
+          //   title: "KEYNOTE",
+          //   description:
+          //     "Dive into the transformative power of AI with an inspiring talk by a top AI thought leader from GWC DATA.AI.",
+          //   time: "11:30 AM - 01:00 PM",
+          //   location: "Kamarajar Arangam",
+          //   speaker: {
+          //     name: "Padmasri MAYILSAMY ANNADURAI",
+          //     image:
+          //       "https://ui-avatars.com/api/?name=MAYILSAMY+ANNADURAI&background=random&size=300",
+          //   },
+          //   backgroundColor: "bg-white border-lightgrey",
+          // },
           {
             id: 2,
-            title: "KEYNOTE",
+            title: "KEYNOTE SESSIONS",
             description:
-              "Dive into the transformative power of AI with an inspiring talk by a top AI thought leader from GWC DATA.AI.",
-            time: "11:30 AM - 01:00 PM",
-            location: "Kamarajar Arangam",
+              "Innovation in Indian Education & Space Science by industry leaders from VIT Group and former ISRO scientist.",
+            time: "10:00 AM - 10:40 AM",
+            location: "Main Auditorium",
             speaker: {
-              name: "Padmasri MAYILSAMY ANNADURAI",
+              name: "Dr. G. Viswanathan & Dr. Mylswamy Annadurai",
               image:
-                "https://ui-avatars.com/api/?name=MAYILSAMY+ANNADURAI&background=random&size=300",
+                "https://ui-avatars.com/api/?name=Dr+Viswanathan&background=random&size=300",
             },
             backgroundColor: "bg-white border-lightgrey",
           },
+          // {
+          //   id: 3,
+          //   title: "START UP PITCH",
+          //   time: "02:00 PM - 03:00 PM",
+          //   location: "Pope Francis Hall",
+          //   backgroundColor: "bg-lightgrey",
+          // },
           {
             id: 3,
-            title: "START UP PITCH",
-            time: "02:00 PM - 03:00 PM",
-            location: "Pope Francis Hall",
+            title: "PANEL DISCUSSION",
+            description:
+              "The Next Wave: IT Industry Growth & Industry-Academia Collaboration moderated by global tech leaders.",
+            time: "10:40 AM - 11:20 AM",
+            location: "Main Auditorium",
+            speaker: {
+              name: "Dr. Bala M.S.",
+              image:
+                "https://ui-avatars.com/api/?name=Bala+MS&background=random&size=300",
+            },
+            backgroundColor: "bg-lightgrey",
+          },
+          // {
+          //   id: 4,
+          //   title: "INNOVATION EXPO",
+          //   time: "08.30 AM - 04.30 PM",
+          //   location: "College Ground",
+          //   backgroundColor: "bg-white border-lightgrey",
+          // },
+          {
+            id: 4,
+            title: "FIRESIDE CHAT",
+            description:
+              "The Entrepreneurial Mindset – Fail Fast, Learn Faster with young AI innovators and startup founders.",
+            time: "11:20 AM - 12:00 PM",
+            location: "Innovation Hall",
+            backgroundColor: "bg-white border-lightgrey",
+          },
+          // {
+          //   id: 5,
+          //   title: "VALEDICTORY AND AWARDS",
+          //   time: "05:00 PM",
+          //   location: "Kamarajar Arangam",
+          //   backgroundColor: " bg-lightgrey",
+          // },
+          {
+            id: 5,
+            title: "TRANSITION BREAK + NETWORKING COFFEE",
+            time: "12:00 PM - 12.30 PM",
             backgroundColor: "bg-lightgrey",
           },
           {
-            id: 4,
-            title: "INNOVATION EXPO",
-            time: "08.30 AM - 04.30 PM",
-            location: "College Ground",
+            id: 6,
+            title: "PARALLEL SESSIONS",
+            description:
+              "Industry 5.0 Career Pathways, AI Workshop, Aerospace Innovation & Life Science Commercialization across multiple halls.",
+            time: "12:30 PM - 02:00 PM",
+            location: "Halls A, B, C & D",
             backgroundColor: "bg-white border-lightgrey",
           },
           {
-            id: 5,
-            title: "VALEDICTORY AND AWARDS",
-            time: "05:00 PM",
-            location: "Kamarajar Arangam",
-            backgroundColor: " bg-lightgrey",
+            id: 7,
+            title: "TECH EXPO & NETWORKING",
+            description:
+              "AI Startups, Innovation Booths, Alumni Connect Lounge & Faculty-Industry Roundtables with networking lunch.",
+            time: "02:00 PM - 03:00 PM",
+            location: "College Ground",
+            backgroundColor: "bg-lightgrey",
+          },
+          {
+            id: 8,
+            title: "RESEARCH & NEP 2020 DISCUSSION",
+            description:
+              "Panel on New Education Policy's impact on research and interdisciplinary education with policy advocates.",
+            time: "03:00 PM - 03:40 PM",
+            location: "Main Auditorium",
+            backgroundColor: "bg-white border-lightgrey",
+          },
+          {
+            id: 9,
+            title: "FIRESIDE CHAT: LESSONS BEYOND THE LAB",
+            description:
+              "A conversation on turning research into real-world solutions. Learn how innovation, collaboration, and community relevance are key to meaningful scientific progress.",
+            time: "03:40 PM - 04:20 PM",
+            location: "Innovation Hall",
+            speaker: {
+              name: "Global STEM Leader",
+              image:
+                "https://ui-avatars.com/api/?name=Global+STEM+Leader&background=random&size=300",
+            },
+            backgroundColor: "bg-lightgrey",
+          },
+          {
+            id: 10,
+            title: "CLOSING REMARKS",
+            description:
+              "Reflections on a day of ideas, energy, and inspiration. This session thanks all collaborators, revisits key insights, and invites continued engagement beyond the event.",
+            time: "04:20 PM - 04:40 PM",
+            location: "Main Auditorium",
+            backgroundColor: "bg-white border-lightgrey",
+          },
+          {
+            id: 11,
+            title: "AWARDS & VALEDICTORY",
+            description:
+              "Best Innovation Awards, Hackathon Winners, Alumni Honors & Faculty Recognition with closing ceremony.",
+            time: "04:40 PM - 06:00 PM",
+            location: "Main Auditorium",
+            backgroundColor: "bg-lightgrey",
           },
         ],
         showMoreButton: false,
@@ -439,13 +541,15 @@ const EventSchedules = () => {
                                 ></i>
                                 <small>{event.time}</small>
                               </li>
-                              <li className="d-inline">
-                                <i
-                                  className="fa fa-thumb-tack pink mx-2"
-                                  aria-hidden="true"
-                                ></i>
-                                <small>{event.location}</small>
-                              </li>
+                              {event.location && (
+                                <li className="d-inline">
+                                  <i
+                                    className="fa fa-thumb-tack pink mx-2"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <small>{event.location}</small>
+                                </li>
+                              )}
                             </ul>
                           </div>
 

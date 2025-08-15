@@ -96,73 +96,36 @@ function About() {
                     <div className="col-lg-6 col-md-6 px-2 pt-2">
                       <div className="event-benifit-list-left mb-4">
                         <div className="benifit-list-box py-7 px-4 rounded mb-4 box-shadow bg-white">
-                          {/* <div className="list-box-icon">
-                            <i
-                              className="fa fa-users pink mb-3"
-                              aria-hidden="true"
-                            ></i>
-                          </div> */}
                           <div className="list-box-body">
-                            {/* <h5 className="mb-2">Event Conference</h5> */}
                             <img
                               src="https://shctpt.edu/assets/img/logo/logo.png"
-                              alt="Logo"
-                              className="w-100"
+                              alt="Sacred Heart College Logo"
+                              className="w-100 "
                             />
-                            <div className="box-btn">
-                              {/* <Link to="/Eventdetail" className="p-0 pink">
-                                Learn More
-                                <i className="fa fa-long-arrow-right ms-2"></i>
-                              </Link> */}
-                            </div>
+                            <div className="box-btn"></div>
                           </div>
                         </div>
                         <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
-                          {/* <div className="list-box-icon">
-                            <i
-                              className="fa fa-globe pink mb-3"
-                              aria-hidden="true"
-                            ></i>
-                          </div> */}
                           <div className="list-box-body">
-                            {/* <h5 className="mb-2">Culture Leadership</h5> */}
                             <img
-                              src={`${process.env.PUBLIC_URL}/assets/images/logo/annamalai.png`}
-                              alt="Logo"
-                              style={{ width: "42%" }}
-                              className=""
+                              src={`${process.env.PUBLIC_URL}/assets/images/logo/annamalaiIcon.jpg`}
+                              alt="Annamalai Foundation Logo"
+                              style={{ width: "45%" }}
                             />
-                            <div className="box-btn">
-                              {/* <Link to="/Eventdetail" className="p-0 pink">
-                                Learn More
-                                <i className="fa fa-long-arrow-right ms-2"></i>
-                              </Link> */}
-                            </div>
+                            <div className="box-btn"></div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6 px-2">
-                      <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
-                        {/* <div className="list-box-icon">
-                          <i
-                            className="fa fa-bar-chart pink mb-3"
-                            aria-hidden="true"
-                          ></i>
-                        </div> */}
-                        <div className="list-box-body">
-                          {/* <h5 className="mb-2">Digital Marketing</h5> */}
+                      <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white d-none d-sm-block">
+                        <div className="list-box-body d-none d-sm-block">
                           <img
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJvofK6zZPeSuCofBJY8ItX7uxyJKMHQpUiw&s"
-                            alt="Logo"
-                            className="w-100"
+                            alt="VIT Logo"
+                            className="w-100 d-none d-sm-block"
                           />
-                          <div className="box-btn">
-                            {/* <Link to="/Eventdetail" className="p-0 pink">
-                              Learn More
-                              <i className="fa fa-long-arrow-right ms-2"></i>
-                            </Link> */}
-                          </div>
+                          <div className="box-btn"></div>
                         </div>
                       </div>
                     </div>
@@ -181,29 +144,38 @@ function About() {
                   </div>
                   <div className="overview-info">
                     <p>
-                      Annamalai Foundation is a global nonprofit dedicated to
-                      uplifting talented students—particularly from government
-                      schools in India—through access to STEM education,
-                      international academic collaborations, mentorship, and
-                      innovation-driven programs.
+                      <strong>Vision:</strong> To nurture future leaders in
+                      science, technology, and social impact.
+                    </p>
+                    <p>
+                      <strong>Mission:</strong> To bridge rural potential with
+                      world-class opportunities in STEM and innovation.
+                    </p>
+                    <p>
+                      A global non-profit committed to empowering rural talent
+                      through education, innovation, and global collaboration.
+                      We establish Innovative Science Labs in rural Tamil Nadu,
+                      equipping government school students with AI, robotics,
+                      and space science skills.
                     </p>
                     <ul class="list-group">
                       <li class="list-group-item">
-                        ✔️ Partnerships with U.S. universities, Sessions with
-                        ISRO and NASA scientists, Industrial Specialists, SME's
-                        experts
+                        ✔️ Global partnerships with USA universities, NASA
+                        officials, and ISRO scientists
                       </li>
                       <li class="list-group-item">
-                        ✔️ STEM labs and incubation centers and ISRO outreach
-                        for rural students
+                        ✔️ Innovative Science Labs in rural Tamil Nadu with AI,
+                        robotics, and space science programs
                       </li>
                       <li class="list-group-item">
-                        ✔️ Career mentoring from global experts
+                        ✔️ Leadership visits to NASA and U.S. institutions for
+                        collaborative programs
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ Building a future where knowledge, innovation, and
+                        opportunity reach every corner of society
                       </li>
                     </ul>
-                    {/* <div className="overview-btn mt-4">
-                                <Link to="/Eventdetail" className="btn">Join Event<i className="fa fa-long-arrow-right ms-4"></i></Link>
-                            </div>       */}
                   </div>
                 </div>
               </div>

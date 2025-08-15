@@ -7,6 +7,7 @@ import EventSchedules from "../Components/EventsSchedules";
 import "./header.css";
 import Aos from "aos";
 import BlurFadeDemo from "../Components/DateFade";
+import SponsersSection from "../Components/SponsersSection";
 
 function Home() {
   useEffect(() => {
@@ -19,7 +20,7 @@ function Home() {
   return (
     <div>
       {/*!-- Bannner section starts --*/}
-      <section className="banner position-relative pb-0 pb-sm-25">
+      <section className="banner position-relative pb-sm-6 pb-lg-10">
         <div className="overlay"></div>
         <div className="container">
           <div className="inner-banner position-relative text-white">
@@ -27,15 +28,11 @@ function Home() {
               {/* Left Column */}
               <div className="col-lg-6 order-2 order-lg-1">
                 <div className="banner-left text-center pb-lg-5 p-md-0">
-                  <h4 className="text-white pb-3">
-                    <span className="pink"> PLATINUM JUBILEE </span>{" "}
-                    <span className="">CELEBRATION</span>
-                  </h4>
-                  <div className="banner-image">
+                  <div className="pt-5 pb-5">
                     <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/bannerImages/75.png`}
+                      src={`${process.env.PUBLIC_URL}/assets/images/logo/annamalaiIcon.png`}
                       alt="banner-image"
-                      className="w-40"
+                      className="w-50"
                     />
                     <br />
                   </div>
@@ -55,29 +52,64 @@ function Home() {
 
               {/* Right Column */}
               <div className="col-lg-6 order-1 order-lg-2">
-                <div className="banner-right ms-2 text-center text-lg-start pb-8">
-                  <div className="banner-title pb-3">
+                <div className="banner-right ms-2 text-center text-lg-start pb-3 pb-lg-8">
+                  <div className="banner-title pb-1">
                     <h4 className="text-white pb-2">
-                      <span className=""> ANNAMALAI FOUNDATION , USA</span>{" "}
+                      <span className=""> ANNAMALAI FOUNDATION , USA,</span>{" "}
+                      <span className=""> Annamalai Trust, India</span>{" "}
                       <span className="pink"> & </span>
                     </h4>
+                    <div className="pb-2">
+                      {/* <h4 className="text-white"> */}
+                      <span className="h4 fw-bold pe-1"> SACRED HEART COLLEGE</span>
+                      {/* </h4> */}
+                      <span className="text-white pb-2">(Autonomous, Tirupattur)</span>
+                    </div>
+                    {/* <i className="text-white pb-2 ">
+                      Jointly Presents & Celebrates{" "}
+                    </i>
                     <h4 className="text-white pb-2">
+                      <span className=""> ANNAMALAI FOUNDATION , USA,</span>{" "}
+                      <span className="pink"> & </span>
+                      <span className="">
+                        SACRED HEART COLLEGE (AUTONOMOUS)
+                      </span>{" "}
+                    </h4> */}
+                    {/* <h4 className="text-white pb-2">
                       <span className="">
                         {" "}
                         SACRED HEART COLLEGE(AUTONOMOUS)
                       </span>{" "}
-                    </h4>
-                    <i className="text-white pb-2 ">
-                      Jointly Presents & Celebrates{" "}
-                    </i>
+                    </h4> */}
+                    <i className="text-white pb-2 ">Jointly Presents</i>
 
-                    <h2 className="text-white">
+                    <h2 className="text-white mb-2">
                       SCIENCE & TECHNOLOGY{" "}
                       <span className="pink">INNOVATION AI FEST 2025</span>
                     </h2>
+                    <i className="text-white pb-2">Celebrates</i>
+                    <div className="d-flex align-items-center gap-2">
+                      <h6 className="text-white">
+                        <span>PLATINUM JUBILEE</span>{" "}
+                        <span className="pink">CELEBRATION</span>
+                      </h6>
+                      <img
+                        src={`${process.env.PUBLIC_URL}/assets/images/bannerImages/75.png`}
+                        alt="banner-image"
+                        className="img-fluid"
+                        style={{ maxWidth: "30px" }}
+                      />
+                    </div>
                   </div>
-                  <div className="banner-event-info pb-3">
-                    <ul className="m-0 ps-0 d-sm-flex justify-content-center justify-content-lg-start list-unstyled">
+                  <div className="d-flex justify-content-evenly align-items-center pb-1">
+                    {/* <div>
+                      <h6 className="text-white">
+                        <span>PLATINUM JUBILEE</span>{" "}
+                        <span className="pink">CELEBRATION</span>
+                      </h6>
+                    </div> */}
+                    <div></div>
+                    {/* <ul className="m-0 ps-0 d-sm-flex justify-content-center justify-content-lg-start list-unstyled">
                       <li className="pe-2 border-end border-1 border-lightgrey">
                         <i className="fa fa-calendar-o pe-1"></i> 13 SEPT 2025
                       </li>
@@ -85,19 +117,19 @@ function Home() {
                         <i className="fa fa-map-marker pe-1"></i> SACRED HEART
                         COLLEGE, TIRUPATTUR
                       </li>
-                    </ul>
+                    </ul> */}
                   </div>
                   <div className="event-description text-left">
-                    <p className="pb-4 m-0">
+                    {/* <p className="pb-4 m-0">
                       Discover cutting-edge AI innovations, connect with
                       industry experts, and explore the future of technology at
                       Sacred Heart College's 75th Jubilee celebration. Proudly
                       powered by GWC DATA.AI
-                    </p>
-                    <div className="container py-4">
+                    </p> */}
+                    <div className="container py-5">
                       {/* Rendered on md and up */}
                       <div className="d-none d-md-flex flex-row justify-content-center gap-4">
-                        <div className="text-center px-3" data-aos="fade-right">
+                        <div className="text-center ps-3" data-aos="fade-right">
                           <h6 className="text-white fw-semibold mb-3">
                             Powered by:
                           </h6>
@@ -106,13 +138,13 @@ function Home() {
                               src="https://gwcdata.ai/assets/Logo-zBt8xU73.svg"
                               alt="GWC DATA.AI Logo"
                               className="img-fluid powered-logo"
-                              style={{ maxHeight: "60px", minWidth: "230px" }}
+                              style={{ maxHeight: "60px", minWidth: "210px" }}
                             />
                           </div>
                         </div>
 
                         <div
-                          className="text-center px-3"
+                          className="text-center pe-3"
                           data-aos="fade-left"
                           data-aos-delay="200"
                         >
@@ -123,8 +155,14 @@ function Home() {
                             <img
                               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwwJFUz91ATiDWH8DT3NcDt3uZ_tOXZwR5w&s"
                               alt="Association Partner Logo"
+                              className="img-fluid powered-logo me-2"
+                              style={{ maxHeight: "60px", minWidth: "110px" }}
+                            />
+                            <img
+                              src={`${process.env.PUBLIC_URL}/assets/images/associatedWith/srm-university-logo.png`}
+                              alt="Association Partner Logo"
                               className="img-fluid powered-logo"
-                              style={{ maxHeight: "60px", minWidth: "230px" }}
+                              style={{ maxHeight: "60px", minWidth: "110px" }}
                             />
                           </div>
                         </div>
@@ -154,9 +192,17 @@ function Home() {
                           <h6 className="text-white fw-semibold mb-3">
                             Association With:
                           </h6>
-                          <div className="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center">
+                          <div className="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center mb-3">
                             <img
                               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwwJFUz91ATiDWH8DT3NcDt3uZ_tOXZwR5w&s"
+                              alt="Association Partner Logo"
+                              className="img-fluid powered-logo"
+                              style={{ maxHeight: "60px", minWidth: "230px" }}
+                            />
+                          </div>
+                          <div className="bg-white p-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/assets/images/associatedWith/srm-university-logo.png`}
                               alt="Association Partner Logo"
                               className="img-fluid powered-logo"
                               style={{ maxHeight: "60px", minWidth: "230px" }}
@@ -166,20 +212,18 @@ function Home() {
                       </div>
                     </div>
 
-                    <div className="banner-button mt-4">
+                    {/* <div className="banner-button mt-4">
                       <div className="row text-center">
                         <div className="col-lg-12 col-md-12 ">
-                          <Link to="/shcaifest/HackathonRegistration" className="btn me-3 my-1 w-50">
+                          <Link
+                            to="/shcaifest/HackathonRegistration"
+                            className="btn me-3 my-1 w-50"
+                          >
                             HACKATHON REGISTRATION
                           </Link>
                         </div>
-                        {/* <div className="col-lg-6 col-md-6">
-                          <Link to="/Schedule" className="btn btn2 my-1 w-100">
-                            VIEW SCHEDULE
-                          </Link>
-                        </div> */}
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -214,7 +258,7 @@ function Home() {
             <div className="row">
               {/* Left Section - Overview Text */}
               <div className="col-lg-6">
-                <div className="overview-left  text-lg-start">
+                <div className="overview-left text-lg-start">
                   <div className="overview-title pb-4">
                     <p className="mb-1 pink">OVERVIEW</p>
                     <h2 className="mb-2">
@@ -233,10 +277,21 @@ function Home() {
                       transformative future.
                     </p>
                     <p className="mb-2">
+                      The <strong>Annamalai Foundation</strong> is a global
+                      non-profit committed to empowering rural talent through
+                      education, innovation, and global collaboration. With
+                      initiatives including Innovative Science Labs in rural
+                      Tamil Nadu and partnerships with USA universities, NASA
+                      officials, and ISRO scientists, we're bridging rural
+                      potential with world-class opportunities in STEM and
+                      innovation.
+                    </p>
+                    <p className="mb-2">
                       Powered by <strong>GWC DATA.AI</strong> and associated by{" "}
                       <strong>Vellore Institute of Technology</strong>, the fest
-                      brings together experts, students, and pioneers in science
-                      and technology.
+                      brings together global experts, students, and pioneers to
+                      explore cutting-edge AI, robotics, and sustainable
+                      technologies.
                     </p>
                   </div>
 
@@ -293,7 +348,7 @@ function Home() {
                             alt="group-image"
                           />
                         </div>
-                        <div className="img-left-2  ">
+                        <div className="img-left-2">
                           <img
                             src="https://news.uppersetup.com/wp-content/uploads/2025/03/dubai-ai-festival-2025-set-to-showcase-ai-innovations-in-tra.jpg"
                             alt="group-image"
@@ -319,7 +374,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="conference">
+      <section className="conference pb-0">
         <div className="container">
           <div className="conference-inner text-center">
             <div className="row gx-lg-5 align-items-center">
@@ -336,18 +391,13 @@ function Home() {
                             ></i>
                           </div>
                           <div className="list-box-body">
-                            <h5 className="mb-2">A Historic Milestone</h5>
+                            <h5 className="mb-2">Empowering Rural Talent</h5>
                             <p className="mb-2 w-75 m-auto">
-                              We proudly welcome you to this Platinum Jubilee
-                              celebration, honoring 75 years of academic
-                              excellence, leadership, and societal contribution.
+                              The Annamalai Foundation bridges rural potential
+                              with world-class opportunities in STEM through
+                              innovative science labs and global partnerships
+                              with NASA and ISRO.
                             </p>
-                            {/* <div className="box-btn">
-                              <Link to="/Eventdetail" className="p-0 pink">
-                                Learn More
-                                <i className="fa fa-long-arrow-right ms-2"></i>
-                              </Link>
-                            </div> */}
                           </div>
                         </div>
                         <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
@@ -358,12 +408,12 @@ function Home() {
                             ></i>
                           </div>
                           <div className="list-box-body">
-                            <h5 className="mb-2">Theme and Vision</h5>
+                            <h5 className="mb-2">Global Innovation Hub</h5>
                             <p className="mb-2 w-75 m-auto">
-                              With the theme "Igniting Young Minds," the fest
-                              unites students, researchers, and experts to
-                              inspire innovation and future-focused
-                              collaboration.
+                              Fostering cross-cultural collaboration through
+                              partnerships with USA universities, NASA
+                              officials, and ISRO scientists for cutting-edge
+                              research and education.
                             </p>
                           </div>
                         </div>
@@ -378,19 +428,13 @@ function Home() {
                           ></i>
                         </div>
                         <div className="list-box-body">
-                          <h5 className="mb-2">A Call to Collaborate</h5>
+                          <h5 className="mb-2">Building Future Leaders</h5>
                           <p className="mb-2 w-75 m-auto">
-                            This event bridges academia and industry,
-                            encouraging global partnerships to shape a
-                            sustainable, inclusive, and knowledge-driven future
-                            together.
+                            Nurturing future leaders in science, technology, and
+                            social impact through education, innovation, and
+                            collaborative programs that reach every corner of
+                            society.
                           </p>
-                          {/* <div className="box-btn">
-                            <Link to="/Eventdetail" className="p-0 pink">
-                              Learn More
-                              <i className="fa fa-long-arrow-right ms-2"></i>
-                            </Link>
-                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -402,44 +446,38 @@ function Home() {
                   <div className="overview-title pb-6">
                     <p className="mb-1 pink">WHY ATTEND </p>
                     <h2 className="mb-2">
-                      What you’ll discover at{" "}
-                      <span className="pink">Event</span>
+                      What you'll discover at{" "}
+                      <span className="pink">AI Fest 2025</span>
                     </h2>
                   </div>
                   <div className="overview-info">
                     <ul class="list-group">
                       <li class="list-group-item">
-                        ✔️ 150+ organizations, 50+ keynote speakers and global
-                        experts
+                        ✔️ Global experts from NASA, ISRO, and leading USA
+                        universities
                       </li>
                       <li class="list-group-item">
-                        ✔️ 15,000+ students expected from across Tamil Nadu
+                        ✔️ 15,000+ students from rural and urban Tamil Nadu
+                        institutions
                       </li>
                       <li class="list-group-item">
-                        ✔️ 50+ stalls showcasing emerging tech, AI, and startups
+                        ✔️ Innovative Science Labs showcasing AI, robotics, and
+                        space science
                       </li>
                       <li class="list-group-item">
-                        ✔️ Workshops, hackathons, research paper presentations,
-                        and product showcases
+                        ✔️ Workshops on sustainable technologies and
+                        cross-cultural collaboration
                       </li>
                       <li class="list-group-item">
-                        ✔️ Campus placement drives and career guidance sessions
+                        ✔️ Industry-academia partnerships and mentorship
+                        opportunities
                       </li>
                       <li class="list-group-item">
-                        ✔️ A melting pot of academia, industry, and
-                        innovation—where future-ready students meet
-                        forward-looking industries for mutual growth
+                        ✔️ A platform where rural talent meets global
+                        opportunities, fostering innovation that transforms
+                        communities and creates future-ready leaders
                       </li>
                     </ul>
-                    {/* <div className="overview-btn mt-4">
-                      <Link
-                        // to="/Eventdetail"
-                        className="btn"
-                      >
-                        Join Event
-                        <i className="fa fa-long-arrow-right ms-4"></i>
-                      </Link>
-                    </div> */}
                   </div>
                 </div>
               </div>
@@ -452,6 +490,10 @@ function Home() {
       {/*--Cheif Guests Section start--*/}
       <CheifGuestSection />
       {/*--Cheif Guests Section end--*/}
+
+      {/*--Sponsers Section start--*/}
+      <SponsersSection />
+      {/*--Sponsers Section end--*/}
 
       {/*--Features Section start--*/}
       <section className="feature text-white position-relative z-0 start-0 py-6">
@@ -586,73 +628,36 @@ function Home() {
                     <div className="col-lg-6 col-md-6 px-2 pt-2">
                       <div className="event-benifit-list-left mb-4">
                         <div className="benifit-list-box py-7 px-4 rounded mb-4 box-shadow bg-white">
-                          {/* <div className="list-box-icon">
-                            <i
-                              className="fa fa-users pink mb-3"
-                              aria-hidden="true"
-                            ></i>
-                          </div> */}
                           <div className="list-box-body">
-                            {/* <h5 className="mb-2">Event Conference</h5> */}
                             <img
                               src="https://shctpt.edu/assets/img/logo/logo.png"
-                              alt="Logo"
+                              alt="Sacred Heart College Logo"
                               className="w-100 "
                             />
-                            <div className="box-btn">
-                              {/* <Link to="/Eventdetail" className="p-0 pink">
-                                Learn More
-                                <i className="fa fa-long-arrow-right ms-2"></i>
-                              </Link> */}
-                            </div>
+                            <div className="box-btn"></div>
                           </div>
                         </div>
-                        <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white d-none d-sm-block">
-                          {/* <div className="list-box-icon">
-                            <i
-                              className="fa fa-globe pink mb-3"
-                              aria-hidden="true"
-                            ></i>
-                          </div> */}
-                          <div className="list-box-body d-none d-sm-block">
-                            {/* <h5 className="mb-2">Culture Leadership</h5> */}
+                        <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white">
+                          <div className="list-box-body">
                             <img
-                              src={`${process.env.PUBLIC_URL}/assets/images/logo/annamalai.png`}
-                              alt="Logo"
-                              style={{ width: "42%" }}
-                              className="d-none d-sm-block"
+                              src={`${process.env.PUBLIC_URL}/assets/images/logo/annamalaiIcon.jpg`}
+                              alt="Annamalai Foundation Logo"
+                              style={{ width: "45%" }}
                             />
-                            <div className="box-btn">
-                              {/* <Link to="/Eventdetail" className="p-0 pink">
-                                Learn More
-                                <i className="fa fa-long-arrow-right ms-2"></i>
-                              </Link> */}
-                            </div>
+                            <div className="box-btn"></div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6 px-2">
                       <div className="benifit-list-box py-7 px-4 rounded box-shadow bg-white d-none d-sm-block">
-                        {/* <div className="list-box-icon">
-                          <i
-                            className="fa fa-bar-chart pink mb-3"
-                            aria-hidden="true"
-                          ></i>
-                        </div> */}
                         <div className="list-box-body d-none d-sm-block">
-                          {/* <h5 className="mb-2">Digital Marketing</h5> */}
                           <img
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJvofK6zZPeSuCofBJY8ItX7uxyJKMHQpUiw&s"
-                            alt="Logo"
+                            alt="VIT Logo"
                             className="w-100 d-none d-sm-block"
                           />
-                          <div className="box-btn">
-                            {/* <Link to="/Eventdetail" className="p-0 pink">
-                              Learn More
-                              <i className="fa fa-long-arrow-right ms-2"></i>
-                            </Link> */}
-                          </div>
+                          <div className="box-btn"></div>
                         </div>
                       </div>
                     </div>
@@ -671,29 +676,38 @@ function Home() {
                   </div>
                   <div className="overview-info">
                     <p>
-                      Annamalai Foundation is a global nonprofit dedicated to
-                      uplifting talented students—particularly from government
-                      schools in India—through access to STEM education,
-                      international academic collaborations, mentorship, and
-                      innovation-driven programs.
+                      <strong>Vision:</strong> To nurture future leaders in
+                      science, technology, and social impact.
+                    </p>
+                    <p>
+                      <strong>Mission:</strong> To bridge rural potential with
+                      world-class opportunities in STEM and innovation.
+                    </p>
+                    <p>
+                      A global non-profit committed to empowering rural talent
+                      through education, innovation, and global collaboration.
+                      We establish Innovative Science Labs in rural Tamil Nadu,
+                      equipping government school students with AI, robotics,
+                      and space science skills.
                     </p>
                     <ul class="list-group">
                       <li class="list-group-item">
-                        ✔️ Partnerships with U.S. universities, Sessions with
-                        ISRO and NASA scientists, Industrial Specialists, SME's
-                        experts
+                        ✔️ Global partnerships with USA universities, NASA
+                        officials, and ISRO scientists
                       </li>
                       <li class="list-group-item">
-                        ✔️ STEM labs and incubation centers and ISRO outreach
-                        for rural students
+                        ✔️ Innovative Science Labs in rural Tamil Nadu with AI,
+                        robotics, and space science programs
                       </li>
                       <li class="list-group-item">
-                        ✔️ Career mentoring from global experts
+                        ✔️ Leadership visits to NASA and U.S. institutions for
+                        collaborative programs
+                      </li>
+                      <li class="list-group-item">
+                        ✔️ Building a future where knowledge, innovation, and
+                        opportunity reach every corner of society
                       </li>
                     </ul>
-                    {/* <div className="overview-btn mt-4">
-                                <Link to="/Eventdetail" className="btn">Join Event<i className="fa fa-long-arrow-right ms-4"></i></Link>
-                            </div>       */}
                   </div>
                 </div>
               </div>
@@ -1819,7 +1833,7 @@ function Home() {
       {/*--FAQ Section end--*/}
 
       {/*--Direction Section start--*/}
-      <section className="direction pt-9 pb-8">
+      <section className="direction">
         <div className="container">
           <div className="section-title text-center pb-2 w-lg-60 m-auto">
             <p className="mb-1 pink">REACH US</p>
@@ -1851,6 +1865,7 @@ function Home() {
                         Booking & Info: +91 80562 86482
                       </p>
                       <a
+                        className="text-decoration-underline text-white"
                         href="https://maps.google.com/?q=Sacred+Heart+College+Tirupattur"
                         target="_blank"
                         rel="noopener noreferrer"

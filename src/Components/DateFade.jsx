@@ -54,7 +54,13 @@ const DateFade = () => {
   return (
     <div className="">
       <BlurFade delay={0.25} inView={true} className="">
-        <h2 className="display-6 fw-bold text-white">13th September 2025</h2>
+        <h2 className="display-6 fw-bold text-white">
+          13
+          <span className="text-lowercase">
+            <sup>th</sup>
+          </span>{" "}
+          September 2025
+        </h2>
       </BlurFade>
       {/* <BlurFade delay={0.5} inView={true}>
           <span className="display-4 text-muted">Nice to meet you</span>
