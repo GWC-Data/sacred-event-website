@@ -61,9 +61,14 @@ function Home() {
                     </h4>
                     <div className="pb-2">
                       {/* <h4 className="text-white"> */}
-                      <span className="h4 fw-bold pe-1"> SACRED HEART COLLEGE</span>
+                      <span className="h4 fw-bold pe-1">
+                        {" "}
+                        SACRED HEART COLLEGE
+                      </span>
                       {/* </h4> */}
-                      <span className="text-white pb-2">(Autonomous, Tirupattur)</span>
+                      <span className="text-white pb-2">
+                        (Autonomous, Tirupattur)
+                      </span>
                     </div>
                     {/* <i className="text-white pb-2 ">
                       Jointly Presents & Celebrates{" "}
@@ -216,7 +221,7 @@ function Home() {
                       <div className="row text-center">
                         <div className="col-lg-12 col-md-12 ">
                           <Link
-                            to="/shcaifest/HackathonRegistration"
+                            to="/HackathonRegistration"
                             className="btn me-3 my-1 w-50"
                           >
                             HACKATHON REGISTRATION
@@ -262,9 +267,9 @@ function Home() {
                   <div className="overview-title pb-4">
                     <p className="mb-1 pink">OVERVIEW</p>
                     <h2 className="mb-2">
-                      CELEBRATING 75 YEARS OF
+                      Science and Technology
                       <br />
-                      <span className="pink">IMPACT & INNOVATION</span>
+                      <span className="pink">Innovation AI Fest 2025</span>
                     </h2>
                     <p>
                       Join us for the <strong>Innovation AI Fest 2025</strong>,
@@ -1101,7 +1106,7 @@ function Home() {
                 <em>Solution Matters</em>.
               </p>
               <div className="ticket-button">
-                <Link to="/shcaifest/HackathonRegistration" className="btn">
+                <Link to="/HackathonRegistration" className="btn">
                   HACKATHON REGISTRATION
                 </Link>
               </div>

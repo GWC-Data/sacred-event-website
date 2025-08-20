@@ -178,21 +178,21 @@ const GuideLine = () => {
                           {[
                             [
                               "Registration Deadline",
-                              "17-08-2025",
+                              "22-08-2025",
                               FaUserPlus,
                               "primary",
                               "STEP 1",
                             ],
                             [
                               "Submission Deadline",
-                              "20-08-2025",
+                              "24-08-2025",
                               FaFileUpload,
                               "success",
                               "STEP 2",
                             ],
                             [
                               "Results Announcement",
-                              "24-08-2025",
+                              "28-08-2025",
                               FaBullhorn,
                               "warning",
                               "FINAL",

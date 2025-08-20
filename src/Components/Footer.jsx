@@ -166,11 +166,11 @@ function Footer() {
   ];
 
   const quickLinks = [
-    { label: "Home", url: "/shcaifest/" },
-    { label: "About Us", url: "/shcaifest/About" },
-    { label: "Agenda", url: "/shcaifest/Agenda" },
-    { label: "Guests", url: "/shcaifest/Guests" },
-    { label: "Sponsers", url: "/shcaifest/Sponsers" },
+    { label: "Home", url: "/" },
+    { label: "About Us", url: "/About" },
+    { label: "Agenda", url: "/Agenda" },
+    { label: "Guests", url: "/Guests" },
+    { label: "Sponsers", url: "/Sponsers" },
   ];
 
   return (
