@@ -77,7 +77,7 @@ const Header = () => {
                   {/* Desktop buttons */}
                   <div className="d-none d-lg-flex">
                     <Link
-                      to="/HackathonRegistration"
+                      to="/shcaifest/HackathonRegistration"
                       className="btn btn3 text-nowrap px-3 py-2"
                       style={{ fontSize: "0.85rem" }}
                     >
@@ -89,7 +89,7 @@ const Header = () => {
                   {/* Tablet buttons */}
                   <div className="d-none d-md-flex d-lg-none">
                     <Link
-                      to="/HackathonRegistration"
+                      to="/shcaifest/HackathonRegistration"
                       className="btn btn3 text-nowrap"
                       style={{
                         fontSize: "0.8rem",
@@ -118,7 +118,7 @@ const Header = () => {
                       style={{ minWidth: "200px" }}
                     >
                       <li>
-                        <Link className="dropdown-item py-2" to="/">
+                        <Link className="dropdown-item py-2" to="/shcaifest/">
                           <i className="fa fa-home me-3"></i>
                           Home
                         </Link>
@@ -129,7 +129,7 @@ const Header = () => {
                       <li>
                         <Link
                           className="dropdown-item py-2"
-                          to="/About"
+                          to="/shcaifest/About"
                         >
                           <i className="fa fa-question me-3"></i>
                           About
@@ -138,7 +138,7 @@ const Header = () => {
                       <li>
                         <Link
                           className="dropdown-item py-2"
-                          to="/Agenda"
+                          to="/shcaifest/Agenda"
                         >
                           <i className="fa fa-ticket me-3"></i>
                           Agenda
@@ -147,7 +147,7 @@ const Header = () => {
                       <li>
                         <Link
                           className="dropdown-item py-2"
-                          to="/Guests"
+                          to="/shcaifest/Guests"
                         >
                           <i className="fa fa-calendar me-3"></i>
                           Guests
@@ -156,7 +156,7 @@ const Header = () => {
                       <li>
                         <Link
                           className="dropdown-item py-2"
-                          to="/Sponsers"
+                          to="/shcaifest/Sponsers"
                         >
                           <i className="fa fa-users me-3"></i>
                           Sponsors
@@ -168,7 +168,7 @@ const Header = () => {
                       <li>
                         <Link
                           className="dropdown-item py-2 fw-bold"
-                          to="/HackathonRegistration"
+                          to="/shcaifest/HackathonRegistration"
                         >
                           <i className="fa fa-lock me-3"></i>
                           Hackathon Registration

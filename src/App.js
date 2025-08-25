@@ -29,16 +29,16 @@ function App() {
     <div>
       {!hideHeaderFooter && <Header />}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Agenda" element={<Agenda />} />
-        <Route path="/Guests" element={<Guests />} />
-        <Route path="/Sponsers" element={<Sponsers />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Booknow" element={<Booknow />} />
-        <Route path="/Error" element={<Error />} />
+        <Route path="/shcaifest/" element={<Home />} />
+        <Route path="/shcaifest/About" element={<About />} />
+        <Route path="/shcaifest/Agenda" element={<Agenda />} />
+        <Route path="/shcaifest/Guests" element={<Guests />} />
+        <Route path="/shcaifest/Sponsers" element={<Sponsers />} />
+        <Route path="/shcaifest/Contact" element={<Contact />} />
+        <Route path="/shcaifest/Booknow" element={<Booknow />} />
+        <Route path="/shcaifest/Error" element={<Error />} />
         <Route
-          path="/HackathonRegistration"
+          path="/shcaifest/HackathonRegistration"
           element={<GuideLine />}
         />
       </Routes>
