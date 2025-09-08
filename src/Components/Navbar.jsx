@@ -10,28 +10,28 @@ const Navbar = () => {
       >
         <ul className="navbar-nav align-items-center" id="responsive-menu">
           <li className="nav-item">
-            <Link to="/shcaifest/" className="nav-link px-2 my-4 py-0 text-white">
+            <Link to="/" className="nav-link px-2 my-4 py-0 text-white">
               Home
             </Link>
           </li>
 
           <li className="nav-item">
-            <Link to="/shcaifest/About" className="nav-link px-2 my-4 py-0 text-white">
+            <Link to="/About" className="nav-link px-2 my-4 py-0 text-white">
               About
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/shcaifest/Agenda" className="nav-link px-2 my-4 py-0 text-white">
+            <Link to="/Agenda" className="nav-link px-2 my-4 py-0 text-white">
               Agenda
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/shcaifest/Guests" className="nav-link px-2 my-4 py-0 text-white">
+            <Link to="/Guests" className="nav-link px-2 my-4 py-0 text-white">
               Guest
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/shcaifest/Sponsers" className="nav-link px-2 my-4 py-0 text-white">
+            <Link to="/Sponsers" className="nav-link px-2 my-4 py-0 text-white">
               Sponsers
             </Link>
           </li>

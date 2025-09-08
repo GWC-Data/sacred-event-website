@@ -291,149 +291,305 @@ const EventSchedules = () => {
         events: [
           {
             id: 1,
-            title: "REGISTRATION & INAUGURATION",
+            title: "REGISTRATION",
             description:
-              "Kickstart the celebration with a warm welcome, guest registration, and ceremonial lighting by our dignitaries.",
-            time: "09:00 AM - 10:00 AM",
-            location: "Kamarajar Arangam",
+              "Registration for school students, college students, and external participants by Annamalai Foundation and Sacred Heart College.",
+            targetGroup:
+              "School Students, College Students, and External Participants",
+            time: "08:00 AM",
             backgroundColor: "bg-lightgrey",
           },
-          // {
-          //   id: 2,
-          //   title: "KEYNOTE",
-          //   description:
-          //     "Dive into the transformative power of AI with an inspiring talk by a top AI thought leader from GWC DATA.AI.",
-          //   time: "11:30 AM - 01:00 PM",
-          //   location: "Kamarajar Arangam",
-          //   speaker: {
-          //     name: "Padmasri MAYILSAMY ANNADURAI",
-          //     image:
-          //       "https://ui-avatars.com/api/?name=MAYILSAMY+ANNADURAI&background=random&size=300",
-          //   },
-          //   backgroundColor: "bg-white border-lightgrey",
-          // },
           {
             id: 2,
-            title: "KEYNOTE SESSIONS",
+            title: "BOOTH INAUGURATION",
             description:
-              "Innovation in Indian Education & Space Science by industry leaders from VIT Group and former ISRO scientist.",
-            time: "10:00 AM - 10:40 AM",
-            location: "Main Auditorium",
-            speaker: {
-              name: "Dr. G. Viswanathan & Dr. Mylswamy Annadurai",
-              image:
-                "https://ui-avatars.com/api/?name=Dr+Viswanathan&background=random&size=300",
-            },
+              "Physics and Chemistry booth inauguration by Dr. V. G. Santhosam and Mr. Nalla Thambi, MLA.",
+            targetGroup: "PHYSICS & CHEMISTRY",
+            time: "08:30 AM - 09:00 AM",
+            speakers: [
+              {
+                name: "DR. V. G. SANTHOSAM",
+                image:
+                  "https://ui-avatars.com/api/?name=Dr+V+G+Santhosam&background=random&size=300",
+              },
+              {
+                name: "MR. NALLA THAMBI, MLA",
+                image:
+                  "https://ui-avatars.com/api/?name=Nalla+Thambi&background=random&size=300",
+              },
+            ],
             backgroundColor: "bg-white border-lightgrey",
           },
-          // {
-          //   id: 3,
-          //   title: "START UP PITCH",
-          //   time: "02:00 PM - 03:00 PM",
-          //   location: "Pope Francis Hall",
-          //   backgroundColor: "bg-lightgrey",
-          // },
           {
             id: 3,
-            title: "PANEL DISCUSSION",
+            title: "INAUGURATION",
             description:
-              "The Next Wave: IT Industry Growth & Industry-Academia Collaboration moderated by global tech leaders.",
-            time: "10:40 AM - 11:20 AM",
-            location: "Main Auditorium",
-            speaker: {
-              name: "Dr. Bala M.S.",
-              image:
-                "https://ui-avatars.com/api/?name=Bala+MS&background=random&size=300",
-            },
+              "Official inauguration ceremony by Dr. Mylswamy Annadurai, Dr. M. Krishnan, Dr. Bala M S & Principal, Faculty Members for Sacred Heart College students and guests from other colleges.",
+            targetGroup:
+              "SACRED HEART COLLEGE - SHIFT I & II (II UG + II PG), GUESTS, OTHER COLLEGES",
+            time: "09:00 AM - 10:00 AM",
+            speakers: [
+              {
+                name: "DR. MYLSWAMY ANNADURAI",
+                image:
+                  "https://ui-avatars.com/api/?name=Dr+Mylswamy+Annadurai&background=random&size=300",
+              },
+              {
+                name: "DR. M. KRISHNAN",
+                image:
+                  "https://ui-avatars.com/api/?name=Dr+M+Krishnan&background=random&size=300",
+              },
+              {
+                name: "DR. BALA M S",
+                image:
+                  "https://ui-avatars.com/api/?name=Dr+Bala+M+S&background=random&size=300",
+              },
+            ],
             backgroundColor: "bg-lightgrey",
           },
-          // {
-          //   id: 4,
-          //   title: "INNOVATION EXPO",
-          //   time: "08.30 AM - 04.30 PM",
-          //   location: "College Ground",
-          //   backgroundColor: "bg-white border-lightgrey",
-          // },
           {
             id: 4,
-            title: "FIRESIDE CHAT",
+            title: "KEYNOTE 1",
             description:
-              "The Entrepreneurial Mindset – Fail Fast, Learn Faster with young AI innovators and startup founders.",
-            time: "11:20 AM - 12:00 PM",
-            location: "Innovation Hall",
+              "From Tradition to Transformation - The Role of Liberal Arts in the Age of Artificial Intelligence by Dr. M. Krishnan, VC, Central University (Govt. of India), Tiruvarur.",
+            targetGroup:
+              "SACRED HEART COLLEGE - SHIFT I & II (IIUG + II PG), GUESTS, OTHER COLLEGES",
+            time: "10:00 AM - 10:20 AM",
+            speaker: {
+              name: "Dr. M. Krishnan",
+              image:
+                "https://ui-avatars.com/api/?name=Dr+M+Krishnan&background=random&size=300",
+            },
+
             backgroundColor: "bg-white border-lightgrey",
           },
-          // {
-          //   id: 5,
-          //   title: "VALEDICTORY AND AWARDS",
-          //   time: "05:00 PM",
-          //   location: "Kamarajar Arangam",
-          //   backgroundColor: " bg-lightgrey",
-          // },
           {
             id: 5,
-            title: "TRANSITION BREAK + NETWORKING COFFEE",
-            time: "12:00 PM - 12.30 PM",
+            title: "KEYNOTE 2",
+            description:
+              "Space, Science & Youth: Moonshots of Tomorrow by Dr. Mylswamy Annadurai (Former ISRO Scientist - 'Moon Man of India') for Sacred Heart College students and guests from other colleges.",
+            targetGroup:
+              "SACRED HEART COLLEGE - SHIFT I & II(IIUG + II PG), GUESTS, OTHER COLLEGES",
+            time: "10:20 AM - 10:40 AM",
+            speakers: [
+              {
+                name: "Dr. Mylswamy Annadurai",
+                image:
+                  "https://ui-avatars.com/api/?name=Dr+Mylswamy+Annadurai&background=random&size=300",
+              },
+            ],
             backgroundColor: "bg-lightgrey",
           },
           {
             id: 6,
-            title: "PARALLEL SESSIONS",
+            title: "KEYNOTE 3",
             description:
-              "Industry 5.0 Career Pathways, AI Workshop, Aerospace Innovation & Life Science Commercialization across multiple halls.",
-            time: "12:30 PM - 02:00 PM",
-            location: "Halls A, B, C & D",
+              "Innovation and entrepreneurship insights by Mr. Narasimman, Ex MP, RAASI Groups President, and India Solar Association leader.",
+            targetGroup:
+              "SACRED HEART COLLEGE - SHIFT I & II (IIUG + II PG), GUESTS, OTHER COLLEGES",
+            time: "10:40 AM - 11:00 AM",
+            speakers: [
+              {
+                name: "Mr. Narasimman, EX MP",
+                image:
+                  "https://ui-avatars.com/api/?name=Mr+Narasimman&background=random&size=300",
+              },
+            ],
             backgroundColor: "bg-white border-lightgrey",
           },
           {
             id: 7,
-            title: "TECH EXPO & NETWORKING",
-            description:
-              "AI Startups, Innovation Booths, Alumni Connect Lounge & Faculty-Industry Roundtables with networking lunch.",
-            time: "02:00 PM - 03:00 PM",
-            location: "College Ground",
+            title: "BREAK",
+            time: "11:00 AM - 11:15 AM",
+            targetGroup: "BREAK",
             backgroundColor: "bg-lightgrey",
           },
           {
             id: 8,
-            title: "RESEARCH & NEP 2020 DISCUSSION",
+            title:
+              "THE NEXT WAVE IT INDUSTRY GROWTH & INDUSTRY ACADEMIA COLLABORATION",
             description:
-              "Panel on New Education Policy's impact on research and interdisciplinary education with policy advocates.",
-            time: "03:00 PM - 03:40 PM",
-            location: "Main Auditorium",
+              "Panel discussion on IT industry growth and academia collaboration with tech leaders, corporate innovators, and academic liaisons.",
+            targetGroup:
+              "Tech leaders, corporate innovators, academic liaisons, MCA(I), DS(III), CS(III UG),S-I&II BCA III MSc(CS), EXTERNAL 100)",
+            time: "11:15 AM - 12:00 PM",
+            speakers: [
+              {
+                name: "Dr. BALA M.S. (GCC Leader)",
+                image:
+                  "https://ui-avatars.com/api/?name=Dr+Bala+M+S&background=random&size=300",
+              },
+              {
+                name: "S. Karmegam IAS",
+                role: "Former Director, Collegiate Education",
+                image:
+                  "https://ui-avatars.com/api/?name=S+Karmegam+IAS&background=random&size=300",
+              },
+              {
+                name: "Smt. Sulochana, COE",
+                role: "Central University (Govt of India)",
+                image:
+                  "https://ui-avatars.com/api/?name=Smt+Sulochana&background=random&size=300",
+              },
+              {
+                name: "Dr. Kurinji Vendhan",
+                role: "Director, Tamil University, Tanjore",
+                image:
+                  "https://ui-avatars.com/api/?name=Dr+Kurinji+Vendhan&background=random&size=300",
+              },
+              {
+                name: "Shri. Neelagaantan Govindasamy",
+                role: "Academician, Consultant & Environmentalist (Former CIPET, Govt of India)",
+                image:
+                  "https://ui-avatars.com/api/?name=Shri+Neelagaantan&background=random&size=300",
+              },
+            ],
             backgroundColor: "bg-white border-lightgrey",
           },
           {
             id: 9,
-            title: "FIRESIDE CHAT: LESSONS BEYOND THE LAB",
+            title: "ADDRESSING THE YOUNG",
             description:
-              "A conversation on turning research into real-world solutions. Learn how innovation, collaboration, and community relevance are key to meaningful scientific progress.",
-            time: "03:40 PM - 04:20 PM",
-            location: "Innovation Hall",
+              "Inspirational session for school students and alumni by Dr. Mylswamy Annadurai (Former ISRO Scientist - 'Moon Man of India').",
+            targetGroup: "SCHOOL STUDENT'S ALUMNI",
+            time: "12:00 PM - 01:00 PM",
             speaker: {
-              name: "Global STEM Leader",
+              name: "DR. MYLSWAMY ANNADURAI",
+              role: "Former ISRO Scientist - 'Moon Man of India'",
               image:
-                "https://ui-avatars.com/api/?name=Global+STEM+Leader&background=random&size=300",
+                "https://ui-avatars.com/api/?name=Dr+Mylswamy+Annadurai&background=random&size=300",
             },
             backgroundColor: "bg-lightgrey",
           },
           {
             id: 10,
-            title: "CLOSING REMARKS",
-            description:
-              "Reflections on a day of ideas, energy, and inspiration. This session thanks all collaborators, revisits key insights, and invites continued engagement beyond the event.",
-            time: "04:20 PM - 04:40 PM",
-            location: "Main Auditorium",
+            title: "LUNCH",
+            time: "01:00 PM - 02:00 PM",
+            targetGroup: "LUNCH",
             backgroundColor: "bg-white border-lightgrey",
           },
           {
             id: 11,
-            title: "AWARDS & VALEDICTORY",
+            title: "HAPPINESS AT WORKPLACE",
             description:
-              "Best Innovation Awards, Hackathon Winners, Alumni Honors & Faculty Recognition with closing ceremony.",
-            time: "04:40 PM - 06:00 PM",
-            location: "Main Auditorium",
+              "Session on workplace happiness and well-being for I and II years of Shift I students.",
+            targetGroup: "I AND II YEARS OF SHIFT I",
+            time: "02:00 PM - 02:30 PM",
+            speaker: {
+              name: "MR. MIKE MURALI",
+              image:
+                "https://ui-avatars.com/api/?name=Mr+Mike+Murali&background=random&size=300",
+            },
             backgroundColor: "bg-lightgrey",
+          },
+          {
+            id: 12,
+            title: "GOVT ADOPTING TECHNOLOGY",
+            description:
+              "Panel discussion on government technology adoption with moderator Mr. Mike Murali and distinguished government officials.",
+            targetGroup: "I AND II YEARS OF SHIFT I",
+            time: "02:30 PM - 03:00 PM",
+            speakers: [
+              {
+                name: "MR. MIKE MURALI",
+                image:
+                  "https://ui-avatars.com/api/?name=Mr+Mike+Murali&background=random&size=300",
+              },
+              {
+                name: "Hon. NALLTHAMBI, MLA",
+                image:
+                  "https://ui-avatars.com/api/?name=Nallthambi+MLA&background=random&size=300",
+              },
+              {
+                name: "Tmt. K. Sivasoundaravalli, I.A.S",
+                image:
+                  "https://ui-avatars.com/api/?name=K+Sivasoundaravalli&background=random&size=300",
+              },
+              {
+                name: "Tmt.V.Shyamala Devi, SP",
+                image:
+                  "https://ui-avatars.com/api/?name=V+Shyamala+Devi&background=random&size=300",
+              },
+              {
+                name: "Mr. Naveen Kumar, CEO, GWC Data AI",
+                image:
+                  "https://ui-avatars.com/api/?name=Naveen+Kumar&background=random&size=300",
+              },
+            ],
+            backgroundColor: "bg-white border-lightgrey",
+          },
+          {
+            id: 13,
+            title:
+              "Aerospace Engineering: Designing for the Skies: How Aerospace Inspires Innovation",
+            description:
+              "Specialized session on aerospace engineering and innovation for Physics, Mathematics, and Chemistry students.",
+            targetGroup:
+              "PHYSICS (S I&II) + MATHEMATICS(III) AND CHEMISTRY(III)",
+            time: "03:00 PM - 03:30 PM",
+            speaker: {
+              name: "Prof. R. R. Elangovan",
+              role: "Ex-ISRO Scientist",
+              image:
+                "https://ui-avatars.com/api/?name=Prof+R+R+Elangovan&background=random&size=300",
+            },
+            backgroundColor: "bg-lightgrey",
+          },
+          {
+            id: 14,
+            title: "PANEL",
+            description:
+              "Panel discussion with industry leaders and academic experts for I and II years of Shift I students.",
+            targetGroup: "I AND II YEARS OF SHIFT I",
+            time: "03:30 PM - 04:00 PM",
+            speakers: [
+              {
+                name: "MR. BALA M S CEO",
+                image:
+                  "https://ui-avatars.com/api/?name=Mr+Bala+M+S&background=random&size=300",
+              },
+              {
+                name: "MR. RAM, STARINFINITY",
+                image:
+                  "https://ui-avatars.com/api/?name=Mr+Ram&background=random&size=300",
+              },
+              {
+                name: "MRS. GOMATHY PERIYATHIRUVEDI",
+                image:
+                  "https://ui-avatars.com/api/?name=Mrs+Gomathy&background=random&size=300",
+              },
+              {
+                name: "MR. SRINIVAS GOPAL",
+                image:
+                  "https://ui-avatars.com/api/?name=Mr+Srinivas+Gopal&background=random&size=300",
+              },
+            ],
+            backgroundColor: "bg-white border-lightgrey",
+          },
+          {
+            id: 15,
+            title: "GUEST SPEECH",
+            description:
+              "Special guest speech by Hon. Ma. Subramanian, Minister for Health & Family Welfare of Tamil Nadu for I and II years of Shift I students.",
+            targetGroup: "I AND II YEARS OF SHIFT I",
+            time: "04:00 PM - 04:30 PM",
+            speaker: {
+              name: "HON. MA. SUBRAMANIAN",
+              role: "Minister for Health & Family Welfare of Tamil Nadu",
+              image:
+                "https://ui-avatars.com/api/?name=Hon+Ma+Subramanian&background=random&size=300",
+            },
+            backgroundColor: "bg-lightgrey",
+          },
+          {
+            id: 16,
+            title: "VALEDICTION, Awards & Valedictory Ceremony",
+            description:
+              "Closing ceremony with awards and valedictory for dignitaries, special invitees and Sacred Heart College Shift 2 students.",
+            targetGroup:
+              "DIGNITARIES, SPECIAL INVITEES AND SACRED HEART COLLEGE SHIFT 2",
+            time: "04:00 PM - 05:00 PM",
+            backgroundColor: "bg-white border-lightgrey",
           },
         ],
         showMoreButton: false,
@@ -533,6 +689,14 @@ const EventSchedules = () => {
                                 <small>{event.description}</small>
                               </p>
                             )}
+                            {/* Target Group */}
+                            {event.targetGroup && (
+                              <p className="mb-2">
+                                <small className="text-muted">
+                                  {event.targetGroup}
+                                </small>
+                              </p>
+                            )}
                             <ul className="mb-2 p-0">
                               <li className="d-inline">
                                 <i
@@ -554,33 +718,38 @@ const EventSchedules = () => {
                           </div>
 
                           {/* Speaker Bio */}
-                          {event.speaker && (
-                            <div className="schedule-box-bio d-md-flex">
-                              <div className="schedule-bio-image">
-                                <img
-                                  src={event.speaker.image}
-                                  alt="team-image"
-                                  className="me-2 rounded-circle"
-                                  style={{
-                                    width: "50px",
-                                    height: "50px",
-                                    objectFit: "cover",
-                                  }}
-                                />
-                              </div>
+                          {/* Speaker Bio - Updated to display speakers as comma-separated list */}
+                          {(event.speaker || event.speakers) && (
+                            <div className="schedule-box-bio">
                               <div className="schedule-bio-info">
-                                <p className="mt-3 mb-0">
-                                  <button
-                                    onClick={() =>
-                                      handleSpeakerClick(event.speaker.name)
-                                    }
-                                    className="pink bg-transparent border-0 p-0 text-decoration-none"
-                                    style={{ cursor: "pointer" }}
-                                  >
-                                    {event.speaker.name}
-                                  </button>
+                                <p className="mt-1 mb-0">
+                                  {/* Handle single speaker */}
+                                  {event.speaker && (
+                                    <button
+                                      className="pink bg-transparent border-0 p-0 text-decoration-none"
+                                      style={{ cursor: "pointer" }}
+                                    >
+                                      {event.speaker.name}
+                                    </button>
+                                  )}
+
+                                  {/* Handle multiple speakers */}
+                                  {event.speakers &&
+                                    event.speakers.map(
+                                      (speaker, speakerIndex) => (
+                                        <span key={speakerIndex}>
+                                          <button
+                                            className="pink bg-transparent border-0 p-0 text-decoration-none"
+                                            style={{ cursor: "pointer" }}
+                                          >
+                                            {speaker.name}
+                                          </button>
+                                          {speakerIndex <
+                                            event.speakers.length - 1 && ", "}
+                                        </span>
+                                      )
+                                    )}
                                 </p>
-                                {/* <small>{event.speaker.role}</small> */}
                               </div>
                             </div>
                           )}

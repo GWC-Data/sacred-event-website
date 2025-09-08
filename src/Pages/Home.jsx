@@ -1106,7 +1106,7 @@ function Home() {
                 <em>Solution Matters</em>.
               </p>
               <div className="ticket-button">
-                <Link to="/shcaifest/HackathonRegistration" className="btn">
+                <Link to="/HackathonRegistration" className="btn">
                   HACKATHON REGISTRATION
                 </Link>
               </div>
